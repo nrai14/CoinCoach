@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 import Home from "./pages/Home";
-import Predictor from "./pages/Predictor";
+import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -15,12 +15,12 @@ function App() {
    <>
     <Header />
 
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/predictor" element={<Predictor />} />
+        <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
          <Route path="*" element={<NotFound />} />
-      </Routes> */}
+      </Routes>
     
     <Footer/>
    </>
