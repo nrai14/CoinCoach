@@ -65,7 +65,7 @@ function OpenAi() {
       </div>
 
       <button disabled={loading} onClick={getRes}>
-        {loading ? "Loading... " : "Get resposne"}
+        {loading ? "Loading... " : "Get response"}
       </button>
     </>
   );
