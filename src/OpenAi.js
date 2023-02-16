@@ -21,7 +21,7 @@ function OpenAi() {
       headers: {
         "Content-Type": "application/json",
         Authorization:
-          "Bearer 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",
+          "Bearer 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",
       },
     })
       .then((res) => {

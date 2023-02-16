@@ -3,6 +3,8 @@ import Footer from './components/Footer';
 import Form from './components/Form';
 import OpenAi from './OpenAi';
 
+import CryptoInfo from './CryptoInfo';
+
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
 
       <OpenAi className="App-openai" />
 
+
+      <CryptoInfo className="App-crypto" />
     
 
       <Footer className="App-footer" />
