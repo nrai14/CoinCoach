@@ -36,17 +36,16 @@ function Tracker() {
 
             <Grid item xs={12}>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DatePicker
-        label="Date"
-        value={value}
-        onChange={(newValue) => {
-          setValue(newValue);
-        }}
-        renderInput={(params) => <TextField {...params} />}
-      />
-    </LocalizationProvider>
-
-    </Grid>
+            <DatePicker
+              label="Date"
+              value={value}
+              onChange={(newValue) => {
+                setValue(newValue);
+              }}
+              renderInput={(params) => <TextField {...params} />}
+             />
+              </LocalizationProvider>
+             </Grid>
 
 
               <Grid item xs={12}>
