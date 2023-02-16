@@ -1,8 +1,11 @@
+import ContactForm from "../components/ContactForm";
+
 function Contact() {
     return (
         <>
-            <h1>Contact</h1>
-          
+          <Typography variant='h1' align='center'> Contact Us</Typography>
+          <ContactForm/>
+
         </>
     )
 };
