@@ -5,13 +5,11 @@ import axios from "axios";
 
 function CryptoInfo() {
 
-    const coin_name = "bitcoin";
-    const language = "en";
 
     
 
   const apiUrl =
-  `https://newsdata.io/api/1/news?apikey=pub_172643d5b5bab743abcf4cae2cd5cc853dcdd&q=${coin_name}&language=${language}`;
+  `https://cryptopanic.com/api/v1/posts/?auth_token=778bd1202a41253ff2bfa288b1b3483350e91b55`;
 
   const getCryptoInfo = async () => {
     try {

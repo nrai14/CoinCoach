@@ -1,9 +1,8 @@
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Form from './components/Form';
-import OpenAi from './OpenAi';
-
-import CryptoInfo from './CryptoInfo';
+import OpenAi from './components/OpenAi';
+import CryptoInfo from './components/CryptoInfo';
 
 
 function App() {
