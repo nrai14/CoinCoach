@@ -20,10 +20,38 @@ function Tracker() {
 
   const [category, setCategory] = useState('');
   const [value, setValue] = useState(null);
+  const [transactions, setTransactions] = useState([]);
 
   const handleChange = (event) => {
     setCategory(event.target.value);
   };
+
+
+  const handleSubmit = (event) => {
+   event.preventDefault(); 
+   const newTransactions=[
+
+   {
+    date: 'date',
+    category:'Holidays',
+    description: 'Roma ',
+    value: '400'
+   },
+   {
+    date: 'date',
+    category:'Savings',
+    description: 'May',
+    value: '100'
+   }
+
+   ]
+
+   setTransactions(newTransactions);
+   localStorage.setItem('transactions', JSON.stringify(transactions));
+  
+
+
+  }
 
 
   return (
@@ -31,13 +59,13 @@ function Tracker() {
    <Typography variant='h2' align='center'>Add Transaction</Typography>
       <Card style={{ maxWidth: 500, margin: "0 auto", padding: "20px 5px" }} >
         <CardContent>
-          <form>
+          <form onSubmit={handleSubmit}>
             <Grid container spacing={4} justifyContent="center" padding={10}>
 
             <Grid item xs={12} >
               <LocalizationProvider  dateAdapter={AdapterDayjs} >
               <DatePicker
-               
+  
                 label="Date" 
                 value={value}
                 onChange={(newValue) => {
