@@ -35,20 +35,21 @@ function Tracker() {
             <Grid container spacing={4} justifyContent="center" padding={10}>
 
             <Grid item xs={12} >
-              <LocalizationProvider dateAdapter={AdapterDayjs} >
+              <LocalizationProvider  dateAdapter={AdapterDayjs} >
               <DatePicker
+               
                 label="Date" 
                 value={value}
                 onChange={(newValue) => {
                   setValue(newValue);
                 }}
-                renderInput={(params) => <TextField fullWidth {...params} />}
+                renderInput={(params) => <TextField fullWidth required {...params} />}
               />
              </LocalizationProvider>
              </Grid>
 
               <Grid item xs={12}>
-                <FormControl fullWidth>
+                <FormControl fullWidth required>
                   <InputLabel id="input-category">Category</InputLabel>
                   <Select
                     labelId="Category"
@@ -56,7 +57,7 @@ function Tracker() {
                     value={category}
                     label="Category"
                     onChange={handleChange}
-                    required
+                  
                   >
                     <MenuItem value={1}>Bills</MenuItem>
                     <MenuItem value={2}>Charity</MenuItem>
@@ -65,7 +66,7 @@ function Tracker() {
                     <MenuItem value={5}>Expenses</MenuItem>
                     <MenuItem value={6}>Groceries</MenuItem>
                     <MenuItem value={7}>Holidays</MenuItem>
-                    <MenuItem value={8}>Income</MenuItem>
+                    <MenuItem value={8} >Income</MenuItem>
                     <MenuItem value={9}>Savings</MenuItem>
                     <MenuItem value={10}>Shopping</MenuItem>
                     <MenuItem value={11}>Transport</MenuItem>
