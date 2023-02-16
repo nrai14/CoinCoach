@@ -58,9 +58,17 @@ function Tracker() {
                     onChange={handleChange}
                     required
                   >
-                    <MenuItem value={1}>Salary</MenuItem>
-                    <MenuItem value={2}>Food</MenuItem>
-                    <MenuItem value={3}>Petrol</MenuItem>
+                    <MenuItem value={1}>Bills</MenuItem>
+                    <MenuItem value={2}>Charity</MenuItem>
+                    <MenuItem value={3}>Eating Out</MenuItem>
+                    <MenuItem value={4}>Entertainment</MenuItem>
+                    <MenuItem value={5}>Expenses</MenuItem>
+                    <MenuItem value={6}>Groceries</MenuItem>
+                    <MenuItem value={7}>Holidays</MenuItem>
+                    <MenuItem value={8}>Income</MenuItem>
+                    <MenuItem value={9}>Savings</MenuItem>
+                    <MenuItem value={10}>Shopping</MenuItem>
+                    <MenuItem value={11}>Transport</MenuItem>
                   </Select>
                 </FormControl>
               </Grid>
