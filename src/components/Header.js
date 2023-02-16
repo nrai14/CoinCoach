@@ -1,10 +1,14 @@
+import {NavLink} from "react-router-dom";
+
 function Header() {
     return (
-        <div>
-            <h1>Header</h1>
-        </div>
-    )
-}
-
-
-export default Header   
+      <>
+       <h1> Header</h1>
+       <NavLink className="nav-item nav-link h5" to="/">Home</NavLink>
+        <NavLink className="nav-item nav-link h5" to="/about">About</NavLink>
+        <NavLink  className="nav-item nav-link h5" to="/contact">Contact</NavLink>
+      </>
+    );
+  }
+  
+  export default Header;
