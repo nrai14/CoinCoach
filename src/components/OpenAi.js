@@ -1,23 +1,37 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 import axios from "axios";
 
-function OpenAi() {
+function OpenAi({cryptoData}) {
   const [loading, setLoading] = useState(false);
-  let [obj, setObj] = useState({ choices: [] });
-  const [payload, setPayLoad] = useState({
-    prompt: "",
+  // let [obj, setObj] = useState({ choices: [] });
+  const [openAiData, setopenAiData] = useState([]);
 
-    temperature: 0.5,
-    n: 1,
-    model: "text-davinci-003",
-  });
+  useEffect(() => {
+      if (cryptoData.length === 5) {
+    cryptoData.forEach(element => {
+        getRes(element.url)
+      
+    });
+  }
 
-  const getRes = () => {
+  }, [cryptoData])
+
+
+
+console.log({cryptoData})
+  const getRes = (url) => {
     setLoading(true);
     axios({
       method: "POST",
       url: "https://api.openai.com/v1/completions",
-      data: payload,
+      data: {
+        prompt: url,
+    
+        temperature: 0.5,
+        n: 1,
+        model: "text-davinci-003",
+      },
       headers: {
         "Content-Type": "application/json",
         Authorization:
@@ -25,6 +39,7 @@ function OpenAi() {
       },
     })
       .then((res) => {
+        setopenAiData([...openAiData, res.data.choices[0].text])
         console.log(res);
         responseHandler(res);
       })
@@ -36,37 +51,22 @@ function OpenAi() {
 
   const responseHandler = (res) => {
     if (res.status === 200) {
-      setObj(res.data);
+      
       setLoading(false);
     }
   };
 
   return (
     <>
-      <textarea
-        type="text"
-        placeholder="Enter Text"
-        readOnly={loading}
-        onChange={(e) => {
-          setPayLoad({
-            ...payload,
-            prompt: e.target.value,
-          });
-        }}
-        value={payload.prompt}
-      />
 
       <div>
         {loading ? (
           <span>loading...</span>
         ) : (
-          obj?.choices?.map((v, i) => <div key="{i}">{v.text}</div>)
+          openAiData.map((text, i) => <div key={i}>{text}</div>)
         )}
       </div>
 
-      <button disabled={loading} onClick={getRes}>
-        {loading ? "Loading... " : "Get resposne"}
-      </button>
     </>
   );
 }
