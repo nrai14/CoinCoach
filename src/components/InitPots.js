@@ -1,10 +1,13 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
+import Typography from '@mui/material/Typography';
 
 function InitPots() {
 
     const [pots, setPots] = useState([]);
-    const newPots = [
 
+    useEffect(() => {
+  
+    const newPots = [
         {
             id: 0,
             category: 'Bills',
@@ -64,19 +67,30 @@ function InitPots() {
             id: 11,
             category: 'Balance',
             value: 0
-        },
+        }
 
-    ]
-
-    
+    ];
 
     //If there are pots on the Local storage already do not create again
     const existingPots = JSON.parse(localStorage.getItem('pots'));
+ 
     if (!existingPots) {
+        alert('nopots');
         setPots(newPots);
         localStorage.setItem('pots', JSON.stringify(pots));  
     }
+    });
 
+
+    return(
+       
+    <>
+    
+    <Typography variant='h2' align='center'>Pots</Typography>
+    </>
+
+
+    );
 }
 
 export default InitPots;

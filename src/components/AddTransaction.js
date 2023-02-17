@@ -18,6 +18,8 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 function AddTransaction() {
 
+
+
   
   const [transactions, setTransactions] = useState([]);
 
@@ -62,7 +64,7 @@ function AddTransaction() {
    console.log(newTransactions);
    alert('hola');
    setTransactions(newTransactions);
-   localStorage.setItem('transactions', JSON.stringify(transactions));
+   //localStorage.setItem('transactions', JSON.stringify(transactions));
 
 
   }
