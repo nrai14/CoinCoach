@@ -18,12 +18,29 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 function Tracker() {
 
-  const [category, setCategory] = useState('');
-  const [value, setValue] = useState(null);
+ // const [category, setCategory] = useState('');
+  const [date, setDate] = useState(null);
   const [transactions, setTransactions] = useState([]);
 
+
+  const [formData, setFormData] = useState({
+    // date:'',
+    category: '',
+    description: '',
+    value: ''
+});
+
+
+
+
   const handleChange = (event) => {
-    setCategory(event.target.value);
+    // setCategory(event.target.value);
+ 
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value
+  });
+
   };
 
 
@@ -36,12 +53,6 @@ function Tracker() {
     category:'Holidays',
     description: 'Roma ',
     value: '400'
-   },
-   {
-    date: 'date',
-    category:'Savings',
-    description: 'May',
-    value: '100'
    }
 
    ]
@@ -64,13 +75,14 @@ function Tracker() {
 
             <Grid item xs={12} >
               <LocalizationProvider  dateAdapter={AdapterDayjs} >
-              <DatePicker
-  
+              <DatePicker  
                 label="Date" 
-                value={value}
-                onChange={(newValue) => {
-                  setValue(newValue);
-                }}
+                value={date}
+               
+                 onChange={(newValue) => {
+                   setDate(newValue);
+                 }}
+               // onChange={handleChange}
                 renderInput={(params) => <TextField fullWidth required {...params} />}
               />
              </LocalizationProvider>
@@ -81,32 +93,34 @@ function Tracker() {
                   <InputLabel id="input-category">Category</InputLabel>
                   <Select
                     labelId="Category"
-                    id="category"
-                    value={category}
                     label="Category"
-                    onChange={handleChange}
-                  
-                  >
-                    <MenuItem value={1}>Bills</MenuItem>
-                    <MenuItem value={2}>Charity</MenuItem>
-                    <MenuItem value={3}>Eating Out</MenuItem>
-                    <MenuItem value={4}>Entertainment</MenuItem>
-                    <MenuItem value={5}>Expenses</MenuItem>
-                    <MenuItem value={6}>Groceries</MenuItem>
-                    <MenuItem value={7}>Holidays</MenuItem>
-                    <MenuItem value={8} >Income</MenuItem>
-                    <MenuItem value={9}>Savings</MenuItem>
-                    <MenuItem value={10}>Shopping</MenuItem>
-                    <MenuItem value={11}>Transport</MenuItem>
+                    name="category"
+                    value={formData.category}
+                    
+                    onChange={handleChange}>
+                    <MenuItem value={0}>Bills</MenuItem>
+                    <MenuItem value={1}>Charity</MenuItem>
+                    <MenuItem value={2}>Eating Out</MenuItem>
+                    <MenuItem value={3}>Entertainment</MenuItem>
+                    <MenuItem value={4}>Expenses</MenuItem>
+                    <MenuItem value={5}>Groceries</MenuItem>
+                    <MenuItem value={6}>Holidays</MenuItem>
+                    <MenuItem value={7} >Income</MenuItem>
+                    <MenuItem value={8}>Savings</MenuItem>
+                    <MenuItem value={9}>Shopping</MenuItem>
+                    <MenuItem value={10}>Transport</MenuItem>
                   </Select>
                 </FormControl>
               </Grid>
 
               <Grid item xs={12}>
-                <TextField id='' 
+                <TextField 
+                name='description' 
+                value={formData.description}
                 label='Description' 
-                Placeholder='Enter description' 
+                placeholder='Enter description' 
                 variant='outlined' 
+                onChange={handleChange}
                 fullWidth 
                 required />
               </Grid>
@@ -114,10 +128,12 @@ function Tracker() {
               <Grid item xs={12}>
                 <TextField 
                 type='number' 
-                id='' 
+                name='value' 
+                value= {formData.value}
                 label='Value' 
-                Placeholder='Please enter the value' 
+                placeholder='Please enter the value' 
                 variant='outlined' 
+                onChange={handleChange}
                 fullWidth 
                 required />
               </Grid>
