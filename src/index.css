@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.money { 
+  border-radius: 950px;
+  height: 150px;
+}
+
+.maincontainer {
+  display: flex;
+  justify-content: center;
+}
+
+.financial, .crypto {
+  width: 30%;
+}
+
+.welcomebanner {
+  text-align: center;
+}

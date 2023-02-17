@@ -4,7 +4,7 @@ import Nav from "./Nav";
 function Header() {
     return (
       <>
-       <h1> CoinCoach</h1>
+       <h1></h1>
         
         <Nav />
       </>
