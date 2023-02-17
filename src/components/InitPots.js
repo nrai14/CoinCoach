@@ -68,8 +68,14 @@ function InitPots() {
 
     ]
 
-    setTransactions(newPots);
-    localStorage.setItem('transactions', JSON.stringify(pots));
+    
+
+    //If there are pots on the Local storage already do not create again
+    const existingPots = JSON.parse(localStorage.getItem('pots'));
+    if (!existingPots) {
+        setPots(newPots);
+        localStorage.setItem('pots', JSON.stringify(pots));  
+    }
 
 }
 
