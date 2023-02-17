@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
-
 import axios from "axios";
 
 function OpenAi({cryptoData}) {
   const [loading, setLoading] = useState(false);
-  // let [obj, setObj] = useState({ choices: [] });
   const [openAiData, setopenAiData] = useState([]);
+
+  const question = " - based on provided url tell me what is cryptocurrency name and from scale from 0 to 100 is it worth to buy in format: \"cryptoname\": \"scale\"";
 
   useEffect(() => {
       if (cryptoData.length === 5) {
     cryptoData.forEach(element => {
-        getRes(element.url)
+        getRes(element.url + question)
       
     });
   }
@@ -60,6 +60,7 @@ console.log({cryptoData})
     <>
 
       <div>
+        <p>OpenAi return this:</p>
         {loading ? (
           <span>loading...</span>
         ) : (
