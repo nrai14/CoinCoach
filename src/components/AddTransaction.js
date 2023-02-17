@@ -18,13 +18,11 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 function AddTransaction() {
 
- // const [category, setCategory] = useState('');
-  const [date, setDate] = useState(null);
+  
   const [transactions, setTransactions] = useState([]);
 
-
+  const [date, setDate] = useState(null);
   const [formData, setFormData] = useState({
-    // date:'',
     category: '',
     description: '',
     value: ''
@@ -34,7 +32,7 @@ function AddTransaction() {
 
 
   const handleChange = (event) => {
-    // setCategory(event.target.value);
+    
  
     setFormData({
       ...formData,
@@ -45,21 +43,26 @@ function AddTransaction() {
 
 
   const handleSubmit = (event) => {
+  
    event.preventDefault(); 
-   const newTransactions=[
-
+   const newTransactions =[
    {
     date: 'date',
     category:'Holidays',
     description: 'Roma ',
     value: '400'
+   }, 
+   {
+    date: 'date',
+    category:'Holidays',
+    description: 'Paris ',
+    value: '200'
    }
-
-   ]
-
+   ];
+   console.log(newTransactions);
+   alert('hola');
    setTransactions(newTransactions);
    localStorage.setItem('transactions', JSON.stringify(transactions));
-  
 
 
   }
@@ -82,7 +85,7 @@ function AddTransaction() {
                  onChange={(newValue) => {
                    setDate(newValue);
                  }}
-               // onChange={handleChange}
+              
                 renderInput={(params) => <TextField fullWidth required {...params} />}
               />
              </LocalizationProvider>
