@@ -1,4 +1,4 @@
-import Tracker from "../components/Tracker";
+import Tracker from "./Tracker";
 import Typography from '@mui/material/Typography';
 
 function Home() {
