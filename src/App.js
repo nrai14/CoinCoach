@@ -4,7 +4,8 @@ import {Routes, Route} from "react-router-dom";
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Form from './components/Form';
-import OpenAi from './OpenAi';
+import OpenAi from './pages/OpenAi';
+import Tracker from './pages/Tracker';
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -22,8 +23,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+         <Route path="/tracker" element={<Tracker/>} />
+         <Route path="/crypto" element={<OpenAi/>} />
          <Route path="*" element={<NotFound />} />
+         
       </Routes>
+
 
     
      

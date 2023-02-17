@@ -24,6 +24,11 @@ code {
 
 .financial, .crypto {
   width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  
 }
 
 .welcomebanner {
