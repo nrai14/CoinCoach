@@ -8,6 +8,7 @@ function Tracker() {
   return (
     <>
     <Typography variant='h2' align='center'>Tracker</Typography>
+    <InitPots/>
     <AddTransaction/>
 
     </>

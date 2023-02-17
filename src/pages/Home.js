@@ -1,10 +1,10 @@
 import Tracker from "../components/Tracker";
-
+import Typography from '@mui/material/Typography';
 
 function Home() {
     return (
         <>
-            <h1>Home</h1>
+            <Typography variant='h2' align='center'>Home</Typography>
             <Tracker/>
 
         </>
