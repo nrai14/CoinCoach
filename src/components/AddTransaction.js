@@ -75,6 +75,7 @@ function AddTransaction() {
 
     }
    
+    
     // //Pot logics 
     // //id 7 = Income adds to Balance and to Income pot
     // //All other ids subtract from  Balance and add to individual pots

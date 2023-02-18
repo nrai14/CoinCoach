@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 
 
 
-useEffect(() => {});
+// useEffect(() => {});
 
 function ShowPots() {
 
