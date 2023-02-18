@@ -5,7 +5,9 @@ function OpenAi({cryptoData}) {
   const [loading, setLoading] = useState(false);
   const [openAiData, setopenAiData] = useState([]);
 
-  const question = " - based on provided url tell me what is cryptocurrency name and from scale from 0 to 100 is it worth to buy in format: \"cryptoname\": \"scale\"";
+  var answer = [];
+
+  const question = " - based on provided url tell me what is cryptocurrency name and from scale from 0 to 100 is it worth to buy in format: \"cryptoname\" \"scale\"";
 
   useEffect(() => {
       if (cryptoData.length === 5) {
@@ -40,12 +42,18 @@ console.log({cryptoData})
     })
       .then((res) => {
         setopenAiData([...openAiData, res.data.choices[0].text])
-        console.log(res);
+        
+        
+        // appendData(res.data.choices[0].text); to answer array
+        answer.push(res.data.choices[0].text);
+        console.log(answer);
+
+
+
         responseHandler(res);
       })
       .catch((e) => {
         setLoading(false);
-        console.log(e.message, e);
       });
   };
 
