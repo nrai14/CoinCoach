@@ -13,8 +13,8 @@ function Tracker() {
     <>
     <Typography variant='h2' align='center'>Tracker</Typography>
     <InitPots/>
-    {/* <AddTransaction/>
-    <ShowPots/> */}
+    <AddTransaction/>
+    <ShowPots/>
 
 
     </>
