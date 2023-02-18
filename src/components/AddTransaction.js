@@ -35,7 +35,6 @@ function AddTransaction() {
 
   const handleChange = (event) => {
 
-
     setFormData({
       ...formData,
       [event.target.name]: event.target.value
@@ -47,20 +46,40 @@ function AddTransaction() {
   const handleSubmit = (event) => {
 
     event.preventDefault();
-    const newTransactions = [
+    const newTransactions = 
       {
-        date: 'date',
-        category: 'Holidays',
-        description: 'Roma ',
-        value: '400'
+        date: date,
+        category: formData.category,
+        description: formData.description,
+        value: formData.value,
       }
-    ];
-
+    ;
    
+    setDate(null);
+    setFormData( {
+      category: '',
+      description: '',
+      value: ''
+    });
+    
 
+   //Add new transactions to the array
+    const existingTransactions = JSON.parse(localStorage.getItem('transactions'));
+     
+    if( existingTransactions ){
+     
+        //Push new element into the Array 
+        setTransactions(newTransactions);
+        existingTransactions.push(transactions);
+        localStorage.setItem('transactions', JSON.stringify(existingTransactions));
 
-    setTransactions(newTransactions);
-    localStorage.setItem('transactions', JSON.stringify(transactions));
+    }
+    else{
+
+      localStorage.setItem('transactions', JSON.stringify([newTransactions]));
+
+    }
+   
 
 
   }
@@ -79,7 +98,6 @@ function AddTransaction() {
                   <DatePicker
                     label="Date"
                     value={date}
-
                     onChange={(newValue) => {
                       setDate(newValue);
                     }}
