@@ -55,12 +55,7 @@ function AddTransaction() {
       }
     ;
    
-    setDate(null);
-    setFormData( {
-      category: '',
-      description: '',
-      value: ''
-    });
+
     
 
    //Add new transactions to the array
@@ -80,6 +75,32 @@ function AddTransaction() {
 
     }
    
+    // //Pot logics 
+    // //id 7 = Income adds to Balance and to Income pot
+    // //All other ids subtract from  Balance and add to individual pots
+    // const MyPots = JSON.parse(localStorage.getItem('pots'));
+    //  if (formData.category==7){
+    //   //Adds to pot 11 (Balance)
+    //   //Adds to pot 7    
+    //   MyPots[11]=MyPots[11]+formData.value;
+    //   MyPots[7]=MyPots[7]+formData.value;    
+    //  }
+    //  else{
+    //     //Subtract from pot 11
+    //     //Adds to individual pot
+    //     MyPots[11]=MyPots[11]-formData.value;
+    //     MyPots[formData.category]=MyPots[formData.category]+formData.value;
+    //  }
+    //  localStorage.setItem('pots', JSON.stringify(MyPots));  
+
+    //Cleans inputs 
+     setDate(null);
+     setFormData( {
+       category: '',
+       description: '',
+       value: ''
+     });
+
 
 
   }
@@ -124,7 +145,7 @@ function AddTransaction() {
                     <MenuItem value={4}>Expenses</MenuItem>
                     <MenuItem value={5}>Groceries</MenuItem>
                     <MenuItem value={6}>Holidays</MenuItem>
-                    <MenuItem value={7} >Income</MenuItem>
+                    <MenuItem value={7}>Income</MenuItem>
                     <MenuItem value={8}>Savings</MenuItem>
                     <MenuItem value={9}>Shopping</MenuItem>
                     <MenuItem value={10}>Transport</MenuItem>
