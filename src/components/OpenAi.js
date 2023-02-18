@@ -20,8 +20,6 @@ function OpenAi({cryptoData}) {
   }, [cryptoData])
 
 
-
-console.log({cryptoData})
   const getRes = (url) => {
     setLoading(true);
     axios({
@@ -47,9 +45,6 @@ console.log({cryptoData})
         // appendData(res.data.choices[0].text); to answer array
         answer.push(res.data.choices[0].text);
         console.log(answer);
-
-
-
         responseHandler(res);
       })
       .catch((e) => {
