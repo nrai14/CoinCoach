@@ -26,7 +26,7 @@ function OpenAi({ cryptoData }) {
       data: {
         prompt: url,
 
-        temperature: 0.5,
+        temperature: 0,
         n: 1,
         model: "text-davinci-003",
       },
@@ -74,6 +74,8 @@ function OpenAi({ cryptoData }) {
         ) : (
           <p>
             OpenAi based on 5 article evaluate bitcoin future on:{" "}
+
+
             {openAiData < 5 ? (
               <span style={{ color: "red" }}>{openAiData}</span>
             ) : openAiData > 5 ? (
@@ -83,6 +85,8 @@ function OpenAi({ cryptoData }) {
             ) : (
               openAiData
             )}
+
+            
           </p>
         )}
       </div>
