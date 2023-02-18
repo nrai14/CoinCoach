@@ -18,6 +18,7 @@ function OpenAi({ cryptoData }) {
     }
   }, [cryptoData]);
 
+
   const getRes = (url) => {
     setLoading(true);
     axios({
@@ -66,6 +67,7 @@ function OpenAi({ cryptoData }) {
     }
   };
 
+
   return (
     <>
       <div>
@@ -73,7 +75,8 @@ function OpenAi({ cryptoData }) {
           <span>loading...</span>
         ) : (
           <p>
-            OpenAi based on 5 article evaluate bitcoin future on:{" "}
+            
+            OpenAi based on {cryptoData.length} article evaluate bitcoin future on:{" "}
 
 
             {openAiData < 5 ? (
