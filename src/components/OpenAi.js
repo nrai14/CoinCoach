@@ -8,7 +8,7 @@ function OpenAi({ cryptoData }) {
   var answer = [];
 
   const question =
-    ' - based on provided url tell me what is cryptocurrency name and from scale from 0 to 100 is it worth to buy in format: "cryptoname" "scale"';
+    ' - return only number from 0 to 10 if that information is good for bitcoin future.';
 
 
 
@@ -47,23 +47,19 @@ function OpenAi({ cryptoData }) {
     })
       .then((res) => {
         setopenAiData([...openAiData, res.data.choices[0].text]);
-
-
-
         // appendData(res.data.choices[0].text); to answer array
         answer.push(res.data.choices[0].text);
-        
-
-
-        
-        if (answer.length === 5) {
-          console.log(answer);
-
-        }
-
-
-
-
+        // remove \n\n from answer array
+        answer = answer.map((item) => item.replace(/\n\n/g, ""));
+        // remove all non numeric characters from answer array
+        answer = answer.map((item) => item.replace(/[^0-9]/g, ""));
+        // change value from string to number
+        answer = answer.map((item) => Number(item));
+        // remove all NaN values from answer array
+        answer = answer.filter((item) => !isNaN(item));
+        // remove all values from answer array that are not between 0 and 10
+        answer = answer.filter((item) => item >= 0 && item <= 10);
+        console.log(answer)
 
 
         responseHandler(res);

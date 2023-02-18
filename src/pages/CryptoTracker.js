@@ -6,7 +6,7 @@ function CryptoTracker() {
 
     const [cryptoData, setCryptoData] = useState([]);
     const api_key = 'f237a2061812440599b5684a5ae72bc9';
-    const crypto_name = 'bitcoin, ethereum';
+    const crypto_name = 'bitcoin';
     
     useEffect(() => {
       
