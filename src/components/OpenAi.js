@@ -46,7 +46,7 @@ function OpenAi({ cryptoData }) {
       },
     })
       .then((res) => {
-        setopenAiData([...openAiData, res.data.choices[0].text]);
+        
         // appendData(res.data.choices[0].text); to answer array
         answer.push(res.data.choices[0].text);
         // remove \n\n from answer array
@@ -60,7 +60,8 @@ function OpenAi({ cryptoData }) {
         // remove all values from answer array that are not between 0 and 10
         answer = answer.filter((item) => item >= 0 && item <= 10);
         console.log(answer)
-
+        
+        setopenAiData([...openAiData, answer]);
 
         responseHandler(res);
       })
