@@ -1,23 +1,30 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-function OpenAi({cryptoData}) {
+function OpenAi({ cryptoData }) {
   const [loading, setLoading] = useState(false);
   const [openAiData, setopenAiData] = useState([]);
 
   var answer = [];
 
-  const question = " - based on provided url tell me what is cryptocurrency name and from scale from 0 to 100 is it worth to buy in format: \"cryptoname\" \"scale\"";
+  const question =
+    ' - based on provided url tell me what is cryptocurrency name and from scale from 0 to 100 is it worth to buy in format: "cryptoname" "scale"';
+
+
+
+
 
   useEffect(() => {
-      if (cryptoData.length === 5) {
-    cryptoData.forEach(element => {
-        getRes(element.url + question)
-      
-    });
-  }
+    if (cryptoData.length === 5) {
+      cryptoData.forEach((element) => {
+        getRes(element.url + question);
+      });
+    }
+  }, [cryptoData]);
 
-  }, [cryptoData])
+
+
+
 
 
   const getRes = (url) => {
@@ -27,7 +34,7 @@ function OpenAi({cryptoData}) {
       url: "https://api.openai.com/v1/completions",
       data: {
         prompt: url,
-    
+
         temperature: 0.5,
         n: 1,
         model: "text-davinci-003",
@@ -39,12 +46,26 @@ function OpenAi({cryptoData}) {
       },
     })
       .then((res) => {
-        setopenAiData([...openAiData, res.data.choices[0].text])
-        
-        
+        setopenAiData([...openAiData, res.data.choices[0].text]);
+
+
+
         // appendData(res.data.choices[0].text); to answer array
         answer.push(res.data.choices[0].text);
-        console.log(answer);
+        
+
+
+        
+        if (answer.length === 5) {
+          console.log(answer);
+
+        }
+
+
+
+
+
+
         responseHandler(res);
       })
       .catch((e) => {
@@ -54,14 +75,12 @@ function OpenAi({cryptoData}) {
 
   const responseHandler = (res) => {
     if (res.status === 200) {
-      
       setLoading(false);
     }
   };
 
   return (
     <>
-
       <div>
         <p>OpenAi return this:</p>
         {loading ? (
@@ -70,7 +89,6 @@ function OpenAi({cryptoData}) {
           openAiData.map((text, i) => <div key={i}>{text}</div>)
         )}
       </div>
-
     </>
   );
 }
