@@ -8,11 +8,7 @@ function OpenAi({ cryptoData }) {
   var answer = [];
 
   const question =
-    ' - return only number from 0 to 10 if that information is good for bitcoin future.';
-
-
-
-
+    " - return only number from 0 to 10 if that information is good for bitcoin future.";
 
   useEffect(() => {
     if (cryptoData.length === 5) {
@@ -21,11 +17,6 @@ function OpenAi({ cryptoData }) {
       });
     }
   }, [cryptoData]);
-
-
-
-
-
 
   const getRes = (url) => {
     setLoading(true);
@@ -46,7 +37,6 @@ function OpenAi({ cryptoData }) {
       },
     })
       .then((res) => {
-        
         // appendData(res.data.choices[0].text); to answer array
         answer.push(res.data.choices[0].text);
         // remove \n\n from answer array
@@ -59,8 +49,8 @@ function OpenAi({ cryptoData }) {
         answer = answer.filter((item) => !isNaN(item));
         // remove all values from answer array that are not between 0 and 10
         answer = answer.filter((item) => item >= 0 && item <= 10);
-        console.log(answer)
-        
+        console.log(answer);
+
         setopenAiData([...openAiData, answer]);
 
         responseHandler(res);
@@ -79,11 +69,21 @@ function OpenAi({ cryptoData }) {
   return (
     <>
       <div>
-        <p>OpenAi return this:</p>
         {loading ? (
           <span>loading...</span>
         ) : (
-          openAiData.map((text, i) => <div key={i}>{text}</div>)
+          <p>
+            OpenAi based on 5 article evaluate bitcoin future on:{" "}
+            {openAiData < 5 ? (
+              <span style={{ color: "red" }}>{openAiData}</span>
+            ) : openAiData > 5 ? (
+              <span style={{ color: "green" }}>{openAiData}</span>
+            ) : openAiData === 5 ? (
+              <span style={{ color: "yellow" }}>{openAiData}</span>
+            ) : (
+              openAiData
+            )}
+          </p>
         )}
       </div>
     </>
