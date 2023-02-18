@@ -35,7 +35,7 @@ console.log({cryptoData})
       headers: {
         "Content-Type": "application/json",
         Authorization:
-          "Bearer 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",
+          "Bearer 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",
       },
     })
       .then((res) => {
