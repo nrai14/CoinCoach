@@ -7,6 +7,7 @@ import RenderPots from '../components/RenderPots'
 
 import Typography from '@mui/material/Typography';
 import RenderTransactions from '../components/RenderTransactions';
+import RenderCards from '../components/RenderCards';
 
 
 
@@ -19,6 +20,10 @@ function Tracker() {
     <AddTransaction/>
     <RenderTransactions/>
     <RenderPots/>
+    <RenderCards/>
+
+
+
 
 
     </>
