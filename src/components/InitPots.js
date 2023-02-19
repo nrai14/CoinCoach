@@ -86,7 +86,7 @@ function InitPots() {
 
     return(    
     <>
-    <Typography variant='h2' align='center'>Pots</Typography>
+    <Typography variant='h2' align='center'></Typography>
     </>
     );
 }

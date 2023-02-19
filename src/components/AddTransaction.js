@@ -169,11 +169,11 @@ function AddTransaction() {
 
   return (
     <>
-      <Typography variant='h2' align='center'>Add Transaction</Typography>
-      <Card style={{ maxWidth: 500, margin: "0 auto", padding: "20px 5px" }} >
+      <Typography variant='h3' align='center'>Add Transaction</Typography>
+      <Card style={{ maxWidth: 400, margin: "0 auto", padding: "0px 5px" }} >
         <CardContent>
           <form onSubmit={handleSubmit}>
-            <Grid container spacing={4} justifyContent="center" padding={10}>
+            <Grid container spacing={4} justifyContent="center" padding={2}>
 
               <Grid item xs={12} >
                 <LocalizationProvider dateAdapter={AdapterDayjs} >

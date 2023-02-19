@@ -9,20 +9,41 @@ import Typography from '@mui/material/Typography';
 import RenderTransactions from '../components/RenderTransactions';
 import RenderCards from '../components/RenderCards';
 
-
+import Container from '@mui/material/Container';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
 
 function Tracker() {
 
   return (
     <>
-    <Typography variant='h2' align='center'>Tracker</Typography>
+    <Typography variant='h2' align='center'>Money Tracker</Typography>
     <InitPots/>
-    <AddTransaction/>
-    <RenderTransactions/>
-    <RenderPots/>
-    <RenderCards/>
+    
+ 
+   
+   
+ 
+  
+  
+         
 
 
+    <Grid container spacing={2}>
+  <Grid item xs={8}>
+      <RenderCards/>
+  </Grid>
+  <Grid item xs={4}>
+   <AddTransaction/>
+  </Grid>
+  <Grid item xs={7}>
+  <RenderPots/>
+  </Grid>
+  <Grid item xs={5}>
+  <RenderTransactions/>
+   
+  </Grid>
+</Grid>
 
 
 
