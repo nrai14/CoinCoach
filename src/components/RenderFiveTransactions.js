@@ -2,6 +2,7 @@
 
 import React from "react";
 import { RadialBarChart, RadialBar, Legend } from "recharts";
+import Typography from '@mui/material/Typography';
 
 
 function RenderFiveTransactions() {
@@ -70,6 +71,8 @@ const transactions = JSON.parse(localStorage.getItem('transactions'));
 
 return(
 <>
+<Typography variant='h6' align='left'>5 recent Transactions</Typography>
+
 <RadialBarChart
       width={500}
       height={300}

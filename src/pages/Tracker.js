@@ -20,10 +20,10 @@ function Tracker() {
     <>
       <Typography variant='h2' align='center'>Money Tracker</Typography>
       <InitPots />
-      <RenderIncome/>
-      <RenderFiveTransactions/>
-
       
+      
+
+
       <Grid container spacing={2}>
         <Grid item xs={8}>
           <RenderCards />
@@ -32,6 +32,13 @@ function Tracker() {
         <Grid item xs={4}>
           <AddTransaction />
         </Grid>
+        <Grid item xs={6}>
+        <RenderIncome/>
+        </Grid>
+        <Grid item xs={6}>
+        <RenderFiveTransactions/>
+        </Grid>
+
         <Grid item xs={7}>
           <RenderPots />
         </Grid>

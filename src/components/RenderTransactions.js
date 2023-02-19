@@ -47,7 +47,7 @@ function RenderTransactions() {
     return (
         <>
             
-            <Typography variant='h6' align='left'>Last Transactions</Typography>
+            <Typography variant='h6' align='center'>Transactions History</Typography>
 
 
 

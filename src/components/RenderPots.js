@@ -91,7 +91,7 @@ function RenderPots(){
     return (
      
       <>
-      {/* <Typography variant='h3' align='center'>Pots</Typography> */}
+      <Typography variant='h6' align='center'>Pots Totals - All times</Typography>
 
 
       <BarChart
