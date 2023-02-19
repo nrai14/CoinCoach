@@ -6,9 +6,9 @@ function About() {
       <div class="container">
         <p>
           Welcome to CoinCoach, a React app created by Nish, Sabrina, Michal and
-          Laura as part of their EDX coding bootcamp's final project. CoinCoach
-          is a versatile tool that offers users two crucial functionalities.
+          Laura as part of their EDX coding bootcamp's final project. 
         </p>
+        <br></br>
         <div>
             <img src="Nish.jpeg"></img>
             <img src="Sabrina.jpeg"></img>
@@ -17,21 +17,25 @@ function About() {
         </div>
 
         <p>
+            CoinCoach
+          is a versatile tool that offers users <strong>two crucial functionalities.</strong>
+          </p>
+       
+        <p>
           Firstly, CoinCoach serves as a Financial Tracker, making it simple for
-          users to monitor their spending and expenditures against their income.
+          users to <strong>monitor their spending and expenditures against their income.</strong>
           With a user-friendly interface, CoinCoach enables you to track and
           categorize your expenses, helping you get a better understanding of
-          your financial situation. Our Financial Tracker is designed to be
-          simple, easy to use and gives you a clear picture of your financial
-          health.
+          your financial situation. Our Financial Tracker is designed to be 
+          <strong> simple, easy to use and gives you a clear picture of your financial
+          health.</strong>
         </p>
         <p>
           Secondly, CoinCoach is also a Crypto Currency Tracker, giving you
-          insights on the coins that are worth investing in. Michal worked hard
-          to build our API for this feature, and with his contribution,
-          CoinCoach provides you with real-time information about
+          insights on the coins that are worth investing in. 
+          CoinCoach provides you with <strong>real-time information about
           cryptocurrencies, helping you make informed decisions about your
-          investments.
+          investments.</strong> 
         </p>
         <p>
           Nish's designed the front page, which sets the tone for the whole user
@@ -50,9 +54,9 @@ function About() {
           keep track of our progress and respond to feedback quickly.
         </p>
         <p>
-          Overall, CoinCoach is a must-have app for anyone who wants to improve
+          Overall, CoinCoach is a <strong>must-have app for anyone who wants to improve
           their financial literacy and make informed decisions about their
-          investments. We hope you enjoy using it as much as we enjoyed creating
+          investments.</strong> We hope you enjoy using it as much as we enjoyed creating
           it.
         </p>
       </div>
