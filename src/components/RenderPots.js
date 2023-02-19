@@ -4,64 +4,68 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
 import Typography from '@mui/material/Typography';
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink','violet','purple','blue'];
 
+
+const Pots = JSON.parse(localStorage.getItem('pots'));
+
+
 const data = [
   {
     name: 'Bills',
-    uv: 4000,
+    uv: Pots[0].value,
     pv: 2400,
     amt: 2400,
   },
   {
     name: 'Charity',
-    uv: 3000,
+    uv: Pots[1].value,
     pv: 1398,
     amt: 2210,
   },
   {
     name: 'Eating Out',
-    uv: 2000,
+    uv: Pots[2].value,
     pv: 9800,
     amt: 2290,
   },
   {
     name: 'Entertainment',
-    uv: 2780,
+    uv: Pots[3].value,
     pv: 3908,
     amt: 2000,
   },
   {
     name: 'Expenses',
-    uv: 1890,
+    uv: Pots[4].value,
     pv: 4800,
     amt: 2181,
   },
   {
     name: 'Groceries',
-    uv: 2390,
+    uv: Pots[5].value,
     pv: 3800,
     amt: 2500,
   },
   {
     name: 'Holidays',
-    uv: 2390,
+    uv: Pots[6].value,
     pv: 3800,
     amt: 2500,
   },
   {
     name: 'Savings',
-    uv: 2390,
+    uv: Pots[8].value,
     pv: 3800,
     amt: 2500,
   },
   {
     name: 'Shopping',
-    uv: 2390,
+    uv: Pots[9].value,
     pv: 3800,
     amt: 2500,
   },
   {
     name: 'Transport',
-    uv: 3490,
+    uv: Pots[10].value,
     pv: 4300,
     amt: 2100,
   },
