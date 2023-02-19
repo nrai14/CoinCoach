@@ -4,7 +4,9 @@ import AddTransaction from '../components/AddTransaction';
 import ShowPots from '../components/ShowPots';
 
 
+
 import Typography from '@mui/material/Typography';
+
 
 
 function Tracker() {
@@ -15,7 +17,7 @@ function Tracker() {
     <InitPots/>
     <AddTransaction/>
     <ShowPots/>
-
+   
 
     </>
   );

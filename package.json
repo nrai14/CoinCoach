@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/joy": "^5.0.0-alpha.67",
     "@mui/material": "^5.11.9",
     "@mui/x-data-grid": "^5.17.24",
     "@mui/x-date-pickers": "^5.0.19",
@@ -18,6 +19,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
+    "recharts": "^2.4.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

@@ -25,6 +25,7 @@ function AddTransaction() {
 
   const [date, setDate] = useState(null);
   const [formData, setFormData] = useState({
+
     category: '',
     description: '',
     value: ''
@@ -46,36 +47,49 @@ function AddTransaction() {
   const handleSubmit = (event) => {
 
     event.preventDefault();
-    const newTransactions = 
+
+
+
+
+
+    //Add new transactions to the array
+    const existingTransactions = JSON.parse(localStorage.getItem('transactions'));
+
+    if (existingTransactions) {
+
+      const newId = existingTransactions.length;
+
+      const newTransactions =
       {
+        id: newId,
         date: date,
         category: formData.category,
         description: formData.description,
         value: formData.value,
-      }
-    ;
-   
+      };
 
-    
-
-   //Add new transactions to the array
-    const existingTransactions = JSON.parse(localStorage.getItem('transactions'));
-     
-    if( existingTransactions ){
-     
-        //Push new element into the Array 
-        setTransactions(newTransactions);
-        existingTransactions.push(transactions);
-        localStorage.setItem('transactions', JSON.stringify(existingTransactions));
+      //Push new element into the Array 
+      setTransactions(newTransactions);
+      existingTransactions.push(transactions);
+      localStorage.setItem('transactions', JSON.stringify(existingTransactions));
 
     }
-    else{
+    else {
+
+      const newTransactions =
+      {
+        id: 0,
+        date: date,
+        category: formData.category,
+        description: formData.description,
+        value: formData.value,
+      };
 
       localStorage.setItem('transactions', JSON.stringify([newTransactions]));
 
     }
-   
-  
+
+
     // //Pot logics 
     // //id 7 = Income adds to Balance and to Income pot
     // //All other ids subtract from  Balance and add to individual pots
@@ -83,30 +97,70 @@ function AddTransaction() {
     // console.log('MyPots[1]');
     // console.log(MyPots[1].value +1);
     //  MyPots[1].value=MyPots[1].value +1
-    
-     if (formData.category===7){
+
+    if (formData.category === 'Income') {
       //Adds to pot 11 (Balance)
-      //Adds to pot 7    
-      MyPots[11].value=+MyPots[11].value + +formData.value;
-      MyPots[7].value=+MyPots[7].value + +formData.value;    
-     }
-     else{
-        //Subtract from pot 11
-        //Adds to individual pot
-        MyPots[11].value=MyPots[11].value-formData.value;
-        MyPots[formData.category].value=+MyPots[formData.category].value+ +formData.value;
-      
+      //Adds to pot 7   
+
+      MyPots[11].value = +MyPots[11].value + +formData.value;
+      MyPots[7].value = +MyPots[7].value + +formData.value;
+    }
+    else {
+    
+      //Subtract from pot 11
+      //Adds to individual pot
      
-      }
-     localStorage.setItem('pots', JSON.stringify(MyPots));  
+      MyPots[11].value = MyPots[11].value - formData.value;
+
+      let idPot = 0  
+      switch (formData.category) {
+        case 'Bills':
+           idPot = 0;
+          break;
+        case 'Charity':
+          idPot = 1;
+          break;
+        case 'Eating Out':
+          idPot = 2;
+          break;
+        case 'Entertainment':
+          idPot = 3;
+          break;
+        case 'Expenses':
+           idPot = 4;
+          break;
+        case 'Groceries':
+           idPot = 5;
+          break;
+        case 'Holidays':
+           idPot = 6;
+          break;
+        case 'Savings':
+           idPot = 8;
+          break;
+        case 'Shopping':
+           idPot = 9;
+          break;
+        case 'Transport':
+         idPot = 10;
+          break;
+
+       }
+     
+     MyPots[idPot].value = +MyPots[idPot].value + +formData.value;
+
+
+    }
+
+    localStorage.setItem('pots', JSON.stringify(MyPots));
 
     //Cleans inputs 
-     setDate(null);
-     setFormData( {
-       category: '',
-       description: '',
-       value: ''
-     });
+    setDate(null);
+    setFormData({
+      category: '',
+      description: '',
+      value: ''
+    });
 
 
 
@@ -145,17 +199,17 @@ function AddTransaction() {
                     value={formData.category}
 
                     onChange={handleChange}>
-                    <MenuItem value={0}>Bills</MenuItem>
-                    <MenuItem value={1}>Charity</MenuItem>
-                    <MenuItem value={2}>Eating Out</MenuItem>
-                    <MenuItem value={3}>Entertainment</MenuItem>
-                    <MenuItem value={4}>Expenses</MenuItem>
-                    <MenuItem value={5}>Groceries</MenuItem>
-                    <MenuItem value={6}>Holidays</MenuItem>
-                    <MenuItem value={7}>Income</MenuItem>
-                    <MenuItem value={8}>Savings</MenuItem>
-                    <MenuItem value={9}>Shopping</MenuItem>
-                    <MenuItem value={10}>Transport</MenuItem>
+                    <MenuItem value={'Bills'}>Bills</MenuItem>
+                    <MenuItem value={'Charity'}>Charity</MenuItem>
+                    <MenuItem value={'Eating Out'}>Eating Out</MenuItem>
+                    <MenuItem value={'Entertainment'}>Entertainment</MenuItem>
+                    <MenuItem value={'Expenses'}>Expenses</MenuItem>
+                    <MenuItem value={'Groceries'}>Groceries</MenuItem>
+                    <MenuItem value={'Holidays'}>Holidays</MenuItem>
+                    <MenuItem value={'Income'}>Income</MenuItem>
+                    <MenuItem value={'Savings'}>Savings</MenuItem>
+                    <MenuItem value={'Shopping'}>Shopping</MenuItem>
+                    <MenuItem value={'Transport'}>Transport</MenuItem>
                   </Select>
                 </FormControl>
               </Grid>
