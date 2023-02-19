@@ -33,10 +33,10 @@ function Tracker() {
           <AddTransaction />
         </Grid>
         <Grid item xs={6}>
-        <RenderIncome/>
+        {/* <RenderIncome/> */}
         </Grid>
         <Grid item xs={6}>
-        <RenderFiveTransactions/>
+        {/* <RenderFiveTransactions/> */}
         </Grid>
 
         <Grid item xs={7}>
