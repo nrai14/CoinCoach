@@ -1,49 +1,41 @@
 
-import InitPots from '../components/InitPots'; 
+import InitPots from '../components/InitPots';
 import AddTransaction from '../components/AddTransaction';
-
 import RenderPots from '../components/RenderPots'
+
 
 
 import Typography from '@mui/material/Typography';
 import RenderTransactions from '../components/RenderTransactions';
 import RenderCards from '../components/RenderCards';
 
-import Container from '@mui/material/Container';
-import Paper from '@mui/material/Paper';
+
 import Grid from '@mui/material/Grid';
+import RenderIncome from '../components/RenderIncome';
 
 function Tracker() {
 
   return (
     <>
-    <Typography variant='h2' align='center'>Money Tracker</Typography>
-    <InitPots/>
-    
- 
-   
-   
- 
-  
-  
-         
+      <Typography variant='h2' align='center'>Money Tracker</Typography>
+      <InitPots />
+      <RenderIncome/>
 
-
-    <Grid container spacing={2}>
-  <Grid item xs={8}>
-      <RenderCards/>
-  </Grid>
-  <Grid item xs={4}>
-   <AddTransaction/>
-  </Grid>
-  <Grid item xs={7}>
-  <RenderPots/>
-  </Grid>
-  <Grid item xs={5}>
-  <RenderTransactions/>
-   
-  </Grid>
-</Grid>
+      <Grid container spacing={2}>
+        <Grid item xs={8}>
+          <RenderCards />
+        </Grid>
+      
+        <Grid item xs={4}>
+          <AddTransaction />
+        </Grid>
+        <Grid item xs={7}>
+          <RenderPots />
+        </Grid>
+        <Grid item xs={5}>
+          <RenderTransactions />
+        </Grid>
+      </Grid>
 
 
 

@@ -169,7 +169,7 @@ function AddTransaction() {
 
   return (
     <>
-      <Typography variant='h3' align='center'>Add Transaction</Typography>
+      {/* <Typography variant='h3' align='center'>Add Transaction</Typography> */}
       <Card style={{ maxWidth: 400, margin: "0 auto", padding: "0px 5px" }} >
         <CardContent>
           <form onSubmit={handleSubmit}>
