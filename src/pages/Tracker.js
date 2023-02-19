@@ -2,7 +2,7 @@
 import InitPots from '../components/InitPots'; 
 import AddTransaction from '../components/AddTransaction';
 import ShowPots from '../components/ShowPots';
-
+import Pie from '../components/Pie'
 
 
 import Typography from '@mui/material/Typography';
@@ -17,7 +17,8 @@ function Tracker() {
     <InitPots/>
     <AddTransaction/>
     <ShowPots/>
-   
+    <Pie/>
+
 
     </>
   );
