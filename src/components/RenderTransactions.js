@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 
 
 
-function ShowPots() {
+function RenderTransactions() {
 
  
  //const rows = JSON.parse(localStorage.getItem('transactions'));
@@ -47,7 +47,7 @@ function ShowPots() {
     return (
         <>
             
-            <Typography variant='h2' align='center'>ShowPots</Typography>
+            <Typography variant='h3' align='center'>Last Transactions</Typography>
 
 
 
@@ -83,20 +83,10 @@ function ShowPots() {
         experimentalFeatures={{ newEditingApi: true }}
       />
     </Box>
-
-
    
-    
-    
-      
-   
-
-
-  
-            
 
         </>
     )
 };
 
-export default ShowPots;
+export default RenderTransactions;

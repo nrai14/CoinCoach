@@ -1,11 +1,12 @@
 
 import InitPots from '../components/InitPots'; 
 import AddTransaction from '../components/AddTransaction';
-import ShowPots from '../components/ShowPots';
-import Pie from '../components/Pie'
+
+import RenderPots from '../components/RenderPots'
 
 
 import Typography from '@mui/material/Typography';
+import RenderTransactions from '../components/RenderTransactions';
 
 
 
@@ -16,8 +17,8 @@ function Tracker() {
     <Typography variant='h2' align='center'>Tracker</Typography>
     <InitPots/>
     <AddTransaction/>
-    <ShowPots/>
-    <Pie/>
+    <RenderTransactions/>
+    <RenderPots/>
 
 
     </>
