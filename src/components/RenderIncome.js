@@ -15,10 +15,11 @@ useEffect(() => {
 
       const onlyIncomes = transactions.filter(val => val.category ==='Income');
      
+      const reverse = onlyIncomes.reverse();
      
-      for (let index = 0; index < onlyIncomes.length; index++) {
+      for (let index = 0; (index < reverse.length && index < 5) ; index++) {
        
-       newData.push({name: onlyIncomes[index].description, value: +onlyIncomes[index].value });
+       newData.push({value: +reverse[index].value});
       
       }
  
@@ -32,7 +33,7 @@ useEffect(() => {
   return (
   
     <>
-     <Typography variant='h6' align='center'>5 recent Incomes </Typography>
+     <Typography variant='h6' align='center'>Most recent Incomes </Typography>
 
      <PieChart width={400} height={400} >
       <Pie
