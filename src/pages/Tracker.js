@@ -12,6 +12,7 @@ import RenderCards from '../components/RenderCards';
 
 import Grid from '@mui/material/Grid';
 import RenderIncome from '../components/RenderIncome';
+import RenderFiveTransactions from '../components/RenderFiveTransactions';
 
 function Tracker() {
 
@@ -20,7 +21,9 @@ function Tracker() {
       <Typography variant='h2' align='center'>Money Tracker</Typography>
       <InitPots />
       <RenderIncome/>
+      <RenderFiveTransactions/>
 
+      
       <Grid container spacing={2}>
         <Grid item xs={8}>
           <RenderCards />

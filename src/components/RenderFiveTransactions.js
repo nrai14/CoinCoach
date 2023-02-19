@@ -1,65 +1,106 @@
 
 
-
-
-
-
-
-import React, { PureComponent } from 'react';
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
+import React from "react";
+import { RadialBarChart, RadialBar, Legend } from "recharts";
 
 
 function RenderFiveTransactions() {
 
+const transactions = JSON.parse(localStorage.getItem('transactions'));
 
-const data = [
-  { name: 'Group A', value: 400 },
-  { name: 'Group B', value: 300 },
-  { name: 'Group C', value: 300 },
-  { name: 'Group D', value: 200 },
-];
 
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+// const data = [];
 
-const RADIAN = Math.PI / 180;
-const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
-  const radius = innerRadius + (outerRadius - innerRadius) * 1.3;
-  const x = cx + radius * Math.cos(-midAngle * RADIAN);
-  const y = cy + radius * Math.sin(-midAngle * RADIAN);
+// data.push({name: 'Group A', value: +transactions[0].value});
+// //   { name: 'Group A', value: 300 },
+// //   { name: 'Group B', value: 300 },
+// //   { name: 'Group C', value: 300 },
+// //   { name: 'Group D', value: 200 },
+// //   { name: 'Group D', value: 200 },
+// // ;
 
-  return (
-    <text x={x} y={y} fill="red" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
-      {`${(percent * 100).toFixed(0)}%`}
-    </text>
-  );
-};
+// const data = [
+//     {name: 'Group A', value: +transactions[0].value},
+//     {name: 'Group A', value: +transactions[1].value},
+//     {name: 'Group A', value: +transactions[2].value},
+//     {name: 'Group A', value: +transactions[3].value},
+//     {name: 'Group A', value: +transactions[4].value}
+//   ];
+
+  const data = [
+    {
+      name: transactions[(transactions.length-1)].category + transactions[(transactions.length-1)].date,
+      uv: transactions[(transactions.length-1)].value,
+      pv: 2400,
+      fill: "#8884d8"
+    },
+    {
+        name:transactions[(transactions.length-2)].category,
+        uv: transactions[(transactions.length-2)].value,
+      pv: 4567,
+      fill: "#83a6ed"
+    },
+    {
+        name: transactions[(transactions.length-3)].category,
+        uv: transactions[(transactions.length-3)].value,
+      pv: 1398,
+      fill: "#8dd1e1"
+    },
+    {
+        name: transactions[(transactions.length-4)].category,
+        uv: transactions[(transactions.length-4)].value,
+      pv: 9800,
+      fill: "#82ca9d"
+    },
+    {
+        name: transactions[(transactions.length-5)].category,
+        uv: transactions[(transactions.length-5)].value,
+      pv: 3908,
+      fill: "#a4de6c"
+    }
+   
+  ];
+  
+  const style = {
+    top: 0,
+    left: 350,
+    lineHeight: "34px"
+  };
 
 
 return(
 <>
+<RadialBarChart
+      width={500}
+      height={300}
+      cx={150}
+      cy={150}
+      innerRadius={20}
+      outerRadius={140}
+      barSize={10}
+      data={data}
+    >
+      <RadialBar
+        minAngle={15}
+        label={{ position: "insideStart", fill: "#000" }}
+        background
+        clockWise
+        dataKey="uv"
+      />
+      <Legend
+        iconSize={10}
+        width={600}
+        height={240}
+        layout="vertical"
+        verticalAlign="middle"
+        wrapperStyle={style}
+      />
+    </RadialBarChart>
 
-<ResponsiveContainer width="100%" height="100%">
-        <PieChart width={400} height={400}>
-          <Pie
-            data={data}
-            cx="50%"
-            cy="50%"
-            labelLine={false}
-            label={renderCustomizedLabel}
-            outerRadius={80}
-            fill="#8884d8"
-            dataKey="value"
-          >
-            {data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-            ))}
-          </Pie>
-        </PieChart>
-      </ResponsiveContainer>
 </>
 
 
-)
+);
 
 
 }
