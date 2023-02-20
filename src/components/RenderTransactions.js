@@ -9,14 +9,8 @@ import { useState, useEffect } from 'react';
 
 function RenderTransactions() {
 
-  const [text, setText]= useState('');
+  const [textOnScreen, setText]= useState('');
   
-
-
-  // const rows = JSON.parse(localStorage.getItem('pots'));
-
-
-
 
   useEffect(() => {
     const rows = JSON.parse(localStorage.getItem('transactions'));
@@ -71,7 +65,7 @@ function RenderTransactions() {
     }
     else {
   
-      setText(<Typography variant='h4' align='center'>There is no history yet.</Typography>);
+      setText(<Typography variant='body1' align='center'>There are no transactions stored. Transactions will be shown in a table.</Typography>);
   
     }
   
@@ -85,13 +79,8 @@ function RenderTransactions() {
     <>
       <Typography variant='h6' align='center'>Transactions History</Typography>
       
-     {text}
-       
-    
-
-    
-
-
+      {textOnScreen}
+      
     </>
   )
 };

@@ -4,11 +4,30 @@ import Card from '@mui/joy/Card';
 import CardCover from '@mui/joy/CardCover';
 import CardContent from '@mui/joy/CardContent';
 import Typography from '@mui/joy/Typography';
-
+import { useState, useEffect } from 'react';
 
 function RenderCards() {
 
-    const Pots = JSON.parse(localStorage.getItem('pots'));
+   
+
+    const [Pot1, setPot1]= useState(0);
+    const [Pot2, setPot2]= useState(0);
+    const [Pot3, setPot3]= useState(0);
+
+
+    useEffect(() => {
+      const Pots = JSON.parse(localStorage.getItem('pots'));
+
+  
+      if(Pots) {
+        setPot1(Pots[11].value);
+        setPot2(Pots[7].value);
+        setPot3(Pots[8].value);
+      }
+  
+  
+    },[]);
+
 
     return (
       <>
@@ -36,7 +55,7 @@ function RenderCards() {
             textColor="#001C55"
             mt={{ xs: 12, sm: 18 }}
           >
-            Balance : £{Pots[11].value}
+            Balance : £{Pot1}
           </Typography>
         </CardContent>
       </Card>
@@ -63,7 +82,7 @@ function RenderCards() {
             mt={{ xs: 12, sm: 18 }}
             
           >
-            Total Income : £{Pots[7].value}
+            Total Income : £{Pot2}
           </Typography>
         </CardContent>
       </Card>
@@ -90,7 +109,7 @@ function RenderCards() {
             textColor="#001C55"
             mt={{ xs: 12, sm: 18 }}
           >
-            Total Savings :£{Pots[8].value}
+            Total Savings :£{Pot3}
           </Typography>
         </CardContent>
       </Card>
