@@ -25,14 +25,19 @@ function Tracker() {
       
       <InitPots />
 
-      <RenderTopFive/>
+    
 
 
       <Box sx={{ bgcolor: ' #eaf6f9', border: 2, borderColor: '#F7F7F7', borderRadius: 3, maxWidth: '70%', margin: "0 auto" }}>
         <Typography variant='h3' align='center'>Money Tracker</Typography>
         <Grid container spacing={2} justifyContent="center" >
-          <Grid item xs={12} display ="flex" justifyContent="center" alignItems="center">
+          
+          <Grid item xs={9}>
             <RenderCards />
+            
+          </Grid>
+          <Grid item xs={3} > 
+            <RenderTopFive/>
           </Grid>
 
           <Grid item xs={5} >
@@ -51,7 +56,7 @@ function Tracker() {
           <Grid item xs={12}  >
             <RenderPots />
 
-            <CurrencyConverter/>
+            {/* <CurrencyConverter/> */}
           </Grid>
          
         </Grid>

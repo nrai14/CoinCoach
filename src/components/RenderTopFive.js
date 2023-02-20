@@ -8,10 +8,15 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
 
 
 import LooksOneIcon from '@mui/icons-material/LooksOne';
 import LooksTwoIcon from '@mui/icons-material/LooksTwo';
+import Looks3Icon from '@mui/icons-material/Looks3';
+import Looks4Icon from '@mui/icons-material/Looks4';
+import Looks5Icon from '@mui/icons-material/Looks5';
+
 
 
 
@@ -33,28 +38,54 @@ function RenderTopFive() {
 
             setText( 
              
-                <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+             //   <Box sx={{ width: '100%', maxWidth: 260, bgcolor: '#96bac4', color:'#fff' }}>
                 
+                <Card style={{ maxWidth: 250, margin: "0 auto", padding: "0px 5px", color:'#488485'  }} >
                   <List>
                     <ListItem disablePadding>
-                      <ListItemButton>
+                     
                         <ListItemIcon>
-                          <LooksOneIcon />
+                          <LooksOneIcon fontSize='large' />
                         </ListItemIcon>
-                        <ListItemText primary="Inbox" />
-                      </ListItemButton>
+                        <ListItemText primary={Sorted[0].category +' -  £' + Sorted[0].value} />
+                      
                     </ListItem>
                     <ListItem disablePadding>
-                      <ListItemButton>
+                     
                         <ListItemIcon>
-                          <LooksTwoIcon />
+                          <LooksTwoIcon fontSize='large' />
                         </ListItemIcon>
-                        <ListItemText primary="Drafts" />
-                      </ListItemButton>
+                        <ListItemText primary={Sorted[1].category +' -  £' + Sorted[1].value} />
+                   
                     </ListItem>
+
+                    <ListItem disablePadding>
+                     
+                     <ListItemIcon>
+                       <Looks3Icon fontSize='large' />
+                     </ListItemIcon>
+                     <ListItemText primary={Sorted[2].category +' -  £' + Sorted[2].value} />
+                
+                 </ListItem>
+                 <ListItem disablePadding>
+                     
+                     <ListItemIcon>
+                       <Looks4Icon  fontSize='large'/>
+                     </ListItemIcon>
+                     <ListItemText primary={Sorted[3].category +' -  £' + Sorted[3].value} />
+                
+                 </ListItem>
+                 <ListItem disablePadding>
+                     
+                     <ListItemIcon>
+                       <Looks5Icon  fontSize='large'/>
+                     </ListItemIcon>
+                     <ListItemText primary={Sorted[4].category +' -  £' + Sorted[4].value} />
+                
+                 </ListItem>
                   </List>
                
-              </Box>
+              </Card>
                 
 
 
