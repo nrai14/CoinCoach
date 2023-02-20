@@ -17,8 +17,7 @@ function RenderCards() {
           <video
             autoPlay
             loop
-            muted
-          
+            muted    
           >
             <source
               src="https://static.vecteezy.com/system/resources/previews/001/803/901/mp4/euro-coins-falling-into-a-glass-jar-free-video.mp4"
@@ -36,7 +35,7 @@ function RenderCards() {
             mt={{ xs: 12, sm: 18 }}
             
           >
-            Income : £{Pots[7].value}
+            Total Income : £{Pots[7].value}
           </Typography>
         </CardContent>
       </Card>
@@ -62,7 +61,7 @@ function RenderCards() {
             textColor="#000"
             mt={{ xs: 12, sm: 18 }}
           >
-            Savings :£{Pots[8].value}
+            Total Savings :£{Pots[8].value}
           </Typography>
         </CardContent>
       </Card>

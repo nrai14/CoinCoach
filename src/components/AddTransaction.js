@@ -49,15 +49,16 @@ function AddTransaction() {
 
     event.preventDefault();
 
-
     //Add new transactions to the array
     const existingTransactions = JSON.parse(localStorage.getItem('transactions'));
 
     if (existingTransactions) {
-
+    
       const newId = existingTransactions.length;
-      const formattedDate = moment(date).format('DD/MM/YYYY');
-
+    
+  
+      const formattedDate = moment(`${date}`).format('DD/MM/YYYY');
+    
       const newTransactions =
       {
         id: newId,
@@ -75,8 +76,7 @@ function AddTransaction() {
     }
     else {
 
-      const formattedDate = moment(date).format('DD/MM/YYYY');
-
+      const formattedDate = moment(`${date}`).format('DD/MM/YYYY');
       const newTransactions =
       {
         id: 0,
@@ -95,24 +95,17 @@ function AddTransaction() {
     // //id 7 = Income adds to Balance and to Income pot
     // //All other ids subtract from  Balance and add to individual pots
     const MyPots = JSON.parse(localStorage.getItem('pots'));
-    // console.log('MyPots[1]');
-    // console.log(MyPots[1].value +1);
-    //  MyPots[1].value=MyPots[1].value +1
-
+ 
     if (formData.category === 'Income') {
       //Adds to pot 11 (Balance)
       //Adds to pot 7   
-
       MyPots[11].value = +MyPots[11].value + +formData.value;
       MyPots[7].value = +MyPots[7].value + +formData.value;
     }
-    else {
-    
+    else { 
       //Subtract from pot 11
       //Adds to individual pot
-     
       MyPots[11].value = MyPots[11].value - formData.value;
-
       let idPot = 0  
       switch (formData.category) {
         case 'Bills':
@@ -147,10 +140,7 @@ function AddTransaction() {
           break;
 
        }
-     
      MyPots[idPot].value = +MyPots[idPot].value + +formData.value;
-
-
     }
 
     localStorage.setItem('pots', JSON.stringify(MyPots));
@@ -183,7 +173,6 @@ function AddTransaction() {
                     value={date}
                    
                     onChange={(newValue) => {
- 
                       setDate(newValue);
                     }}
 
@@ -200,7 +189,6 @@ function AddTransaction() {
                     label="Category"
                     name="category"
                     value={formData.category}
-
                     onChange={handleChange}>
                     <MenuItem value={'Bills'}>Bills</MenuItem>
                     <MenuItem value={'Charity'}>Charity</MenuItem>
