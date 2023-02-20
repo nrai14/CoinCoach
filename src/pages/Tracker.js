@@ -11,8 +11,7 @@ import RenderCards from '../components/RenderCards';
 
 
 import Grid from '@mui/material/Grid';
-import RenderIncome from '../components/RenderIncome';
-import RenderFiveTransactions from '../components/RenderFiveTransactions';
+
 
 function Tracker() {
 
@@ -43,7 +42,7 @@ function Tracker() {
           <RenderPots />
         </Grid>
         <Grid item xs={5}>
-          {/* <RenderTransactions /> */}
+          <RenderTransactions />
         </Grid>
       </Grid>
 

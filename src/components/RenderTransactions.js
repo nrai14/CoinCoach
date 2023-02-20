@@ -8,21 +8,19 @@ import Box from '@mui/material/Box';
 
 function RenderTransactions() {
 
- 
-const rows = JSON.parse(localStorage.getItem('transactions'));
+
+  const rows = JSON.parse(localStorage.getItem('transactions'));
 
 
-// const rows = JSON.parse(localStorage.getItem('pots'));
+  // const rows = JSON.parse(localStorage.getItem('pots'));
 
 
-
-
-
-
- const columns = [
-    { field: 'id', 
-    headerName: '#', 
-    width: 10 },
+  const columns = [
+    {
+      field: 'id',
+      headerName: '#',
+      width: 10
+    },
     {
       field: 'date',
       headerName: 'Date',
@@ -47,32 +45,31 @@ const rows = JSON.parse(localStorage.getItem('transactions'));
       type: 'number',
       width: 160,
       editable: false,
-   
+
     },
   ];
-  
 
 
-    return (
-        <>
-            
-            <Typography variant='h6' align='center'>Transactions History</Typography>
+
+  return (
+    <>
+
+      <Typography variant='h6' align='center'>Transactions History</Typography>
+
+      <Box sx={{ height: '90%', width: '100%' }}>
+        <DataGrid
+          rows={rows}
+          columns={columns}
+          pageSize={10}
+          rowsPerPageOptions={[5]}
+          disableSelectionOnClick
+          experimentalFeatures={{ newEditingApi: true }}
+        />
+      </Box>
 
 
-    <Box sx={{ height: '90%', width: '100%' }}>
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        pageSize={5}
-        rowsPerPageOptions={[10]}   
-        disableSelectionOnClick
-        experimentalFeatures={{ newEditingApi: true }}
-      />
-    </Box>
-   
-
-        </>
-    )
+    </>
+  )
 };
 
 export default RenderTransactions;

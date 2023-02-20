@@ -9,7 +9,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
-import Typography from '@mui/material/Typography';
+
 
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -33,6 +33,9 @@ function AddTransaction() {
   });
 
 
+  function refreshPage() {
+    window.location.reload(false);
+  }
 
 
   const handleChange = (event) => {
@@ -153,7 +156,8 @@ function AddTransaction() {
       value: ''
     });
 
-
+    refreshPage();
+    
 
   }
 
