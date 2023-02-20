@@ -97,16 +97,11 @@ function RenderPots(){
 
 
       setText(
-      <BarChart
+      <BarChart style={{ margin: "0 auto" }}
       width={1060}
       height={600}
       data={data}
-      margin={{
-        top: 20,
-        right: 30,
-        left: 20,
-        bottom: 5,
-      }}
+     
     >
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="name" />

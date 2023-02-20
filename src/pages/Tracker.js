@@ -11,6 +11,7 @@ import RenderCards from '../components/RenderCards';
 import RenderIncome from '../components/RenderIncome';
 import RenderFiveTransactions from '../components/RenderFiveTransactions';
 
+import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 
 
@@ -20,34 +21,36 @@ function Tracker() {
     <>
       <Typography variant='h3' align='center'>Money Tracker</Typography>
       <InitPots />
-      
-      
 
 
-      <Grid container spacing={2}>
-        <Grid item xs={8}>
-          <RenderCards />
-        </Grid>
-      
-        <Grid item xs={4}>
-          <AddTransaction />
-        </Grid>
-        <Grid item xs={6}>
-        <RenderIncome/>
-        </Grid>
-        <Grid item xs={6}>
-        <RenderFiveTransactions/>
+
+      <Box sx={{ bgcolor: ' #eaf6f9', border: 2, borderColor: '#F7F7F7', borderRadius: 7, maxWidth: '70%', margin: "0 auto", }}>
+
+        <Grid container spacing={2} justifyContent="center" >
+          <Grid item xs={12} display ="flex" justifyContent="center" alignItems="center">
+            <RenderCards />
+          </Grid>
+
+          <Grid item xs={5} >
+            <AddTransaction />
+          </Grid>
+          <Grid item xs={7} >
+            <RenderTransactions />
+          </Grid>
+          <Grid item xs={6} display ="flex" justifyContent="center" alignItems="center">
+            <RenderIncome />
+          </Grid>
+          <Grid item xs={6} >
+            <RenderFiveTransactions />
+          </Grid>
+
+          <Grid item xs={12}  >
+            <RenderPots />
+          </Grid>
+         
         </Grid>
 
-        <Grid item xs={7}>
-          <RenderPots />
-        </Grid>
-        <Grid item xs={5}>
-          <RenderTransactions />
-        </Grid>
-      </Grid>
-
-
+      </Box>
 
     </>
   );

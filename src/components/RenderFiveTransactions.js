@@ -89,14 +89,14 @@ function RenderFiveTransactions() {
           }
           else{
 
-            setText(<Typography variant='body1' align='left'>There are less than 5 transactions stored.</Typography>);
+            setText(<Typography variant='body1' align='center'>There are less than 5 transactions stored.</Typography>);
           
           }
         },[]);
 
 return(
 <>
-<Typography variant='h6' align='left'>5 most recent Transactions</Typography>
+<Typography variant='h6' align='center'>5 most recent Transactions</Typography>
 {textOnScreen}
   
 </>
