@@ -43,7 +43,7 @@ useEffect(() => {
           cx={200}
           cy={200}
           outerRadius={130}
-          fill="#222479"
+          fill="#001C55"
           label
         />
       </PieChart>);

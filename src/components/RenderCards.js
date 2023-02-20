@@ -54,8 +54,7 @@ function RenderCards() {
             fontWeight="lg"
             textColor="#001C55"
             mt={{ xs: 12, sm: 18 }}
-          >
-            Balance : £{Pot1}
+          >Balance : £{Pot1}
           </Typography>
         </CardContent>
       </Card>

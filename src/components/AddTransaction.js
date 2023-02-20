@@ -14,12 +14,22 @@ import FormControl from '@mui/material/FormControl';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
 
 import moment from 'moment';
 
 function AddTransaction() {
 
 
+  const theme = createTheme({
+    palette: {
+      brand: {
+        main: '#001C55',
+        contrastText: '#fff',
+      },
+    },
+  });
 
 
   const [transactions, setTransactions] = useState([]);
@@ -235,10 +245,15 @@ function AddTransaction() {
               </Grid>
 
               <Grid item xs={12}>
+
+              <ThemeProvider theme={theme}>
                 <Button
                   type="submit"
                   variant='contained'
-                  fullWidth> Add Transaction </Button>
+                  color= 'brand'
+                  fullWidth
+                  > Add Transaction </Button>
+                  </ThemeProvider>
               </Grid>
 
             </Grid>

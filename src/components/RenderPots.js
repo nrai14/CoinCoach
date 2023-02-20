@@ -3,7 +3,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
 import Typography from '@mui/material/Typography';
-const colors = ['#0c104e', '#222479', '#1446a7',
+const colors = ['#001C55', '#222479', '#1446a7',
  '#4c78c9', '#b7cdf7', '#346568','#488485','#67bfbf','#96bac4','#c1e9f4'];
 
 

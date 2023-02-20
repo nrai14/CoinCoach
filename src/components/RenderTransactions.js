@@ -19,25 +19,30 @@ function RenderTransactions() {
       {
         field: 'id',
         headerName: '#',
-        width: 10
+        width: 10,
+        headerClassName: 'dataGridHeader',
       },
       {
         field: 'date',
         headerName: 'Date',
         width: 160,
         editable: false,
+        headerClassName: 'dataGridHeader',
       },
       {
         field: 'category',
         headerName: 'Category',
-        width: 160,
+        width: 200,
         editable: false,
+        headerClassName: 'dataGridHeader',
       },
       {
         field: 'description',
         headerName: 'Description',
-        width: 160,
+        width: 200,
         editable: false,
+        headerClassName: 'dataGridHeader',
+       
       },
       {
         field: 'value',
@@ -45,13 +50,19 @@ function RenderTransactions() {
         type: 'number',
         width: 160,
         editable: false,
+        headerClassName: 'dataGridHeader',
   
-      },
+      }
     ];
   
     if(rows) {
 
-      setText(<Box sx={{ height: '90%', width: '100%' }}>
+      setText(
+      <Box sx={{ height: '90%', width: '100%','& .dataGridHeader': {
+        backgroundColor: '#001C55',
+        color:'#fff',
+        fontSize: 16
+      },}}>
       <DataGrid
         rows={rows}
         columns={columns}
