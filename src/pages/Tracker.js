@@ -11,6 +11,7 @@ import RenderTransactions from '../components/RenderTransactions';
 import RenderCards from '../components/RenderCards';
 import RenderIncome from '../components/RenderIncome';
 import RenderFiveTransactions from '../components/RenderFiveTransactions';
+import RenderTopFive from '../components/RenderTopFive';
 
 
 import Box from '@mui/material/Box';
@@ -24,6 +25,7 @@ function Tracker() {
       
       <InitPots />
 
+      <RenderTopFive/>
 
 
       <Box sx={{ bgcolor: ' #eaf6f9', border: 2, borderColor: '#F7F7F7', borderRadius: 3, maxWidth: '70%', margin: "0 auto" }}>
