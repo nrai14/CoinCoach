@@ -5,6 +5,7 @@ import CardCover from '@mui/joy/CardCover';
 import CardContent from '@mui/joy/CardContent';
 import Typography from '@mui/joy/Typography';
 
+
 function RenderCards() {
 
     const Pots = JSON.parse(localStorage.getItem('pots'));
@@ -12,6 +13,33 @@ function RenderCards() {
     return (
       <>
     <Box sx={{ display: 'flex', gap: 8, flexWrap: 'wrap', p: 20, m: 0,  }}>
+
+    <Card  sx={{ maxWidth: 250, flexGrow: 1 }}>
+        <CardCover>
+          <video
+            autoPlay
+            loop
+            muted
+          
+          >
+            <source
+              src="https://static.vecteezy.com/system/resources/previews/002/039/650/mp4/woman-holding-smartphone-and-credit-ard-free-video.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </CardCover>
+        <CardContent>
+          <Typography
+            level="h1"
+            fontSize={35}
+            fontWeight="lg"
+            textColor="#001C55"
+            mt={{ xs: 12, sm: 18 }}
+          >
+            Balance : £{Pots[11].value}
+          </Typography>
+        </CardContent>
+      </Card>
     <Card  sx={{ maxWidth: 250, flexGrow: 1 }}>
         <CardCover>
           <video
@@ -26,9 +54,9 @@ function RenderCards() {
           </video>
         </CardCover>
         <CardContent>
-          <Typography
+          <Typography 
             level="h1"
-            
+            fontSize={35}
             fontWeight="lg"
             textColor="#fff"
            
@@ -57,8 +85,9 @@ function RenderCards() {
         <CardContent>
           <Typography
             level="h1"
+            fontSize={35}
             fontWeight="lg"
-            textColor="#000"
+            textColor="#001C55"
             mt={{ xs: 12, sm: 18 }}
           >
             Total Savings :£{Pots[8].value}
@@ -67,31 +96,7 @@ function RenderCards() {
       </Card>
 
 
-      <Card  sx={{ maxWidth: 250, flexGrow: 1 }}>
-        <CardCover>
-          <video
-            autoPlay
-            loop
-            muted
-          
-          >
-            <source
-              src="https://static.vecteezy.com/system/resources/previews/002/039/650/mp4/woman-holding-smartphone-and-credit-ard-free-video.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </CardCover>
-        <CardContent>
-          <Typography
-            level="h1"
-            fontWeight="lg"
-            textColor="#000"
-            mt={{ xs: 12, sm: 18 }}
-          >
-            Balance : £{Pots[11].value}
-          </Typography>
-        </CardContent>
-      </Card>
+   
       {/* <Card  sx={{ maxWidth: 250, flexGrow: 1 }}>
         <CardCover>
           <img

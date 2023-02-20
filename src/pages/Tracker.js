@@ -8,7 +8,7 @@ import RenderPots from '../components/RenderPots'
 import Typography from '@mui/material/Typography';
 import RenderTransactions from '../components/RenderTransactions';
 import RenderCards from '../components/RenderCards';
-
+import RenderIncome from '../components/RenderIncome'
 
 import Grid from '@mui/material/Grid';
 
@@ -32,7 +32,7 @@ function Tracker() {
           <AddTransaction />
         </Grid>
         <Grid item xs={6}>
-        {/* <RenderIncome/> */}
+        <RenderIncome/>
         </Grid>
         <Grid item xs={6}>
         {/* <RenderFiveTransactions/> */}
