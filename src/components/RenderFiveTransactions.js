@@ -26,34 +26,34 @@ function RenderFiveTransactions() {
 
             const data = [
               {
-                name: transactions[(transactions.length-1)].category + transactions[(transactions.length-1)].date,
+                name: transactions[(transactions.length-1)].category +' - '+ transactions[(transactions.length-1)].date,
                 uv: transactions[(transactions.length-1)].value,
                 pv: 2400,
-                fill: "#8884d8"
+                fill: "#222479"
               },
               {
-                  name:transactions[(transactions.length-2)].category + transactions[(transactions.length-2)].date,
+                  name:transactions[(transactions.length-2)].category +' - '+ transactions[(transactions.length-2)].date,
                   uv: transactions[(transactions.length-2)].value,
                 pv: 4567,
-                fill: "#83a6ed"
+                fill: "#1446a7"
               },
               {
-                  name: transactions[(transactions.length-3)].category + transactions[(transactions.length-3)].date,
+                  name: transactions[(transactions.length-3)].category +' - '+ transactions[(transactions.length-3)].date,
                   uv: transactions[(transactions.length-3)].value,
                 pv: 1398,
-                fill: "#8dd1e1"
+                fill: "#346568"
               },
               {
-                  name: transactions[(transactions.length-4)].category + transactions[(transactions.length-4)].date,
+                  name: transactions[(transactions.length-4)].category +' - '+ transactions[(transactions.length-4)].date,
                   uv: transactions[(transactions.length-4)].value,
                 pv: 9800,
-                fill: "#82ca9d"
+                fill: "#488485"
               },
               {
-                  name: transactions[(transactions.length-5)].category + transactions[(transactions.length-5)].date,
+                  name: transactions[(transactions.length-5)].category +' - '+ transactions[(transactions.length-5)].date,
                   uv: transactions[(transactions.length-5)].value,
                 pv: 3908,
-                fill: "#a4de6c"
+                fill: "#96bac4"
               }
             
             ];
@@ -65,18 +65,18 @@ function RenderFiveTransactions() {
               cy={150}
               innerRadius={20}
               outerRadius={140}
-              barSize={10}
+              barSize={20}
               data={data}
             >
               <RadialBar
                 minAngle={15}
-                label={{ position: "insideStart", fill: "#000" }}
+                label={{ position: "insideStart", fill: "#F7F7F7" }}
                 background
                 clockWise
                 dataKey="uv"
               />
               <Legend
-                iconSize={10}
+                iconSize={20}
                 width={600}
                 height={240}
                 layout="vertical"

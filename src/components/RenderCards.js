@@ -31,7 +31,7 @@ function RenderCards() {
 
     return (
       <>
-    <Box sx={{ display: 'flex', gap: 8, flexWrap: 'wrap', p: 20, m: 0,  }}>
+    <Box sx={{ display: 'flex', gap: 8, flexWrap: 'wrap', p: 10, m: 0,  }}>
 
     <Card  sx={{ maxWidth: 250, flexGrow: 1 }}>
         <CardCover>
@@ -50,7 +50,7 @@ function RenderCards() {
         <CardContent>
           <Typography
             level="h1"
-            fontSize={35}
+            fontSize={30}
             fontWeight="lg"
             textColor="#001C55"
             mt={{ xs: 12, sm: 18 }}
@@ -75,20 +75,19 @@ function RenderCards() {
         <CardContent>
           <Typography 
             level="h1"
-            fontSize={35}
+            fontSize={30}
             fontWeight="lg"
             textColor="#fff"
            
             mt={{ xs: 12, sm: 18 }}
             
-          >
-            Total Income : £{Pot2}
+          >Income : £{Pot2}
           </Typography>
         </CardContent>
       </Card>
 
       <Card  sx={{ maxWidth: 250, flexGrow: 1 }}>
-        <CardCover>
+        <CardCover >
           <video
             autoPlay
             loop
@@ -104,12 +103,12 @@ function RenderCards() {
         <CardContent>
           <Typography
             level="h1"
-            fontSize={35}
+            fontSize={30}
             fontWeight="lg"
-            textColor="#001C55"
+            textColor="#1446A7"
+            
             mt={{ xs: 12, sm: 18 }}
-          >
-            Total Savings :£{Pot3}
+          >Savings : £{Pot3}
           </Typography>
         </CardContent>
       </Card>

@@ -18,7 +18,7 @@ function Tracker() {
 
   return (
     <>
-      <Typography variant='h2' align='center'>Money Tracker</Typography>
+      <Typography variant='h3' align='center'>Money Tracker</Typography>
       <InitPots />
       
       
