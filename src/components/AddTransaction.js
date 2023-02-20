@@ -15,6 +15,7 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
+import moment from 'moment';
 
 function AddTransaction() {
 
@@ -55,11 +56,12 @@ function AddTransaction() {
     if (existingTransactions) {
 
       const newId = existingTransactions.length;
+      const formattedDate = moment(date).format('DD/MM/YYYY');
 
       const newTransactions =
       {
         id: newId,
-        date: date,
+        date: formattedDate,
         category: formData.category,
         description: formData.description,
         value: formData.value,
@@ -73,10 +75,12 @@ function AddTransaction() {
     }
     else {
 
+      const formattedDate = moment(date).format('DD/MM/YYYY');
+
       const newTransactions =
       {
         id: 0,
-        date: date,
+        date: formattedDate,
         category: formData.category,
         description: formData.description,
         value: formData.value,
@@ -177,10 +181,9 @@ function AddTransaction() {
                   <DatePicker
                     label="Date"
                     value={date}
-                    views={['day']}
+                   
                     onChange={(newValue) => {
-
-                      let formattedDate =
+ 
                       setDate(newValue);
                     }}
 
