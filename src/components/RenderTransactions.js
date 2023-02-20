@@ -57,6 +57,9 @@ function RenderTransactions() {
   
     if(rows) {
 
+      const newRows = rows.filter(a => a);
+      console.log(newRows);
+
       setText(
       <Box sx={{ height: '90%', width: '100%','& .dataGridHeader': {
         backgroundColor: '#001C55',
@@ -64,7 +67,7 @@ function RenderTransactions() {
         fontSize: 16
       },}}>
       <DataGrid
-        rows={rows}
+        rows={newRows}
         columns={columns}
         pageSize={10}
         rowsPerPageOptions={[5]}
