@@ -38,7 +38,7 @@ function About() {
           investments.</strong> 
         </p>
         <p>
-          Nish's designed the front page, which sets the tone for the whole user
+          Nish designed the front page, which sets the tone for the whole user
           experience. Sabrina worked tirelessly to create the Financial Tracker
           functionality, making sure it meets user expectations. Laura's visual
           displays showcase the data from the tracker and make it easy for users
