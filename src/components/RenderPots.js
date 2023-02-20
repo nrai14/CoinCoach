@@ -99,7 +99,7 @@ function RenderPots(){
       setText(
       <BarChart style={{ margin: "0 auto" }}
       width={1060}
-      height={600}
+      height={500}
       data={data}
      
     >

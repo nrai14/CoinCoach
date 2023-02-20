@@ -4,10 +4,25 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
 
 import { useState } from "react";
 
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+
 function ContactForm() {
+
+  const theme = createTheme({
+    palette: {
+      brand: {
+        main: '#001C55',
+        contrastText: '#fff',
+      },
+    },
+  });
+
+
 
   const [success, setSuccess] = useState(false);
   const [formData, setFormData] = useState({
@@ -66,7 +81,7 @@ function ContactForm() {
                 label='Name' 
                 name='name'
                 value={formData.name}
-                Placeholder='Enter name' 
+                placeholder='Please enter your name' 
                 onChange={handleChange}
                 variant='outlined' 
                 fullWidth />
@@ -79,7 +94,7 @@ function ContactForm() {
                 label='Email' 
                 name='email'
                 value={formData.email}
-                Placeholder='Enter email' 
+                placeholder='Please enter your email address' 
                 onChange={handleChange}
                 variant='outlined' 
                 fullWidth 
@@ -92,7 +107,7 @@ function ContactForm() {
                 name='message'
                 value={formData.message}
                 multiline rows={4} 
-                Placeholder='Please type your message here' 
+                placeholder='Please type your message here' 
                 onChange={handleChange}
                 variant='outlined' 
                 fullWidth 
@@ -100,18 +115,28 @@ function ContactForm() {
               </Grid>
 
               <Grid item xs={12}>
+              <ThemeProvider theme={theme}>
                 <Button type="submit" 
                 variant='contained' 
+                color= 'brand'
                 fullWidth> 
                 Submit
                 </Button>
+                </ThemeProvider>
+              </Grid>
+
+              <Grid item xs={12}>
+              {success && (<Typography variant='h4' align='center'> Thank you very much for your message!</Typography>) }
               </Grid>
 
             </Grid>
+
+
+
           </form>
         </CardContent>
       </Card>
-
+     
     </>
   )
 };

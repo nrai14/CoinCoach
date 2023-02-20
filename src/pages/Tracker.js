@@ -37,7 +37,7 @@ function Tracker() {
           <Grid item xs={7} >
             <RenderTransactions />
           </Grid>
-          <Grid item xs={6} display ="flex" justifyContent="center" alignItems="center">
+          <Grid item xs={6} >
             <RenderIncome />
           </Grid>
           <Grid item xs={6} >

@@ -6,42 +6,7 @@ import Axios from 'axios';
   
 function CurrencyConverter() {
   
-  // Initializing all the state variables 
-  const [info, setInfo] = useState([]);
-  const [input, setInput] = useState(0);
-  const [from, setFrom] = useState("usd");
-  const [to, setTo] = useState("inr");
-  const [options, setOptions] = useState([]);
-  const [output, setOutput] = useState(0);
-  
-  // Calling the api whenever the dependency changes
-  useEffect(() => {
-    Axios.get(
-`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${from}.json`)
-   .then((res) => {
-      setInfo(res.data[from]);
-    })
-  }, [from]);
-  
-  // Calling the convert function whenever
-  // a user switches the currency
-  useEffect(() => {
-    setOptions(Object.keys(info));
-    convert();
-  }, [info])
-    
-  // Function to convert the currency
-  function convert() {
-    var rate = info[to];
-    setOutput(input * rate);
-  }
-  
-  // Function to switch between two currency
-  function flip() {
-    var temp = from;
-    setFrom(to);
-    setTo(temp);
-  }
+
   
   return (
     <div className="App">

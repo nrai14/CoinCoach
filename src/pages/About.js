@@ -5,6 +5,7 @@ function About() {
         <>
             
             <Typography variant='h2' align='center'>About</Typography>
+            
          
         </>
     )
