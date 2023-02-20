@@ -74,7 +74,6 @@ function AddTransaction() {
     
       const newId = existingTransactions.length;
     
-  
       const formattedDate = moment(`${date}`).format('DD/MM/YYYY');
     
       const newTransactions =
@@ -89,10 +88,11 @@ function AddTransaction() {
       console.log(newTransactions);
 
       //Push new element into the Array 
-      setTransactions(newTransactions);
-      existingTransactions.push(transactions).then(
-        localStorage.setItem('transactions', JSON.stringify(existingTransactions))
-      )
+      setTransactions(newTransactions)
+      existingTransactions.push(transactions);
+      localStorage.setItem('transactions', JSON.stringify(existingTransactions));
+      
+      
       
 
     }
