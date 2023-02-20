@@ -43,7 +43,7 @@ function Tracker() {
           <RenderPots />
         </Grid>
         <Grid item xs={5}>
-          <RenderTransactions />
+          {/* <RenderTransactions /> */}
         </Grid>
       </Grid>
 

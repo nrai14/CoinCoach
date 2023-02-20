@@ -49,9 +49,6 @@ function AddTransaction() {
     event.preventDefault();
 
 
-
-
-
     //Add new transactions to the array
     const existingTransactions = JSON.parse(localStorage.getItem('transactions'));
 
@@ -180,7 +177,10 @@ function AddTransaction() {
                   <DatePicker
                     label="Date"
                     value={date}
+                    views={['day']}
                     onChange={(newValue) => {
+
+                      let formattedDate =
                       setDate(newValue);
                     }}
 
