@@ -2,6 +2,7 @@
 import InitPots from '../components/InitPots';
 import AddTransaction from '../components/AddTransaction';
 import RenderPots from '../components/RenderPots'
+import CurrencyConverter from '../components/CurrencyConverter';
 
 
 
@@ -10,6 +11,7 @@ import RenderTransactions from '../components/RenderTransactions';
 import RenderCards from '../components/RenderCards';
 import RenderIncome from '../components/RenderIncome';
 import RenderFiveTransactions from '../components/RenderFiveTransactions';
+
 
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -46,6 +48,8 @@ function Tracker() {
 
           <Grid item xs={12}  >
             <RenderPots />
+
+            <CurrencyConverter/>
           </Grid>
          
         </Grid>

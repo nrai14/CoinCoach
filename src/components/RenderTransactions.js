@@ -58,7 +58,7 @@ function RenderTransactions() {
     if(rows) {
 
       const newRows = rows.filter(a => a);
-      console.log(newRows);
+     
 
       setText(
       <Box sx={{ height: '90%', width: '100%','& .dataGridHeader': {

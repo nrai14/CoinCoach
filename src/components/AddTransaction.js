@@ -54,8 +54,8 @@ function AddTransaction() {
       [event.target.name]: event.target.value
     });
    
-    console.log(formData);
-    console.log(date);
+    // console.log(formData);
+   // console.log(date);
 
   };
 
@@ -63,9 +63,9 @@ function AddTransaction() {
   const handleSubmit = (event) => {
 
     event.preventDefault();
-    console.log("Inside");
-    console.log(formData);
-    console.log(date);
+    // console.log("Inside");
+    // console.log(formData);
+    // console.log(date);
 
     //Add new transactions to the array
     const existingTransactions = JSON.parse(localStorage.getItem('transactions'));
