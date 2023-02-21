@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Coin from "../components/Coin";
-
+import Stack from "@mui/system/Stack";
+import Button from "@mui/material/Button";
 
 
 function Home() {
@@ -10,18 +11,17 @@ function Home() {
             <h1 class="welcomebanner">Welcome to CoinCoach</h1>
             <div class="maincontainer">
         <div class="financial">
-       <button>
-            <Link to="/tracker">Financial Tracker</Link>
-            </button>
+      
+
+       <Button variant="outlined" component={Link} to="/Tracker">Coin Tracker</Button>
+            
         </div>
 
                 <Coin />
           {/* <img src='coin.jpeg' alt='coin logo' class="money" /> */}
        
        <div class="crypto">
-         <button>   
-            <Link to="/crypto">Crypto Tracker</Link>
-         </button>
+       <Button variant="outlined" component={Link} to="/OpenAi.js">Crypto News</Button>
 
        </div>
 

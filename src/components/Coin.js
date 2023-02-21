@@ -6,12 +6,12 @@ import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'; // Ma
 
 
 const Coin = () => {
-  const canvasRef = useRef(null)
+  const canvasRef = useRef(null) // Basically Coin is used to render the 3D coin whilst the canvasRef is for referencing the HTML <canvas> where the 3D image will be rendered 
 
   useEffect(() => {
     const canvas = canvasRef.current
     const renderer = new THREE.WebGLRenderer({ canvas, alpha: true })
-    renderer.setClearColor(0x000000, 0) // sets a transparent background
+    renderer.setClearColor(0x000000, 0) // sets a transparent background, previously had a black background 
     const scene = new THREE.Scene()
 
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)

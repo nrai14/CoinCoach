@@ -1,15 +1,12 @@
-/* 
-Root colour scheme?
 
-Navy blue: #001C55
-Sky blue: #6BC1FF
-Dark gray: #333333
-Light gray: #F7F7F7
-White: #FFFFFF
-
-
-*/
-
+/* Colour palette */
+:root {
+  --NavyBlue: #001C55;
+  --SkyBlue: #6BC1FF;
+  --DarkGray: #333333;
+  --LightGray: #F7F7F7;
+  --White: #FFFFFF;
+}
 
 body {
   margin: 0;
@@ -41,11 +38,12 @@ code {
   justify-content: center;
   align-items: center;
   padding: 10px;
-
+  
 }
 
 .welcomebanner {
   text-align: center;
+  
 }
 
 .footer {
@@ -89,3 +87,9 @@ img {
   margin: 10px;
 }
 
+
+
+a {
+  color: var(--DarkGray);
+  text-decoration: none;
+}
