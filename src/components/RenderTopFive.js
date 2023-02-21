@@ -52,7 +52,7 @@ function RenderTopFive() {
                           <LooksOneIcon 
                           fontSize='large' />
                         </ListItemIcon>
-                        <ListItemText primary={Filtered[0].category +' -  £' + Filtered[0].value} />
+                        <ListItemText primary={  '£' + Filtered[0].value +' - ' +Filtered[0].category  } />
                       
                     </ListItem>
                     <ListItem disablePadding>
@@ -60,7 +60,7 @@ function RenderTopFive() {
                         <ListItemIcon>
                           <LooksTwoIcon fontSize='large' />
                         </ListItemIcon>
-                        <ListItemText primary={Filtered[1].category +' -  £' + Filtered[1].value} />
+                        <ListItemText primary={ '£' + Filtered[1].value +' - ' +Filtered[1].category } />
                    
                     </ListItem>
 
@@ -69,7 +69,7 @@ function RenderTopFive() {
                      <ListItemIcon>
                        <Looks3Icon fontSize='large' />
                      </ListItemIcon>
-                     <ListItemText primary={Filtered[2].category +' -  £' + Filtered[2].value} />
+                     <ListItemText primary={ '£' + Filtered[2].value +' - ' +Filtered[2].category } />
                 
                  </ListItem>
                  <ListItem disablePadding>
@@ -77,7 +77,7 @@ function RenderTopFive() {
                      <ListItemIcon>
                        <Looks4Icon  fontSize='large'/>
                      </ListItemIcon>
-                     <ListItemText primary={Filtered[3].category +' -  £' + Filtered[3].value} />
+                     <ListItemText primary={ '£' + Filtered[3].value +' - ' +Filtered[3].category } />
                 
                  </ListItem>
                  <ListItem disablePadding>
@@ -85,7 +85,7 @@ function RenderTopFive() {
                      <ListItemIcon>
                        <Looks5Icon  fontSize='large'/>
                      </ListItemIcon>
-                     <ListItemText primary={Filtered[4].category +' -  £' + Filtered[4].value} />
+                     <ListItemText primary={ '£' + Filtered[4].value +' - ' +Filtered[4].category } />
                 
                  </ListItem>
                   </List>

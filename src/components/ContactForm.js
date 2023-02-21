@@ -6,6 +6,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 
+import Box from '@mui/material/Box';
 import { useState } from "react";
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -72,10 +73,20 @@ function ContactForm() {
 
   return (
     <>
-      <Card style={{ maxWidth: 500, margin: "0 auto", padding: "20px 5px" }} >
+
+      <Box  pb={10} pr={5} pl={5} sx={{  bgcolor: ' #c7d8e1', border: 2, borderColor: '#F7F7F7', borderRadius: 3, maxWidth: '70%', margin: "0 auto" }}>
+    
+      <Typography variant='h3' align='center' sx={{p:5}}>Contact Us</Typography>
+       
+     
+     
+      <Grid container spacing={1} justifyContent="center" pt={10} >
+          
+          <Grid item xs={6}>
+          <Card style={{ maxWidth: 500, margin: "0 auto", padding: "20px 5px" }} >
         <CardContent>
           <form  onSubmit={handleSubmit}>
-            <Grid container spacing={4} justifyContent="center" padding={10}>
+            <Grid container spacing={3} justifyContent="center" padding={1}>
               <Grid item xs={12}>
                 <TextField id='' 
                 label='Name' 
@@ -136,6 +147,19 @@ function ContactForm() {
           </form>
         </CardContent>
       </Card>
+            
+          </Grid>
+          
+          <Grid item xs={6}>
+          
+      
+          </Grid>
+      </Grid>
+    
+
+
+
+      </Box>
      
     </>
   )

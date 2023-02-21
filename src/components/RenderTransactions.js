@@ -59,6 +59,18 @@ function RenderTransactions() {
     if(rows) {
 
       const newRows = rows.filter(a => a);
+
+  
+      newRows.map((e) => (
+           
+          e.value = '£ ' +  e.value
+ 
+      ));
+     
+    
+     
+
+
      
       setText(
       <Box sx={{ height: '80%', width: '100%','& .dataGridHeader': {

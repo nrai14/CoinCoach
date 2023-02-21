@@ -13,6 +13,8 @@ function RenderFiveTransactions() {
 
     const transactions = JSON.parse(localStorage.getItem('transactions'));
 
+
+
     const style = {
       top: 30,
       left: 350,
@@ -23,39 +25,36 @@ function RenderFiveTransactions() {
 
       const data = [
         {
-          name: transactions[(transactions.length - 1)].category + ' - ' + transactions[(transactions.length - 1)].date,
-          uv: transactions[(transactions.length - 1)].value,
-          pv: 2400,
+          name:   '£' + transactions[(transactions.length - 1)].value +' - ' +transactions[(transactions.length - 1)].category + ' - ' + transactions[(transactions.length - 1)].date,
+          uv: transactions[(transactions.length - 1)].value,       
           fill: "#222479"
         },
         {
-          name: transactions[(transactions.length - 2)].category + ' - ' + transactions[(transactions.length - 2)].date,
-          uv: transactions[(transactions.length - 2)].value,
-          pv: 4567,
+          name:  '£' + transactions[(transactions.length - 2)].value +' - ' + transactions[(transactions.length - 2)].category + ' - ' + transactions[(transactions.length - 2)].date,
+          uv: transactions[(transactions.length - 2)].value,      
           fill: "#1446a7"
         },
         {
-          name: transactions[(transactions.length - 3)].category + ' - ' + transactions[(transactions.length - 3)].date,
-          uv: transactions[(transactions.length - 3)].value,
-          pv: 1398,
+          name:  '£' + transactions[(transactions.length - 3)].value +' - ' +transactions[(transactions.length - 3)].category + ' - ' + transactions[(transactions.length - 3)].date,
+          uv: transactions[(transactions.length - 3)].value,       
           fill: "#346568"
         },
         {
-          name: transactions[(transactions.length - 4)].category + ' - ' + transactions[(transactions.length - 4)].date,
-          uv: transactions[(transactions.length - 4)].value,
-          pv: 9800,
+          name: '£' + transactions[(transactions.length - 4)].value +' - ' + transactions[(transactions.length - 4)].category + ' - ' + transactions[(transactions.length - 4)].date,
+          uv: transactions[(transactions.length - 4)].value,     
           fill: "#488485"
         },
         {
-          name: transactions[(transactions.length - 5)].category + ' - ' + transactions[(transactions.length - 5)].date,
+          name:  '£' + transactions[(transactions.length - 5)].value +' - ' + transactions[(transactions.length - 5)].category + ' - ' + transactions[(transactions.length - 5)].date,
           uv: transactions[(transactions.length - 5)].value,
-          pv: 3908,
           fill: "#96bac4"
         }
 
       ];
 
-      setText(<RadialBarChart
+      setText(
+      
+      <RadialBarChart
         width={500}
         height={300}
         cx={150}
@@ -64,6 +63,7 @@ function RenderFiveTransactions() {
         outerRadius={140}
         barSize={20}
         data={data}
+        
       >
         <RadialBar
           minAngle={15}
@@ -71,6 +71,7 @@ function RenderFiveTransactions() {
           background
           clockWise
           dataKey="uv"
+          
         />
         <Legend
           iconSize={20}
