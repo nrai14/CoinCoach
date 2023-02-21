@@ -1,12 +1,10 @@
-import Tracker from "../components/Tracker";
-
+import CryptoTracker from "./CryptoTracker";
 
 function Home() {
     return (
         <>
-            <h1>Home</h1>
-            <Tracker/>
-
+            <CryptoTracker />
+         
         </>
     )
 };
