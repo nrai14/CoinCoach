@@ -4,10 +4,9 @@ import Typography from '@mui/material/Typography';
 
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import Box from '@mui/material/Box';
+
 import Card from '@mui/material/Card';
 
 
@@ -31,16 +30,21 @@ function RenderTopFive() {
         const Pots = JSON.parse(localStorage.getItem('pots'));
        
         const Sorted = Pots.sort((a, b) => b.value-a.value);
-        console.log(Sorted);
-       // Sorted[0].value;
+       
+    
 
-        if(Sorted.length > 5){
+        const Filtered = Sorted.filter(function (el) {
+        return ((el.category !== 'Income') && (el.category !== 'Balance'));
+      });
+      
+  
+
+        if(Filtered.length > 5){
 
             setText( 
              
-             //   <Box sx={{ width: '100%', maxWidth: 260, bgcolor: '#c1e9f4', color:'#c1e9f4' }}>
-                
-                <Card sx={{ maxWidth: 250, color:'#fff', p: 3, m: 16, bgcolor: '#488485', }} >
+        
+              <Card sx={{ maxWidth: 250, color:'#222479', p: 3, m: 16, bgcolor: '#fff', }} >
                    <Typography variant='h4' align='center'>Top 5 Expenditures </Typography>
                   <List>
                     <ListItem disablePadding> 
@@ -48,7 +52,7 @@ function RenderTopFive() {
                           <LooksOneIcon 
                           fontSize='large' />
                         </ListItemIcon>
-                        <ListItemText primary={Sorted[0].category +' -  £' + Sorted[0].value} />
+                        <ListItemText primary={Filtered[0].category +' -  £' + Filtered[0].value} />
                       
                     </ListItem>
                     <ListItem disablePadding>
@@ -56,7 +60,7 @@ function RenderTopFive() {
                         <ListItemIcon>
                           <LooksTwoIcon fontSize='large' />
                         </ListItemIcon>
-                        <ListItemText primary={Sorted[1].category +' -  £' + Sorted[1].value} />
+                        <ListItemText primary={Filtered[1].category +' -  £' + Filtered[1].value} />
                    
                     </ListItem>
 
@@ -65,7 +69,7 @@ function RenderTopFive() {
                      <ListItemIcon>
                        <Looks3Icon fontSize='large' />
                      </ListItemIcon>
-                     <ListItemText primary={Sorted[2].category +' -  £' + Sorted[2].value} />
+                     <ListItemText primary={Filtered[2].category +' -  £' + Filtered[2].value} />
                 
                  </ListItem>
                  <ListItem disablePadding>
@@ -73,7 +77,7 @@ function RenderTopFive() {
                      <ListItemIcon>
                        <Looks4Icon  fontSize='large'/>
                      </ListItemIcon>
-                     <ListItemText primary={Sorted[3].category +' -  £' + Sorted[3].value} />
+                     <ListItemText primary={Filtered[3].category +' -  £' + Filtered[3].value} />
                 
                  </ListItem>
                  <ListItem disablePadding>
@@ -81,7 +85,7 @@ function RenderTopFive() {
                      <ListItemIcon>
                        <Looks5Icon  fontSize='large'/>
                      </ListItemIcon>
-                     <ListItemText primary={Sorted[4].category +' -  £' + Sorted[4].value} />
+                     <ListItemText primary={Filtered[4].category +' -  £' + Filtered[4].value} />
                 
                  </ListItem>
                   </List>
@@ -98,7 +102,6 @@ function RenderTopFive() {
     return (
         <>
        
-         
          {textOnScreen}
        
         
