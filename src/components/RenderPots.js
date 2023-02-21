@@ -22,56 +22,43 @@ function RenderPots(){
       const data = [
         {
           name: 'Bills',
-          uv: Pots[0].value,
-         
+          uv: Pots[0].value,     
         },
         {
           name: 'Charity',
-          uv: Pots[1].value,
-         
+          uv: Pots[1].value,   
         },
         {
           name: 'Eating Out',
-          uv: Pots[2].value,
-         
+          uv: Pots[2].value,    
         },
         {
           name: 'Entertainment',
-          uv: Pots[3].value,
-         
+          uv: Pots[3].value,     
         },
         {
           name: 'Expenses',
-          uv: Pots[4].value,
-         
+          uv: Pots[4].value,     
         },
         {
           name: 'Groceries',
-          uv: Pots[5].value,
-         
+          uv: Pots[5].value,      
         },
         {
           name: 'Holidays',
-          uv: Pots[6].value,
-         
+          uv: Pots[6].value,      
         },
         {
           name: 'Savings',
-          uv: Pots[8].value,
-          pv: 3800,
-          amt: 2500,
+          uv: Pots[8].value,     
         },
         {
           name: 'Shopping',
-          uv: Pots[9].value,
-          pv: 3800,
-          amt: 2500,
+          uv: Pots[9].value, 
         },
         {
           name: 'Transport',
           uv: Pots[10].value,
-          pv: 4300,
-          amt: 2100,
         },
       ];
       

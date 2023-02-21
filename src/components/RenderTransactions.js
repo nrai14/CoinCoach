@@ -21,6 +21,7 @@ function RenderTransactions() {
         headerName: '#',
         width: 10,
         headerClassName: 'dataGridHeader',
+        
       },
       {
         field: 'date',
@@ -63,7 +64,7 @@ function RenderTransactions() {
       <Box sx={{ height: '80%', width: '100%','& .dataGridHeader': {
         backgroundColor: '#001C55',
         color:'#fff',
-        fontSize: 16
+        fontSize: 18
       },}}>
       <DataGrid
         rows={newRows}
