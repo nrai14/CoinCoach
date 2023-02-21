@@ -35,6 +35,7 @@ function RenderIncome() {
         //SetData(newData);
 
         setText(
+          
           <PieChart width={400} height={400}   >
             <Pie
 
@@ -65,8 +66,8 @@ function RenderIncome() {
   return (
 
     <>
-      <Typography variant='h6' align='center' >Most recent Incomes </Typography>
-
+     
+      <Typography variant='h4' align='center' sx={{p:5}} >Most recent Incomes </Typography>
       {textOnScreen}
 
 

@@ -31,7 +31,7 @@ function RenderCards() {
 
     return (
       <>
-    <Box sx={{ display: 'flex', gap: 8, flexWrap: 'wrap', p: 10, m: 0,  }}>
+    <Box sx={{ display: 'flex', gap: 8, flexWrap: 'wrap', p: 5, m: 5,  }}>
 
     <Card  sx={{ maxWidth: 250, flexGrow: 1 }}>
         <CardCover>

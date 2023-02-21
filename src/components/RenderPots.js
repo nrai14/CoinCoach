@@ -23,44 +23,37 @@ function RenderPots(){
         {
           name: 'Bills',
           uv: Pots[0].value,
-          pv: 2400,
-          amt: 2400,
+         
         },
         {
           name: 'Charity',
           uv: Pots[1].value,
-          pv: 1398,
-          amt: 2210,
+         
         },
         {
           name: 'Eating Out',
           uv: Pots[2].value,
-          pv: 9800,
-          amt: 2290,
+         
         },
         {
           name: 'Entertainment',
           uv: Pots[3].value,
-          pv: 3908,
-          amt: 2000,
+         
         },
         {
           name: 'Expenses',
           uv: Pots[4].value,
-          pv: 4800,
-          amt: 2181,
+         
         },
         {
           name: 'Groceries',
           uv: Pots[5].value,
-          pv: 3800,
-          amt: 2500,
+         
         },
         {
           name: 'Holidays',
           uv: Pots[6].value,
-          pv: 3800,
-          amt: 2500,
+         
         },
         {
           name: 'Savings',
@@ -98,15 +91,15 @@ function RenderPots(){
 
       setText(
       <BarChart style={{ margin: "0 auto" }}
-      width={1060}
+      width={1024}
       height={500}
-      data={data}
-     
+      data={data} 
+        
     >
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="name" />
       <YAxis />
-      <Bar dataKey="uv" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
+      <Bar dataKey="uv" fill="#000" shape={<TriangleBar />} label={{ position: 'top' }}>
         {data.map((entry, index) => (
           <Cell key={`cell-${index}`} fill={colors[index % 20]} />
         ))}
@@ -116,7 +109,7 @@ function RenderPots(){
     }
     else {
 
-      setText(<Typography variant='h4' align='center'>There is no Pots yet.</Typography>);
+      setText(<Typography variant='h4' align='center'>There are no transactions stored.</Typography>);
 
     }
 
@@ -125,7 +118,7 @@ function RenderPots(){
 
   return (
       <>
-      <Typography variant='h6' align='center'>Total Expenses - All times</Typography>
+      <Typography variant='h4' align='center' sx={{p:5}}>Total Expenses - All times</Typography>
       {textOnScreen}
 
       </>

@@ -40,12 +40,13 @@ function RenderTopFive() {
              
              //   <Box sx={{ width: '100%', maxWidth: 260, bgcolor: '#96bac4', color:'#fff' }}>
                 
-                <Card style={{ maxWidth: 250, margin: "0 auto", padding: "0px 5px", color:'#488485'  }} >
+                <Card sx={{ maxWidth: 250, color:'#488485', p: 3, m: 16,  }} >
+                   <Typography variant='h4' align='center'>Top 5 Expenditures </Typography>
                   <List>
-                    <ListItem disablePadding>
-                     
+                    <ListItem disablePadding> 
                         <ListItemIcon>
-                          <LooksOneIcon fontSize='large' />
+                          <LooksOneIcon 
+                          fontSize='large' />
                         </ListItemIcon>
                         <ListItemText primary={Sorted[0].category +' -  £' + Sorted[0].value} />
                       
@@ -96,7 +97,7 @@ function RenderTopFive() {
       },[]);
     return (
         <>
-         <Typography variant='h6' align='center'>Top 5 Expenditures </Typography>
+       
          
          {textOnScreen}
        

@@ -59,9 +59,8 @@ function RenderTransactions() {
 
       const newRows = rows.filter(a => a);
      
-
       setText(
-      <Box sx={{ height: '90%', width: '100%','& .dataGridHeader': {
+      <Box sx={{ height: '80%', width: '100%','& .dataGridHeader': {
         backgroundColor: '#001C55',
         color:'#fff',
         fontSize: 16
@@ -69,7 +68,7 @@ function RenderTransactions() {
       <DataGrid
         rows={newRows}
         columns={columns}
-        pageSize={10}
+        pageSize={5}
         rowsPerPageOptions={[5]}
         disableSelectionOnClick
         experimentalFeatures={{ newEditingApi: true }}
@@ -91,7 +90,7 @@ function RenderTransactions() {
 
   return (
     <>
-      <Typography variant='h6' align='center'>Transactions History</Typography>
+      <Typography variant='h4' align='center' sx={{p:5}}>Transactions History</Typography>
       
       {textOnScreen}
       

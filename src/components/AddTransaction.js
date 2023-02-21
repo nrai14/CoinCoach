@@ -9,7 +9,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
-
+import Typography from '@mui/material/Typography';
 
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -183,11 +183,12 @@ function AddTransaction() {
 
   return (
     <>
-      {/* <Typography variant='h3' align='center'>Add Transaction</Typography> */}
-      <Card style={{ maxWidth: 400, margin: "0 auto", padding: "0px 5px" }} >
+      <Typography variant='h4' align='center' sx={{p:5}}>Add Transaction</Typography>
+     
+      <Card style={{ maxWidth: 350, margin: "0 auto",}} >
         <CardContent>
           <form onSubmit={handleSubmit}>
-            <Grid container spacing={4} justifyContent="center" padding={2}>
+            <Grid container spacing={3} justifyContent="center" padding={2} >
 
               <Grid item xs={12} >
                 <LocalizationProvider dateAdapter={AdapterDayjs} >
