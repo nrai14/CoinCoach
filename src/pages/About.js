@@ -1,7 +1,11 @@
+import Typography from '@mui/material/Typography';
+
 function About() {
     return (
         <>
-            <h1 >About</h1>
+            
+            <Typography variant='h2' align='center'>About</Typography>
+            
          
         </>
     )

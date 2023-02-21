@@ -23,8 +23,6 @@ function CryptoTracker() {
 
             <OpenAi cryptoData={cryptoData.slice(0, 5)} />
 
-
-
             <CryptoInfo cryptoData={cryptoData} />
             
         </>
