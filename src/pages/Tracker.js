@@ -2,9 +2,6 @@
 import InitPots from '../components/InitPots';
 import AddTransaction from '../components/AddTransaction';
 import RenderTotalExpenses from '../components/RenderTotalExpenses'
-// import CurrencyConverter from '../components/CurrencyConverter';
-
-
 
 import Typography from '@mui/material/Typography';
 import RenderTransactions from '../components/RenderTransactions';
