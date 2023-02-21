@@ -78,7 +78,8 @@ function ContactForm() {
     
       <Typography variant='h3' align='center' sx={{p:5}}>Contact Us</Typography>
        
-     
+      <Typography variant='body 1' align='center' sx={{p:5}}>Please send us your message on contact us directly.</Typography>
+       
      
       <Grid container spacing={1} justifyContent="center" pt={10} >
           
