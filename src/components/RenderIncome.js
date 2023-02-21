@@ -67,7 +67,7 @@ function RenderIncome() {
 
     <>
      
-      <Typography variant='h4' align='center' sx={{p:5}} >Most recent Incomes </Typography>
+      <Typography variant='h4' align='center' sx={{p:5}} >Most Recent Incomes </Typography>
       {textOnScreen}
 
 

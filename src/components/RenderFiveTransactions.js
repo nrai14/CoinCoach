@@ -93,7 +93,7 @@ function RenderFiveTransactions() {
 
   return (
     <>
-      <Typography variant='h4' align='center' sx={{ p: 5 }}>5 most recent Transactions</Typography>
+      <Typography variant='h4' align='center' sx={{ p: 5 }}>5 Most Recent Transactions</Typography>
       {textOnScreen}
 
     </>

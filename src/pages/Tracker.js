@@ -30,7 +30,7 @@ function Tracker() {
 
       <Box  pb={10} pr={5} pl={5} sx={{  bgcolor: ' #c7d8e1', border: 2, borderColor: '#F7F7F7', borderRadius: 3, maxWidth: '70%', margin: "0 auto" }}>
         
-        <Typography variant='h3' align='center' sx={{p:5}}>Money Tracker</Typography>
+        <Typography variant='h3' align='center' sx={{p:5}}>Coins Tracker</Typography>
        
         <Grid container spacing={1} justifyContent="center" >
           
