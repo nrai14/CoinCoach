@@ -3,7 +3,7 @@ import {Routes, Route} from "react-router-dom";
 
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Form from './components/Form';
+
 import OpenAi from './pages/OpenAi';
 import Tracker from './pages/Tracker';
 

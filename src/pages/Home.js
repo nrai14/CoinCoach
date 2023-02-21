@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import Coin from "../components/Coin";
 
 
 
@@ -15,7 +15,8 @@ function Home() {
             </button>
         </div>
 
-          <img src='coin.jpeg' alt='coin logo' class="money" />
+                <Coin />
+          {/* <img src='coin.jpeg' alt='coin logo' class="money" /> */}
        
        <div class="crypto">
          <button>   

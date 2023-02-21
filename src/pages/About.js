@@ -1,3 +1,6 @@
+import Team from "../components/Team";
+
+
 function About() {
   return (
     <>
@@ -9,12 +12,8 @@ function About() {
           Laura as part of their EDX coding bootcamp's final project. 
         </p>
         <br></br>
-        <div>
-            <img src="Nish.jpeg"></img>
-            <img src="Sabrina.jpeg"></img>
-            <img src="Michal.jpeg"></img>
-            <img src="Laura.jpeg"></img>
-        </div>
+        
+        <Team />
 
         <p>
             CoinCoach
