@@ -25,27 +25,27 @@ function RenderFiveTransactions() {
 
       const data = [
         {
-          name:   '£' + transactions[(transactions.length - 1)].value +' - ' +transactions[(transactions.length - 1)].category + ' - ' + transactions[(transactions.length - 1)].date,
-          uv: transactions[(transactions.length - 1)].value,       
+          name: '£' + transactions[(transactions.length - 1)].value + ' - ' + transactions[(transactions.length - 1)].category + ' - ' + transactions[(transactions.length - 1)].date,
+          uv: transactions[(transactions.length - 1)].value,
           fill: "#222479"
         },
         {
-          name:  '£' + transactions[(transactions.length - 2)].value +' - ' + transactions[(transactions.length - 2)].category + ' - ' + transactions[(transactions.length - 2)].date,
-          uv: transactions[(transactions.length - 2)].value,      
+          name: '£' + transactions[(transactions.length - 2)].value + ' - ' + transactions[(transactions.length - 2)].category + ' - ' + transactions[(transactions.length - 2)].date,
+          uv: transactions[(transactions.length - 2)].value,
           fill: "#1446a7"
         },
         {
-          name:  '£' + transactions[(transactions.length - 3)].value +' - ' +transactions[(transactions.length - 3)].category + ' - ' + transactions[(transactions.length - 3)].date,
-          uv: transactions[(transactions.length - 3)].value,       
+          name: '£' + transactions[(transactions.length - 3)].value + ' - ' + transactions[(transactions.length - 3)].category + ' - ' + transactions[(transactions.length - 3)].date,
+          uv: transactions[(transactions.length - 3)].value,
           fill: "#346568"
         },
         {
-          name: '£' + transactions[(transactions.length - 4)].value +' - ' + transactions[(transactions.length - 4)].category + ' - ' + transactions[(transactions.length - 4)].date,
-          uv: transactions[(transactions.length - 4)].value,     
+          name: '£' + transactions[(transactions.length - 4)].value + ' - ' + transactions[(transactions.length - 4)].category + ' - ' + transactions[(transactions.length - 4)].date,
+          uv: transactions[(transactions.length - 4)].value,
           fill: "#488485"
         },
         {
-          name:  '£' + transactions[(transactions.length - 5)].value +' - ' + transactions[(transactions.length - 5)].category + ' - ' + transactions[(transactions.length - 5)].date,
+          name: '£' + transactions[(transactions.length - 5)].value + ' - ' + transactions[(transactions.length - 5)].category + ' - ' + transactions[(transactions.length - 5)].date,
           uv: transactions[(transactions.length - 5)].value,
           fill: "#96bac4"
         }
@@ -53,35 +53,35 @@ function RenderFiveTransactions() {
       ];
 
       setText(
-      
-      <RadialBarChart
-        width={500}
-        height={300}
-        cx={150}
-        cy={150}
-        innerRadius={20}
-        outerRadius={140}
-        barSize={20}
-        data={data}
-        
-      >
-        <RadialBar
-          minAngle={15}
-          label={{ position: "insideStart", fill: "#F7F7F7" }}
-          background
-          clockWise
-          dataKey="uv"
-          
-        />
-        <Legend
-          iconSize={20}
-          width={600}
-          height={240}
-          layout="vertical"
-          verticalAlign="middle"
-          wrapperStyle={style}
-        />
-      </RadialBarChart>
+
+        <RadialBarChart
+          width={500}
+          height={300}
+          cx={150}
+          cy={150}
+          innerRadius={20}
+          outerRadius={140}
+          barSize={20}
+          data={data}
+
+        >
+          <RadialBar
+            minAngle={15}
+            label={{ position: "insideStart", fill: "#F7F7F7" }}
+            background
+            clockWise
+            dataKey="uv"
+
+          />
+          <Legend
+            iconSize={20}
+            width={600}
+            height={240}
+            layout="vertical"
+            verticalAlign="middle"
+            wrapperStyle={style}
+          />
+        </RadialBarChart>
       )
 
     }

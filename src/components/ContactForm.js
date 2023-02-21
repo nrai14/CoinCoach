@@ -78,84 +78,96 @@ function ContactForm() {
     
       <Typography variant='h3' align='center' sx={{p:5}}>Contact Us</Typography>
        
-      <Typography variant='body 1' align='center' sx={{p:5}}>Please send us your message on contact us directly.</Typography>
+      <Typography variant='body 1' align='center' sx={{p:60}}>Please send us your message on contact us directly.</Typography>
        
      
       <Grid container spacing={1} justifyContent="center" pt={10} >
           
           <Grid item xs={6}>
-          <Card style={{ maxWidth: 500, margin: "0 auto", padding: "20px 5px" }} >
-        <CardContent>
-          <form  onSubmit={handleSubmit}>
-            <Grid container spacing={3} justifyContent="center" padding={1}>
-              <Grid item xs={12}>
-                <TextField id='' 
-                label='Name' 
-                name='name'
-                value={formData.name}
-                placeholder='Please enter your name' 
-                onChange={handleChange}
-                variant='outlined' 
-                fullWidth />
-              </Grid>
+            <Card style={{ maxWidth: 500, margin: "0 auto", padding: "20px 5px" }} >
+              <CardContent>
+              <form  onSubmit={handleSubmit}>
+                <Grid container spacing={3} justifyContent="center" padding={1}>
+                  <Grid item xs={12}>
+                    <TextField id='' 
+                    label='Name' 
+                    name='name'
+                    value={formData.name}
+                    placeholder='Please enter your name' 
+                    onChange={handleChange}
+                    variant='outlined' 
+                    fullWidth />
+                  </Grid>
 
-              <Grid item xs={12}>
-                <TextField 
-                type='email' 
-                id='' 
-                label='Email' 
-                name='email'
-                value={formData.email}
-                placeholder='Please enter your email address' 
-                onChange={handleChange}
-                variant='outlined' 
-                fullWidth 
-                required />
-              </Grid>
+                  <Grid item xs={12}>
+                    <TextField 
+                    type='email' 
+                    id='' 
+                    label='Email' 
+                    name='email'
+                    value={formData.email}
+                    placeholder='Please enter your email address' 
+                    onChange={handleChange}
+                    variant='outlined' 
+                    fullWidth 
+                    required />
+                  </Grid>
 
-              <Grid item xs={12}>
-                <TextField id='' 
-                label='Message' 
-                name='message'
-                value={formData.message}
-                multiline rows={4} 
-                placeholder='Please type your message here' 
-                onChange={handleChange}
-                variant='outlined' 
-                fullWidth 
-                required />
-              </Grid>
+                  <Grid item xs={12}>
+                    <TextField id='' 
+                    label='Message' 
+                    name='message'
+                    value={formData.message}
+                    multiline rows={4} 
+                    placeholder='Please type your message here' 
+                    onChange={handleChange}
+                    variant='outlined' 
+                    fullWidth 
+                    required />
+                  </Grid>
 
-              <Grid item xs={12}>
-              <ThemeProvider theme={theme}>
-                <Button type="submit" 
-                variant='contained' 
-                color= 'brand'
-                fullWidth> 
-                Submit
-                </Button>
-                </ThemeProvider>
-              </Grid>
+                  <Grid item xs={12}>
+                  <ThemeProvider theme={theme}>
+                    <Button type="submit" 
+                    variant='contained' 
+                    color= 'brand'
+                    fullWidth> 
+                    Submit
+                    </Button>
+                    </ThemeProvider>
+                  </Grid>
 
-              <Grid item xs={12}>
-              {success && (<Typography variant='h4' align='center'> Thank you very much for your message!</Typography>) }
-              </Grid>
+                  <Grid item xs={12}>
+                  {success && (<Typography variant='h4' align='center'> Thank you very much for your message!</Typography>) }
+                  </Grid>
 
-            </Grid>
+                </Grid>
 
 
 
-          </form>
-        </CardContent>
-      </Card>
-            
+              </form>
+              </CardContent>
+            </Card>         
           </Grid>
           
-          <Grid item xs={6}>
+          <Grid item xs={6} >
+
           
+                  <Card style={{ maxWidth: 500, margin: "0px", padding: "50px 5px" }} >
+                  
+                  </Card>
+                  <Card style={{ maxWidth: 500, marginTop: "20px", padding: "50px 5px" }} >
+                  </Card>
+                  <Card style={{ maxWidth: 500, marginTop: "20px", padding: "50px 5px" }} >
+                  </Card>
+                  <Card style={{ maxWidth: 500, marginTop: "20px", padding: "50px 5px" }} >
+                  </Card>
+                  
+                  
+            </Grid>
       
           </Grid>
-      </Grid>
+    
     
 
 

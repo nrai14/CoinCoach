@@ -9,8 +9,8 @@ import { useState, useEffect } from 'react';
 
 function RenderTransactions() {
 
-  const [textOnScreen, setText]= useState('');
-  
+  const [textOnScreen, setText] = useState('');
+
 
   useEffect(() => {
     const rows = JSON.parse(localStorage.getItem('transactions'));
@@ -21,7 +21,7 @@ function RenderTransactions() {
         headerName: '#',
         width: 10,
         headerClassName: 'dataGridHeader',
-        
+
       },
       {
         field: 'date',
@@ -43,7 +43,7 @@ function RenderTransactions() {
         width: 200,
         editable: false,
         headerClassName: 'dataGridHeader',
-       
+
       },
       {
         field: 'value',
@@ -52,61 +52,63 @@ function RenderTransactions() {
         width: 160,
         editable: false,
         headerClassName: 'dataGridHeader',
-  
+
       }
     ];
-  
-    if(rows) {
+
+    if (rows) {
 
       const newRows = rows.filter(a => a);
 
-  
+
       newRows.map((e) => (
-           
-          e.value = '£ ' +  e.value
- 
+
+        e.value = '£ ' + e.value
+
       ));
-     
-    
-     
 
 
-     
+
+
+
+
       setText(
-      <Box sx={{ height: '80%', width: '100%','& .dataGridHeader': {
-        backgroundColor: '#001C55',
-        color:'#fff',
-        fontSize: 18
-      },}}>
-      <DataGrid
-        rows={newRows}
-        columns={columns}
-        pageSize={5}
-        rowsPerPageOptions={[5]}
-        disableSelectionOnClick
-        experimentalFeatures={{ newEditingApi: true }}
-      />
-    </Box> );
-  
+        <Box sx={{
+          height: '80%', width: '100%', '& .dataGridHeader': {
+            backgroundColor: '#001C55',
+            color: '#fff',
+            fontSize: 18
+          },
+        }}>
+          <DataGrid
+            rows={newRows}
+            columns={columns}
+            pageSize={5}
+            rowsPerPageOptions={[5]}
+            disableSelectionOnClick
+            experimentalFeatures={{ newEditingApi: true }}
+          />
+        </Box>);
+
     }
     else {
-  
+
       setText(<Typography variant='body1' align='center'>There are no transactions stored. Transactions will be shown in a table.</Typography>);
-  
+
     }
-  
-  },[]);
+
+  }, []);
 
 
 
-  
+
 
   return (
     <>
-      <Typography variant='h4' align='center' sx={{p:5}}>Transactions History</Typography>
-      
+      <Typography variant='h4' align='center' sx={{ p: 5 }}>Transactions History</Typography>
+
       {textOnScreen}
-      
+
     </>
   )
 };
