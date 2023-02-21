@@ -8,7 +8,7 @@ const colors = ['#001C55', '#222479', '#1446a7',
 
 
    
-function RenderPots(){
+function RenderTotalExpenses(){
 
   const [textOnScreen, setText]= useState('');
 
@@ -113,4 +113,4 @@ function RenderPots(){
     );
  
 }
-export default RenderPots;
+export default RenderTotalExpenses;

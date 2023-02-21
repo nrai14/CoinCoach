@@ -38,9 +38,9 @@ function RenderTopFive() {
 
             setText( 
              
-             //   <Box sx={{ width: '100%', maxWidth: 260, bgcolor: '#96bac4', color:'#fff' }}>
+             //   <Box sx={{ width: '100%', maxWidth: 260, bgcolor: '#c1e9f4', color:'#c1e9f4' }}>
                 
-                <Card sx={{ maxWidth: 250, color:'#488485', p: 3, m: 16,  }} >
+                <Card sx={{ maxWidth: 250, color:'#fff', p: 3, m: 16, bgcolor: '#488485', }} >
                    <Typography variant='h4' align='center'>Top 5 Expenditures </Typography>
                   <List>
                     <ListItem disablePadding> 

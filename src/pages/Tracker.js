@@ -1,8 +1,8 @@
 
 import InitPots from '../components/InitPots';
 import AddTransaction from '../components/AddTransaction';
-import RenderPots from '../components/RenderPots'
-import CurrencyConverter from '../components/CurrencyConverter';
+import RenderTotalExpenses from '../components/RenderTotalExpenses'
+// import CurrencyConverter from '../components/CurrencyConverter';
 
 
 
@@ -36,6 +36,7 @@ function Tracker() {
           
           <Grid item xs={7}>
             <RenderCards /> 
+            
           </Grid>
 
           <Grid item xs={5} > 
@@ -51,7 +52,7 @@ function Tracker() {
           </Grid>
 
           <Grid item xs={12}  >
-            <RenderPots />
+            <RenderTotalExpenses />
             {/* <CurrencyConverter/> */}
           </Grid>
 

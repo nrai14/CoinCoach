@@ -5,6 +5,7 @@ import CardCover from '@mui/joy/CardCover';
 import CardContent from '@mui/joy/CardContent';
 import Typography from '@mui/joy/Typography';
 import { useState, useEffect } from 'react';
+import Grid from '@mui/material/Grid';
 
 function RenderCards() {
 
@@ -33,7 +34,7 @@ function RenderCards() {
       <>
     <Box sx={{ display: 'flex', gap: 8, flexWrap: 'wrap', p: 5, m: 5,  }}>
 
-    <Card  sx={{ maxWidth: 250, flexGrow: 1 }}>
+      {/* <Card  sx={{ maxWidth: 250, flexGrow: 1 }}>
         <CardCover>
           <video
             autoPlay
@@ -49,7 +50,6 @@ function RenderCards() {
         </CardCover>
         <CardContent>
           <Typography
-            level="h1"
             fontSize={30}
             fontWeight="lg"
             textColor="#001C55"
@@ -58,7 +58,7 @@ function RenderCards() {
           </Typography>
         </CardContent>
       </Card>
-    <Card  sx={{ maxWidth: 250, flexGrow: 1 }}>
+      <Card  sx={{ maxWidth: 250, flexGrow: 1 }}>
         <CardCover>
           <video
             autoPlay
@@ -73,7 +73,7 @@ function RenderCards() {
         </CardCover>
         <CardContent>
           <Typography 
-            level="h1"
+          
             fontSize={30}
             fontWeight="lg"
             textColor="#fff"
@@ -84,7 +84,6 @@ function RenderCards() {
           </Typography>
         </CardContent>
       </Card>
-
       <Card  sx={{ maxWidth: 250, flexGrow: 1 }}>
         <CardCover >
           <video
@@ -102,7 +101,93 @@ function RenderCards() {
         </CardCover>
         <CardContent>
           <Typography
-            level="h1"
+        
+            fontSize={30}
+            fontWeight="lg"
+            textColor="#1446A7"
+            
+            mt={{ xs: 12, sm: 18 }}
+          >Savings : £{Pot3}
+          </Typography>
+        </CardContent>
+      </Card> */}
+       
+ 
+
+    <Grid container spacing={4}>
+    <Grid item xs={12}>
+    <Card  sx={{ maxWidth: 580, flexGrow: 1 }}>
+        <CardCover>
+          <video
+            autoPlay
+            loop
+            muted
+          
+          >
+            <source
+              src="https://static.vecteezy.com/system/resources/previews/002/039/650/mp4/woman-holding-smartphone-and-credit-ard-free-video.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </CardCover>
+        <CardContent>
+          <Typography
+            fontSize={30}
+            fontWeight="lg"
+            textColor="#001C55"
+            mt={{ xs: 12, sm: 18 }}
+          >Balance : £{Pot1}
+          </Typography>
+        </CardContent>
+      </Card>
+  </Grid>
+  <Grid item xs={6}>
+  <Card  sx={{ maxWidth: 250, flexGrow: 1 }}>
+        <CardCover>
+          <video
+            autoPlay
+            loop
+            muted    
+          >
+            <source
+              src="https://static.vecteezy.com/system/resources/previews/001/803/901/mp4/euro-coins-falling-into-a-glass-jar-free-video.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </CardCover>
+        <CardContent>
+          <Typography 
+          
+            fontSize={30}
+            fontWeight="lg"
+            textColor="#fff"
+           
+            mt={{ xs: 12, sm: 18 }}
+            
+          >Income : £{Pot2}
+          </Typography>
+        </CardContent>
+      </Card>
+  </Grid>
+  <Grid item xs={6}>
+  <Card  sx={{ maxWidth: 250, flexGrow: 1 }}>
+        <CardCover >
+          <video
+            autoPlay
+            loop
+            muted
+          
+          >
+            <source
+              
+              src="https://static.vecteezy.com/system/resources/previews/002/015/167/mp4/hand-puts-coins-in-a-piggy-bank-free-video.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </CardCover>
+        <CardContent>
+          <Typography
+        
             fontSize={30}
             fontWeight="lg"
             textColor="#1446A7"
@@ -112,32 +197,9 @@ function RenderCards() {
           </Typography>
         </CardContent>
       </Card>
-
-
-   
-      {/* <Card  sx={{ maxWidth: 250, flexGrow: 1 }}>
-        <CardCover>
-          <img
-            src="https://images.unsplash.com/photo-1502657877623-f66bf489d236?auto=format&fit=crop&w=800"
-            srcSet="https://images.unsplash.com/photo-1502657877623-f66bf489d236?auto=format&fit=crop&w=800&dpr=2 2x"
-            loading="lazy"
-            alt=""
-          />
-        </CardCover>
-        <CardContent>
-          <Typography
-            level="h6"
-            fontWeight="lg"
-            textColor="#fff"
-            mt={{ xs: 12, sm: 18 }}
-          >
-            Image
-          </Typography>
-        </CardContent>
-      </Card> */}
-     
-    
-    </Box>
+  </Grid>
+      </Grid>
+      </Box>
 
       </>
     );
