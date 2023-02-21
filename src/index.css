@@ -52,6 +52,7 @@ code {
 }
 
 
+
 /* Hover/grow effect on GitHub logo */
 .githublogo {
   transition:.5s;
@@ -92,4 +93,65 @@ img {
 a {
   color: var(--DarkGray);
   text-decoration: none;
+}
+
+
+
+/* Button test */
+
+a.css3dbutton {
+    background: #6BC1FF; /* background color of button */
+    color: white;
+    text-decoration: none;
+    font: bold 28px Arial; /* font size and style */
+    position: relative;
+		top: 0; /* anchor main button's position */
+    bottom: -12px; /* Depth of 3D effect. :after pseudo element inherits this value so it's animated in Chrome. See: kizu.ru/en/pseudos */
+		margin-bottom: 12px;
+    -moz-box-shadow: 0 -15px 5px rgb(107, 107, 209) inset;
+    -webkit-box-shadow: 0 -15px 5px darkblue inset;
+    box-shadow: 0 -15px 5px #59a9e1 inset;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+a.css3dbutton, a.css3dbutton:after {
+    display: inline-block;
+    padding: 10px 15px; /* vertical and horizontal padding of button */
+    -moz-border-radius: 8px/15px;
+    -webkit-border-radius: 8px/15px;
+    border-radius: 8px/15px;
+    outline: none;
+}
+
+a.css3dbutton:after { /* pseudo element to construct 3D side of button */
+    content: "";
+    position: absolute;
+    padding: 0;
+    z-index: -1;
+    bottom: inherit; /* Inherit main button bottom value to animate it. See: kizu.ru/en/pseudos */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #a8b3c9; /* background color of 3D effect */
+    -moz-box-shadow: 1px 0 3px gray;
+    -webkit-box-shadow: 1px 0 3px gray;
+    box-shadow: 1px 0 3px gray;
+}
+
+a.css3dbutton:hover {
+    -moz-box-shadow: 0 25px 5px rgba(203, 217, 223, 0.7) inset;
+    -webkit-box-shadow: 0 25px 5px rgba(203, 217, 223, 0.7) inset;
+    box-shadow: 0 25px 5px rgba(203, 217, 223, 0.7) inset;
+    background: #6BC1FF; /* background color when mouse rolls over button */
+}
+
+a.css3dbutton:active {
+    top: 12px; /* shift button down 12px when depressed. Change 12px to match button's "bottom" property above */
+    bottom: 0;
+    -moz-box-shadow: 0 -20px 5px darkred inset, 1px 1px 2px #eee;
+    -webkit-box-shadow: 0 -20px 5px darkred inset, 1px 1px 2px #eee;
+    box-shadow: 0 -20px 5px darkred inset, 1px 1px 2px #eee;
 }
