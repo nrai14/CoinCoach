@@ -1,11 +1,14 @@
-import Tracker from "./Tracker";
+import CryptoTracker from "./CryptoTracker";
+//import Tracker from "./Tracker";
 
 
 function Home() {
     return (
         <>
            
-            <Tracker/>
+           
+
+            <CryptoTracker/>
 
      
          

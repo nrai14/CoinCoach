@@ -74,7 +74,7 @@ function ContactForm() {
   return (
     <>
 
-      <Box  pb={10} pr={5} pl={5} sx={{  bgcolor: ' #c7d8e1', border: 2, borderColor: '#F7F7F7', borderRadius: 3, maxWidth: '70%', margin: "0 auto" }}>
+      <Box  pb={10} pr={5} pl={5} sx={{ bgcolor: ' #c7d8e1', border: 2, borderColor: '#F7F7F7', borderRadius: 3, maxWidth: '70%', margin: "0 auto" }}>
     
       <Typography variant='h3' align='center' sx={{p:5}}>Contact Us</Typography>
        
@@ -153,8 +153,7 @@ function ContactForm() {
           <Grid item xs={6} >
 
           
-                  <Card style={{ maxWidth: 500, margin: "0px", padding: "50px 5px" }} >
-                  
+                  <Card style={{ maxWidth: 500, margin: "0px", padding: "50px 5px" }} >          
                   </Card>
                   <Card style={{ maxWidth: 500, marginTop: "20px", padding: "50px 5px" }} >
                   </Card>
