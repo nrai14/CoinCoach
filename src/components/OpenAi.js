@@ -36,7 +36,7 @@ function OpenAi({ cryptoData }) {
       headers: {
         "Content-Type": "application/json",
         Authorization:
-          "Bearer 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",
+          "Bearer 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",
       },
     })
       .then((res) => {
@@ -119,3 +119,4 @@ function OpenAi({ cryptoData }) {
 }
 
 export default OpenAi;
+

@@ -33,19 +33,19 @@ function Tracker() {
        
         <Grid container spacing={1} justifyContent="center" >
           
-          <Grid item xs={7}>
+          <Grid item xs={12} sm={7}>
             <RenderCards /> 
             
           </Grid>
 
-          <Grid item xs={5} > 
+          <Grid item xs={12} sm={5} > 
             <RenderTopFive/>
           </Grid>
 
-          <Grid item xs={5} >
+          <Grid item item xs={12} sm={5} >
             <AddTransaction />
           </Grid>
-          <Grid item xs={7} >
+          <Grid item xs={12} sm={7} >
             <RenderTransactions />
           </Grid>
          
