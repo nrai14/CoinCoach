@@ -12,10 +12,10 @@ function RenderFiveTransactions() {
 
   useEffect(() => {
 
+    //Gets transactions from Local Storage to Render using RadialBarChart from Recharts 
     const transactions = JSON.parse(localStorage.getItem('transactions'));
 
-
-
+    //Style for labels
     const style = { 
       top: 30,
       left: 400,
@@ -24,6 +24,7 @@ function RenderFiveTransactions() {
 
     if (transactions && transactions.length > 4) {
 
+      //Gets the 5 most recent transactions
       const data = [
         {
           name: '£' + transactions[(transactions.length - 1)].value + ' - ' + transactions[(transactions.length - 1)].category + ' - ' + transactions[(transactions.length - 1)].date,
@@ -86,6 +87,7 @@ function RenderFiveTransactions() {
     }
     else {
 
+      //If there is less than 5 Transaction stored, shows a banner
       setText(<Typography variant='body1' align='center'>There are less than 5 transactions stored.</Typography>);
 
     }
@@ -93,7 +95,13 @@ function RenderFiveTransactions() {
 
   return (
     <>
-      <Typography variant='h4' align='center' sx={{ p: 5 }}>5 Most Recent Transactions</Typography>
+      <Typography 
+      variant='h4' 
+      align='center' 
+      sx={{ p: 5 }}>
+      5 Most Recent Transactions
+      </Typography>
+     
       {textOnScreen}
 
     </>
