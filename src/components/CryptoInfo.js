@@ -7,6 +7,7 @@ function CryptoInfo({ cryptoData }) {
       {cryptoData.slice(0, 5).map((article, index) => (
         <div key={index}>
           <h4>{article.title}</h4>
+          {console.log(article)}
 
           {article.urlToImage.endsWith(".mp4") ? (
             <video
