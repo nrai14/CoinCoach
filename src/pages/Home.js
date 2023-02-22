@@ -9,14 +9,14 @@ function Home() {
   return (
     <>
       <Typography 
-      variant="h2" align="center" sx={{ p: 5 }}>
-        Welcome to CoinCoach
+      variant="h2" 
+      align="center" 
+      sx={{ p: 5 }}>
+      Welcome to CoinCoach
       </Typography>
 
       <div class="maincontainer">
         <div class="financial">
-          
-
           <Link to="/tracker">
             <a class="css3dbutton">Coins Tracker</a>
           </Link>

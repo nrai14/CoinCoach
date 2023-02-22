@@ -38,8 +38,7 @@ function CryptoInfo({ cryptoData }) {
                   image="https://static.vecteezy.com/system/resources/previews/007/459/324/non_2x/bitcoin-btc-group-included-cryptocurrency-and-stock-chart-candlestick-down-trend-lose-stock-on-stack-of-coins-use-technology-cryptocurrency-blockchain-close-up-coin-free-photo.jpg"
                   alt="News image"
                 />
-
-               
+    
                 <CardContent>
                   <Typography variant="body2" >
                     {moment(article.publishedAt).format('DD/MM/YYYY')}

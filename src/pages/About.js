@@ -5,12 +5,13 @@ import Typography from '@mui/material/Typography';
 
 function About() {
   return (
-    <>
-     
-
-      <Typography variant='h3' align='center' sx={{ p: 5 }}>About</Typography>
-
-     
+    <> 
+      <Typography 
+      variant='h3' 
+      align='center' 
+      sx={{ p: 5 }}>
+      About</Typography>
+    
       <div class="container">
         <p>
           Welcome to CoinCoach, a React app created by Nish, Sabrina, Michal and
