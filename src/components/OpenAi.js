@@ -34,6 +34,7 @@ function OpenAi({ cryptoData }) {
       headers: {
         "Content-Type": "application/json",
         Authorization:
+        'Bearer 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'
           
       },
     })
