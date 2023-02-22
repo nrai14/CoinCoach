@@ -41,19 +41,6 @@ function Tracker() {
           <Grid item xs={5} > 
             <RenderTopFive/>
           </Grid>
-          
-          <Grid item xs={6} >
-            <RenderIncome />
-          </Grid>
-
-          <Grid item xs={6} >
-            <RenderFiveTransactions />
-          </Grid>
-
-          <Grid item xs={12}  >
-            <RenderTotalExpenses />
-            {/* <CurrencyConverter/> */}
-          </Grid>
 
           <Grid item xs={5} >
             <AddTransaction />
@@ -62,6 +49,21 @@ function Tracker() {
             <RenderTransactions />
           </Grid>
          
+          
+          <Grid item xs={12} >
+            <RenderIncome />
+          </Grid>
+
+          <Grid item xs={12} >
+            <RenderFiveTransactions />
+          </Grid>
+
+          <Grid item xs={12}  >
+            <RenderTotalExpenses />
+            {/* <CurrencyConverter/> */}
+          </Grid>
+
+          
         </Grid>
 
       </Box>
