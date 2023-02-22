@@ -179,7 +179,7 @@ function ContactForm() {
                     </Grid>
 
                     <Grid item xs={12}>
-                      {success && (<Typography variant='h4' align='center'> Thank you very much for your message!</Typography>)}
+                      {success && (<Typography variant='h5' align='center'> Thank you very much for your message. We will in contact soon.</Typography>)}
                     </Grid>
                   </Grid>
                 </form>
