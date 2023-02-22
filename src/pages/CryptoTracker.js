@@ -1,7 +1,7 @@
 import OpenAi from '../components/OpenAi';
 import CryptoInfo from '../components/CryptoInfo';
 import { useState, useEffect } from 'react';
-
+import Box from "@mui/material/Box";
 function CryptoTracker() {
 
     const [cryptoData, setCryptoData] = useState([]);
@@ -23,12 +23,12 @@ function CryptoTracker() {
 
     return (
         <>
+       <Box mt= {10} pb={10} pr={5} pl={5} sx={{ bgcolor: ' #c7d8e1', border: 2, borderColor: '#F7F7F7', borderRadius: 3, maxWidth: '70%', margin: "0 auto" }}>
 
-            {/* <OpenAi cryptoData={cryptoData.slice(0, 5)} /> */}
-
-
+            <OpenAi cryptoData={cryptoData.slice(0, 5)} />
 
             <CryptoInfo cryptoData={cryptoData} />
+        </Box>
             
         </>
     )

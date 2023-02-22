@@ -20,7 +20,7 @@ function Home() {
           
 
           <Link to="/tracker">
-            <a class="css3dbutton">Coin Tracker</a>
+            <a class="css3dbutton">Coins Tracker</a>
           </Link>
         </div>
         <div class="coinbox">

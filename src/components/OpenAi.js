@@ -83,24 +83,16 @@ function OpenAi({ cryptoData }) {
 
             <Card style={{ maxWidth: "100%", margin: "10px", padding: "50px" }} >          
                  
-            <Typography 
-            variant='h4' 
-            align='left'
-    
-            >  
-            OpenAi based on {cryptoData.length} article evaluate bitcoin future on :
-            </Typography>        <Typography 
-            variant='h1' 
-            align='center'
-    
-            >  {"7 "}
-            </Typography>
+              <Typography 
+              variant='h4' 
+              align='left'
+              >  
+              OpenAi based on {cryptoData.length} article evaluate bitcoin future on :
+              {" "}
+              </Typography>
                  
-                 </Card>
-          
-
-          
-
+           </Card>
+               
             {openAiData < 5 ? (
               <span style={{ color: "red" }}>{openAiData}</span>
             ) : openAiData > 5 ? (
