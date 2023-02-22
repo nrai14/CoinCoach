@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Typography from '@mui/material/Typography';
+import Card from '@mui/material/Card';
 
 function OpenAi({ cryptoData }) {
   const [loading, setLoading] = useState(false);
@@ -77,8 +79,27 @@ function OpenAi({ cryptoData }) {
         ) : (
           <p>
             
-            OpenAi based on {cryptoData.length} article evaluate bitcoin future on:{" "}
 
+
+            <Card style={{ maxWidth: "100%", margin: "10px", padding: "50px" }} >          
+                 
+            <Typography 
+            variant='h4' 
+            align='left'
+    
+            >  
+            OpenAi based on {cryptoData.length} article evaluate bitcoin future on :
+            </Typography>        <Typography 
+            variant='h1' 
+            align='center'
+    
+            >  {"7 "}
+            </Typography>
+                 
+                 </Card>
+          
+
+          
 
             {openAiData < 5 ? (
               <span style={{ color: "red" }}>{openAiData}</span>
@@ -99,3 +120,4 @@ function OpenAi({ cryptoData }) {
 }
 
 export default OpenAi;
+

@@ -107,7 +107,7 @@ function RenderCards() {
 
                   fontSize={30}
                   fontWeight="lg"
-                  textColor="#1446A7"
+                  textColor="#fff"
 
                   mt={{ xs: 12, sm: 18 }}
                 >Savings : £{Pot3}

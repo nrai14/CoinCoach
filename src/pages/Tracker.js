@@ -15,6 +15,8 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 
 
+
+
 function Tracker() {
 
   return (
@@ -31,20 +33,28 @@ function Tracker() {
        
         <Grid container spacing={1} justifyContent="center" >
           
-          <Grid item xs={7}>
+          <Grid item xs={12} sm={7}>
             <RenderCards /> 
             
           </Grid>
 
-          <Grid item xs={5} > 
+          <Grid item xs={12} sm={5} > 
             <RenderTopFive/>
           </Grid>
+
+          <Grid item item xs={12} sm={5} >
+            <AddTransaction />
+          </Grid>
+          <Grid item xs={12} sm={7} >
+            <RenderTransactions />
+          </Grid>
+         
           
-          <Grid item xs={6} >
+          <Grid item xs={12} >
             <RenderIncome />
           </Grid>
 
-          <Grid item xs={6} >
+          <Grid item xs={12} >
             <RenderFiveTransactions />
           </Grid>
 
@@ -53,13 +63,7 @@ function Tracker() {
             {/* <CurrencyConverter/> */}
           </Grid>
 
-          <Grid item xs={5} >
-            <AddTransaction />
-          </Grid>
-          <Grid item xs={7} >
-            <RenderTransactions />
-          </Grid>
-         
+          
         </Grid>
 
       </Box>

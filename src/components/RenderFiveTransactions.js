@@ -15,9 +15,9 @@ function RenderFiveTransactions() {
 
 
 
-    const style = {
+    const style = { 
       top: 30,
-      left: 350,
+      left: 400,
       lineHeight: "44px"
     };
 
@@ -63,7 +63,6 @@ function RenderFiveTransactions() {
           outerRadius={140}
           barSize={20}
           data={data}
-
         >
           <RadialBar
             minAngle={15}
@@ -71,7 +70,6 @@ function RenderFiveTransactions() {
             background
             clockWise
             dataKey="uv"
-
           />
           <Legend
             iconSize={20}

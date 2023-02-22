@@ -26,21 +26,21 @@ function RenderTransactions() {
       {
         field: 'date',
         headerName: 'Date',
-        width: 160,
+        width: 100,
         editable: false,
         headerClassName: 'dataGridHeader',
       },
       {
         field: 'category',
         headerName: 'Category',
-        width: 200,
+        width: 150,
         editable: false,
         headerClassName: 'dataGridHeader',
       },
       {
         field: 'description',
         headerName: 'Description',
-        width: 200,
+        width: 150,
         editable: false,
         headerClassName: 'dataGridHeader',
 
@@ -49,7 +49,7 @@ function RenderTransactions() {
         field: 'value',
         headerName: 'Value',
         type: 'number',
-        width: 160,
+        width: 100,
         editable: false,
         headerClassName: 'dataGridHeader',
 

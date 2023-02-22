@@ -52,20 +52,20 @@ function RenderIncome() {
           <RadialBarChart
             width={500}
             height={300}
+            cx={150}
+            cy={150}
             innerRadius={20}
             outerRadius={140}
             data={newData}
             startAngle={180}
             endAngle={0}
           >
-
             <RadialBar
               minAngle={15}
               label={{ position: "insideStart", fill: "#F7F7F7" }}
               background
               clockWise
               dataKey="uv"
-
             />
             <Legend
               iconSize={20}
@@ -74,7 +74,6 @@ function RenderIncome() {
               layout="vertical"
               verticalAlign="middle"
               wrapperStyle={style}
-
             />
           </RadialBarChart>
 

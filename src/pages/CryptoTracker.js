@@ -13,6 +13,8 @@ function CryptoTracker() {
       fetch(`https://newsapi.org/v2/everything?q=${crypto_name}&apiKey=${api_key}`)
         .then(res => res.json())
         .then(data => setCryptoData(data.articles))
+
+        console.log('outside')
         console.log(cryptoData)
         
     
@@ -22,7 +24,9 @@ function CryptoTracker() {
     return (
         <>
 
-            <OpenAi cryptoData={cryptoData.slice(0, 5)} />
+            {/* <OpenAi cryptoData={cryptoData.slice(0, 5)} /> */}
+
+
 
             <CryptoInfo cryptoData={cryptoData} />
             
