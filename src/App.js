@@ -24,13 +24,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
          <Route path="/tracker" element={<Tracker/>} />
          <Route path="/crypto" element={<CryptoTracker/>} />
-         <Route path="*" element={<NotFound />} />
-         
-      </Routes>
-
-
-    
-     
+         <Route path="*" element={<NotFound />} />       
+      </Routes>    
     <Footer/> 
    </>
    

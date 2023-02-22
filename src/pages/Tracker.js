@@ -7,6 +7,9 @@ import RenderCards from '../components/RenderCards';
 import RenderIncome from '../components/RenderIncome';
 import RenderFiveTransactions from '../components/RenderFiveTransactions';
 import RenderTopFive from '../components/RenderTopFive';
+import ResponsiveRenderFiveTransactions from '../components/ResponsiveRenderFiveTransactions'
+import ResponsiveRenderIncome from '../components/ResponsiveRenderIncome'
+
 
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -20,16 +23,22 @@ function Tracker() {
 
       <InitPots />
 
-      <Box 
+      {/* <Box 
       pb={10} 
       pr={5} 
       pl={5} 
+      display={{ xs: "none", sm: "block" }}
       sx={{ bgcolor: '#c7d8e1',
-       border: 2,
+      border: 2,
       borderColor:'#F7F7F7', 
       borderRadius: 3, 
-      maxWidth: '70%', 
-      margin: "0 auto" }}>
+      maxWidth: '80%', 
+      margin: "0 auto"
+      
+      }} */}
+      
+     
+      >
 
       <Typography 
       variant='h3' 
@@ -38,7 +47,9 @@ function Tracker() {
       Coins Tracker
       </Typography>
 
-      <Grid container spacing={1} justifyContent="center" >
+      <Grid container spacing={1} justifyContent="center"  pb={10} 
+      pr={5} 
+      pl={5}  >
 
           <Grid item xs={12} sm={7}>
             <RenderCards />
@@ -49,30 +60,68 @@ function Tracker() {
             <RenderTopFive />
           </Grid>
 
-          <Grid item item xs={12} sm={5} >
+          <Grid item item xs={12} sm={6} >
             <AddTransaction />
           </Grid>
-          <Grid item xs={12} sm={7} >
+          <Grid item xs={12} sm={6}
+          display={{ xs: "none", sm: "block" }}
+           >
             <RenderTransactions />
+            
           </Grid>
 
-          <Grid item xs={12} >
+          <Grid item  sm={6} 
+           display={{ xs: "none", sm: "block" }}>
             <RenderIncome />
           </Grid>
 
-          <Grid item xs={12} >
+
+          <Grid item xs={12} 
+           display={{ xs: "block", sm: "none" }}
+          >
+            <ResponsiveRenderIncome />
+          </Grid>
+
+
+
+
+
+          <Grid item  sm={6}
+           display={{ xs: "none", sm: "block" }}
+          >
             <RenderFiveTransactions />
           </Grid>
 
-          <Grid item xs={12}  >
+          <Grid item xs={12} 
+           display={{ xs: "block", sm: "none" }}
+          >
+            <ResponsiveRenderFiveTransactions/>
+          </Grid>
+         
+
+
+          {/* Render Total Expenses will hide on xs */}
+          <Grid item xs={12} 
+           display={{ xs: "none", sm: "block" }}
+          >
             <RenderTotalExpenses />
-       
+          </Grid>
+
+          <Grid item xs={12} 
+           display={{ xs: "block", sm: "none" }}
+          >
+             <Typography 
+              variant='h5' 
+              align='center' 
+              sx={{ p: 5 }}>
+              Use desktop version to see Transactions History , Total Expenses and full version of data .
+              </Typography>
           </Grid>
 
 
         </Grid>
 
-      </Box>
+      {/* </Box> */}
 
     </>
   );

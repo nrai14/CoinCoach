@@ -66,13 +66,20 @@ function RenderTransactions() {
 
      //Sets DataGrid to show on screen
       setText(
-        <Box sx={{
-          height: '80%', width: '100%', '& .dataGridHeader': {
+        <Box 
+        
+        sx={{
+          height: '80%', 
+          width: '100%', 
+          '& .dataGridHeader': {
           backgroundColor: '#001C55',
           color: '#fff',
           fontSize: 18
           },
-        }}>
+        }}
+        
+      
+        >
           <DataGrid
             rows={newRows}
             columns={columns}

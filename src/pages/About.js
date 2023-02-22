@@ -10,14 +10,15 @@ function About() {
       variant='h3' 
       align='center' 
       sx={{ p: 5 }}>
-      About</Typography>
+      About
+      </Typography>
     
       <div class="container">
         <p>
           Welcome to CoinCoach, a React app created by Nish, Sabrina, Michal and
           Laura as part of their EDX coding bootcamp's final project. 
         </p>
-        <br></br>
+       
         
         <Team />
 

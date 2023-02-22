@@ -1,19 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-import { RadialBarChart, RadialBar, Legend } from "recharts";
+import { RadialBarChart, RadialBar } from "recharts";
 
 import Typography from '@mui/material/Typography';
 
 function RenderIncome() {
 
   const [textOnScreen, setText] = useState('');
-
-  //Style for labels
-  const style = {
-    top: 30,
-    left: 400,
-    lineHeight: "44px"
-  };
 
 
   useEffect(() => {
@@ -66,14 +59,7 @@ function RenderIncome() {
               clockWise
               dataKey="uv"
             />
-            <Legend
-              iconSize={20}
-              width={600}
-              height={240}
-              layout="vertical"
-              verticalAlign="middle"
-              wrapperStyle={style}
-            />
+           
           </RadialBarChart>
 
        );
@@ -83,11 +69,13 @@ function RenderIncome() {
 
   return (
     <>
-          <Typography 
+      <Typography 
       variant='h4' 
       align='center' 
-      sx={{ p: 5 }}>
-   
+      sm={{ p: 5 }}
+      sx={{ pt: 20 }}
+      
+      >
       Most Recent Incomes 
       </Typography>
       {/*Shows the correct banner depending on what is on the Pots at the moment */}   

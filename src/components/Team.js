@@ -1,5 +1,3 @@
-
-//Function to show team images 
 function Team() {
     return (
         <>
@@ -8,7 +6,7 @@ function Team() {
             <img  className="team" src="Sabrina.jpeg" alt="Sabrina"></img>
             <img  className="team" src="Michal.jpeg" alt="Michal"></img>
             <img  className="team" src="Laura.jpeg" alt="Laura"></img>
-        </div>      
+        </div>   
         </>
     );
 }

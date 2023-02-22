@@ -42,12 +42,25 @@ function RenderTopFive() {
        //Sets table board to show on screen
       setText(
         <Card 
-        sx={{ maxWidth: 250, 
+        sx={{ maxWidth: 260, 
         color: '#222479', 
         p: 3, 
-        m:5 , 
+        ml:10,
         mt:20 ,
-        bgcolor: '#fff' }} >
+        bgcolor: '#fff' }} 
+
+        sm={{ maxWidth: 250, 
+          color: '#222479', 
+          p: 3, 
+          m:5 , 
+          mt:20 ,
+          bgcolor: '#fff' }} 
+
+        
+
+        
+        
+        >
 
         <Typography variant='h4' align='center'>Top 5 Expenditures </Typography>
          

@@ -30,8 +30,8 @@ function CryptoTracker() {
        sx={{ bgcolor: '#c7d8e1',
         border: 2, 
         borderColor: '#F7F7F7',
-        borderRadius: 3, 
-        maxWidth: '70%', 
+        borderRadius: 2, 
+        maxWidth: '80%', 
         margin: "0 auto" }}>
 
         <OpenAi cryptoData={cryptoData.slice(0, 5)} />

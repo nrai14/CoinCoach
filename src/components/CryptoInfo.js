@@ -24,8 +24,10 @@ function CryptoInfo({ cryptoData }) {
       >
         {cryptoData.slice(0, 5).map((article, index) => (
 
-          <Grid item xs={3}>
-            <Card sx={{maxWidth: 445, mb: 3, mt: 3 }}>
+          <Grid item xs={6}>
+            <Card sx={{maxWidth: 445, mb: 3, mt: 3 }}
+            
+            >
               <CardActionArea
                 target="_blank"
                 href={article.url}

@@ -93,8 +93,8 @@ function ContactForm() {
           bgcolor: '#c7d8e1',
           border: 2,
           borderColor: '#F7F7F7',
-          borderRadius: 3,
-          maxWidth: '70%',
+          borderRadius: 2,
+          maxWidth: '80%',
           margin: "0 auto"
         }}>
 
@@ -106,10 +106,10 @@ function ContactForm() {
         </Typography>
 
         <Typography
-          variant='h5'
+          variant='h6'
           align='center'
           sx={{ p: 5 }}>
-          Please send us your message on contact us directly.
+          Please send us your message on contact us directly on github. Click on our cards to get the link.
         </Typography>
 
 
@@ -117,7 +117,7 @@ function ContactForm() {
           container
           spacing={3}
           justifyContent="center"
-          pt={10}>
+          pt={1}>
 
           <Grid item xs={12} sm={6} >
             <Card style={{ maxWidth: 500, 
