@@ -1,59 +1,31 @@
-import React, { useState, useEffect } from 'react';
+
 import Typography from '@mui/material/Typography';
-
-import AspectRatio from '@mui/joy/AspectRatio';
-import Box from '@mui/joy/Box';
-// import Button from '@mui/material/Button';
-// import Card from '@mui/joy/Card';
-import IconButton from '@mui/joy/IconButton';
-
-
-
 import Grid from '@mui/material/Grid';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 
-import { Button, CardActionArea, CardActions } from '@mui/material';
-
+import { CardActionArea } from '@mui/material';
+import moment from 'moment';
 
 
 function CryptoInfo({ cryptoData }) {
 
-
-  const theme = createTheme({
-    palette: {
-      brand: {
-        main: '#001C55',
-        contrastText: '#fff',
-      },
-    },
-  });
-
   return (
     <>
 
-
-
       <Typography variant='h4' align='center' pt="50px">Short Crypto News </Typography>
-
-
       <Grid
         container
         spacing={1}
         direction="column"
         alignItems="center"
         justify="center"
-
       >
-
         {cryptoData.slice(0, 5).map((article, index) => (
 
           <Grid item xs={3}>
-
-
             <Card sx={{ maxWidth: 445, mb: 3, mt: 3 }}>
               <CardActionArea
                 target="_blank"
@@ -68,24 +40,19 @@ function CryptoInfo({ cryptoData }) {
                   alt="News image"
                 />
                 <CardContent>
-                <Typography variant="body2" >
-                    {article.publishedAt}
+                  <Typography variant="body2" >
+                    {moment(article.publishedAt).format('DD/MM/YYYY')}
                   </Typography>
                   <Typography gutterBottom variant="h5" component="div">
                     {article.title}
                   </Typography>
                   <Typography variant="body2" >
-                   
                     Description Here{article.description}
                   </Typography>
                 </CardContent>
               </CardActionArea>
-
             </Card>
-
           </Grid>
-
-
         ))}
       </Grid>
     </>
