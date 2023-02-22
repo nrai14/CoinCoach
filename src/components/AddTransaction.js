@@ -23,7 +23,7 @@ import moment from 'moment';
 
 function AddTransaction() {
 
-  // Set style for for button
+  // Set style for for button on form
   const theme = createTheme({
     palette: {
       brand: {
