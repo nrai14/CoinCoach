@@ -248,7 +248,7 @@ function AddTransaction() {
                 <TextField
                   type='number'
                   name='value'
-                  value={formData.value}
+                  value={formData.value} 
                   label='Value'
                   placeholder='Please enter the value'
                   variant='outlined'
