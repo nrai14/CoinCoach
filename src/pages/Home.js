@@ -1,5 +1,5 @@
 import CryptoTracker from "./CryptoTracker";
-import Tracker from "./Tracker";
+//import Tracker from "./Tracker";
 
 
 
@@ -9,8 +9,8 @@ function Home() {
            
            
 
-            <CryptoTracker/>
-            <Tracker/>
+            {/* <CryptoTracker/> */}
+            {/* <Tracker/> */}
 
      
          

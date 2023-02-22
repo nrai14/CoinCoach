@@ -22,7 +22,7 @@ function CryptoTracker() {
     return (
         <>
 
-            <OpenAi cryptoData={cryptoData.slice(0, 5)} />
+            {/* <OpenAi cryptoData={cryptoData.slice(0, 5)} /> */}
 
 
 
