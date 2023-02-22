@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Typography from '@mui/material/Typography';
+
 import { RadialBarChart, RadialBar, Legend } from "recharts";
 
+import Typography from '@mui/material/Typography';
 
 function RenderIncome() {
 

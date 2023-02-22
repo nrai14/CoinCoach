@@ -1,4 +1,3 @@
-
 import Nav from "./Nav";
 
 function Header() {

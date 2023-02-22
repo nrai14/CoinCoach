@@ -1,10 +1,11 @@
-import * as React from 'react';
+import React from 'react';
+import { useState, useEffect } from 'react';
+
 import Box from '@mui/joy/Box';
 import Card from '@mui/joy/Card';
 import CardCover from '@mui/joy/CardCover';
 import CardContent from '@mui/joy/CardContent';
 import Typography from '@mui/joy/Typography';
-import { useState, useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 
 function RenderCards() {
@@ -12,7 +13,6 @@ function RenderCards() {
   const [Pot1, setPot1] = useState(0);
   const [Pot2, setPot2] = useState(0);
   const [Pot3, setPot3] = useState(0);
-
 
   useEffect(() => {
     const Pots = JSON.parse(localStorage.getItem('pots'));

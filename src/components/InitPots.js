@@ -3,9 +3,7 @@ import Typography from '@mui/material/Typography';
 
 function InitPots() {
 
-    
     const [pots, setPots] = useState([]);
-
 
     useEffect(() => {
   

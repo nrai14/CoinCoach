@@ -1,7 +1,10 @@
+import { useState, useEffect } from 'react';
+
 import OpenAi from '../components/OpenAi';
 import CryptoInfo from '../components/CryptoInfo';
-import { useState, useEffect } from 'react';
+
 import Box from "@mui/material/Box";
+
 function CryptoTracker() {
 
     const [cryptoData, setCryptoData] = useState([]);

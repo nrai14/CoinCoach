@@ -1,6 +1,3 @@
-// Home / About / Contact
-// Three Buttons
-
 import Stack from "@mui/system/Stack";
 import Button from "@mui/material/Button";
 import {Link} from "react-router-dom";

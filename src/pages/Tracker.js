@@ -2,19 +2,15 @@
 import InitPots from '../components/InitPots';
 import AddTransaction from '../components/AddTransaction';
 import RenderTotalExpenses from '../components/RenderTotalExpenses'
-
-import Typography from '@mui/material/Typography';
 import RenderTransactions from '../components/RenderTransactions';
 import RenderCards from '../components/RenderCards';
 import RenderIncome from '../components/RenderIncome';
 import RenderFiveTransactions from '../components/RenderFiveTransactions';
 import RenderTopFive from '../components/RenderTopFive';
 
-
+import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-
-
 
 
 function Tracker() {

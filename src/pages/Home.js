@@ -1,12 +1,9 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Coin from "../components/Coin";
-import Stack from "@mui/system/Stack";
-import Button from "@mui/material/Button";
+
 import { Typography } from "@mui/material";
-import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import ButtonBase from "@mui/material/ButtonBase";
+
 
 function Home() {
   return (
