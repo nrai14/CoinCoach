@@ -1,13 +1,15 @@
 import {useState, useEffect} from 'react';
 import Typography from '@mui/material/Typography';
 
+
+//Use of Pots to store values locally: Including Balance and Income
+//All 12 Pots are initialized on 0 
 function InitPots() {
 
     const [pots, setPots] = useState([]);
 
     useEffect(() => {
-  
-    //If there are pots on the Local storage already do not create again
+    //If there are pots on the Local storage  do not create them again
     const existingPots = JSON.parse(localStorage.getItem('pots'));
    
     if (existingPots===null) {
@@ -84,7 +86,7 @@ function InitPots() {
 
     return(    
     <>
-    <Typography variant='h2' align='center'></Typography>
+    
     </>
     );
 }
