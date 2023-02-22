@@ -1,14 +1,13 @@
 function Footer() {
-    return (
-      <>
+  return (
+    <>
       <div class="footer">
-      <a href="https://github.com/nrai14/CoinCoach"><i class="fa-brands fa-github fa-3x githublogo"></i></a>
+        <a href="https://github.com/nrai14/CoinCoach">
+          <i class="fa-brands fa-github fa-3x githublogo"></i></a>
+        <h2 class="Copyright"> © 2023 CoinCoach</h2>
+      </div>
+    </>
+  );
+}
 
-       <h2 class="Copyright"> © 2023 CoinCoach</h2>
-         
-     </div>
-      </>
-    );
-  }
-  
-  export default Footer;
+export default Footer;

@@ -8,7 +8,8 @@ import { Typography } from "@mui/material";
 function Home() {
   return (
     <>
-      <Typography variant="h2" align="center" sx={{ p: 5 }}>
+      <Typography 
+      variant="h2" align="center" sx={{ p: 5 }}>
         Welcome to CoinCoach
       </Typography>
 
