@@ -22,27 +22,32 @@ function RenderTopFive() {
 
   useEffect(() => {
 
+    //Initialize the banner of screen in case there are no transactions stored.
     setText(<Typography variant='body1' align='left'>There are no transactions stored.</Typography>);
 
+    //Get Pots from local storage
     const Pots = JSON.parse(localStorage.getItem('pots'));
-
+    
+    //Sort the pots
     const Sorted = Pots.sort((a, b) => b.value - a.value);
 
-
-
+    //Filter pots that are no Income ot Balance to create the Top 5
     const Filtered = Sorted.filter(function (el) {
       return ((el.category !== 'Income') && (el.category !== 'Balance'));
     });
 
 
-
     if (Filtered.length > 5) {
-
       setText(
+        <Card 
+        sx={{ maxWidth: 250, 
+        color: '#222479', 
+        p: 3, 
+        m:5 , 
+        mt:20 ,
+        bgcolor: '#fff' }} >
 
-
-        <Card sx={{ maxWidth: 250, color: '#222479', p: 3, m:5 , mt:20 ,bgcolor: '#fff', }} >
-          <Typography variant='h4' align='center'>Top 5 Expenditures </Typography>
+        <Typography variant='h4' align='center'>Top 5 Expenditures </Typography>
          
           <List>
             <ListItem disablePadding>
@@ -87,21 +92,14 @@ function RenderTopFive() {
 
             </ListItem>
           </List>
-
         </Card>
-
-
-
       );
     }
-
-
   }, []);
   return (
     <>
-
+      {/*Shows the correct banner depending on what is on the Pots at the moment */}
       {textOnScreen}
-
 
     </>
   );

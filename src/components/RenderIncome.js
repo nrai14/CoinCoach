@@ -89,7 +89,7 @@ function RenderIncome() {
       sx={{ p: 5 }}>
       Most Recent Incomes 
       </Typography>
-         
+      {/*Shows the correct banner depending on what is on the Pots at the moment */}   
       {textOnScreen}
     </>
 

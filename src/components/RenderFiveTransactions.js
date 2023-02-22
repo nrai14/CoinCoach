@@ -102,6 +102,7 @@ function RenderFiveTransactions() {
       5 Most Recent Transactions
       </Typography>
      
+      {/*Shows the correct banner depending on what is on the Pots at the moment */}
       {textOnScreen}
 
     </>
