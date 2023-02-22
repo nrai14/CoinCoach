@@ -51,7 +51,7 @@ code {
 }
 
 .coinbox {
-  position: relative;
+  
   margin-top: 10px;
   width: 20%;
   display: flex;
@@ -133,7 +133,7 @@ a {
 
 
 
-/* Button test */
+/* Button styles */
 
 a.css3dbutton {
     background: #6BC1FF; /* background color of button */
@@ -202,7 +202,7 @@ a.css3dbutton:active {
 }
 
 
-/* Coin stuff */
+/* Coin styles */
 
 .jump {
   animation: jump 1.5s infinite ease;

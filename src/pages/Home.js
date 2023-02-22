@@ -23,6 +23,8 @@ function Home() {
         </div>
         <div class="coinbox">
             <Coin />
+
+
           <p class="marquee">
             <span>
               CoinCoach is your ultimate financial companion to keep tabs on
