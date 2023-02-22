@@ -86,9 +86,10 @@ function RenderTotalExpenses() {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis />
-          <Bar dataKey="uv" fill="#000" shape={<TriangleBar />} label={{ position: 'top' }}>
+          <Bar dataKey="uv" fill="#000" shape={<TriangleBar/>} label={{ position: 'top' }}>
             {data.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+              
             ))}
           </Bar>
         </BarChart>)
