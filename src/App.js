@@ -1,10 +1,8 @@
-
 import {Routes, Route} from "react-router-dom";
-
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-import OpenAi from './pages/OpenAi';
+import CryptoTracker from './pages/CryptoTracker';
 import Tracker from './pages/Tracker';
 
 import Home from "./pages/Home";
@@ -25,7 +23,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
          <Route path="/tracker" element={<Tracker/>} />
-         <Route path="/crypto" element={<OpenAi/>} />
+         <Route path="/crypto" element={<CryptoTracker/>} />
          <Route path="*" element={<NotFound />} />
          
       </Routes>
