@@ -86,9 +86,15 @@ function AddTransaction() {
 
       //Push new element into the Array 
       setTransactions(newTransactions)
-      existingTransactions.push(transactions);
+
+
+      existingTransactions.push(newTransactions);
+
+   
+
       localStorage.setItem('transactions', JSON.stringify(existingTransactions));
       
+    
     
     }
     else {

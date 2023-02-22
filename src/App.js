@@ -15,9 +15,7 @@ function App() {
   return (
    
    <>
-   <br></br>
-    <Header />
-   
+    <Header />  
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -27,8 +25,7 @@ function App() {
          <Route path="*" element={<NotFound />} />       
       </Routes>    
     <Footer/> 
-   </>
-   
+   </>  
   );
 }
 
