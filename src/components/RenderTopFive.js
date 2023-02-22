@@ -45,21 +45,11 @@ function RenderTopFive() {
         sx={{ maxWidth: 260, 
         color: '#222479', 
         p: 3, 
-        ml:10,
+        ml:5,
         mt:20 ,
         bgcolor: '#fff' }} 
 
-        sm={{ maxWidth: 250, 
-          color: '#222479', 
-          p: 3, 
-          m:5 , 
-          mt:20 ,
-          bgcolor: '#fff' }} 
-
-        
-
-        
-        
+     
         >
 
         <Typography variant='h4' align='center'>Top 5 Expenditures </Typography>
