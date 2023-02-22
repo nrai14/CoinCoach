@@ -11,6 +11,8 @@ function RenderTransactions() {
 
 
   useEffect(() => {
+
+    //Gets transactions from Local Storage to Render using dataGrid from MUI 
     const rows = JSON.parse(localStorage.getItem('transactions'));
 
     const columns = [
@@ -56,26 +58,19 @@ function RenderTransactions() {
 
     if (rows) {
 
+      //Filter Transactions to get rid of null or empty 
       const newRows = rows.filter(a => a);
 
+      // Adds £ to values to show on colum values
+      newRows.map((e) => ( e.value = '£ ' + e.value ));
 
-      newRows.map((e) => (
-
-        e.value = '£ ' + e.value
-
-      ));
-
-
-
-
-
-
+     //Sets DataGrid to show on screen
       setText(
         <Box sx={{
           height: '80%', width: '100%', '& .dataGridHeader': {
-            backgroundColor: '#001C55',
-            color: '#fff',
-            fontSize: 18
+          backgroundColor: '#001C55',
+          color: '#fff',
+          fontSize: 18
           },
         }}>
           <DataGrid
@@ -90,21 +85,17 @@ function RenderTransactions() {
 
     }
     else {
-
+      //If there are no transactions stored, shows a different banner
       setText(<Typography variant='body1' align='center'>There are no transactions stored. Transactions will be shown in a table.</Typography>);
 
     }
 
   }, []);
 
-
-
-
-
   return (
     <>
       <Typography variant='h4' align='center' sx={{ p: 5 }}>Transactions History</Typography>
-
+      {/*Shows the correct banner depending on what is on the Pots at the moment */}
       {textOnScreen}
 
     </>
