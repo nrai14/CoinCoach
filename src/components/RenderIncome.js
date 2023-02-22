@@ -6,10 +6,9 @@ import Typography from '@mui/material/Typography';
 
 function RenderIncome() {
 
-
   const [textOnScreen, setText] = useState('');
 
-
+  //Style for labels
   const style = {
     top: 30,
     left: 400,
@@ -19,37 +18,36 @@ function RenderIncome() {
 
   useEffect(() => {
 
+    //Initialize the banner of screen in case there are no incomes stored.
     setText(<Typography variant='body1' align='left'>There are no Incomes stored.</Typography>);
 
     const newData = [];
 
+     //Gets transactions from Local Storage to Render using RadialBarChart from Recharts 
     const transactions = JSON.parse(localStorage.getItem('transactions'));
 
     if (transactions) {
 
+      //Filter only the transactions that are Incomes
       const onlyIncomes = transactions.filter(val => val.category === 'Income');
 
       if (onlyIncomes.length > 0) {
 
+        //Reverse the array to get the new transactions first
         const reverse = onlyIncomes.reverse();
-
 
         for (let index = 0; (index < reverse.length && index < 5); index++) {
 
+          //Creates a new data element for each income in the new array (no more than 5)
           newData.push({
-
             name: '£' + reverse[index].value + ' - ' + reverse[index].date,
             uv: +reverse[index].value,
             fill: "#222479"
-
-
           });
 
         }
 
-
         setText(
-
           <RadialBarChart
             width={500}
             height={300}
@@ -78,28 +76,21 @@ function RenderIncome() {
             />
           </RadialBarChart>
 
-
-        );
-
-
+       );
       }
-
-
     }
-
-
-
   }, []);
 
-
   return (
-
     <>
-
-      <Typography variant='h4' align='center' sx={{ p: 5 }} >Most Recent Incomes </Typography>
+      <Typography 
+      variant='h4' 
+      align='center' 
+      sx={{ p: 5 }}>
+      Most Recent Incomes 
+      </Typography>
+         
       {textOnScreen}
-
-
     </>
 
   );
