@@ -23,7 +23,7 @@ import moment from 'moment';
 
 function AddTransaction() {
 
-
+  // Set style for for button
   const theme = createTheme({
     palette: {
       brand: {
@@ -37,13 +37,13 @@ function AddTransaction() {
   const [transactions, setTransactions] = useState('');
   const [date, setDate] = useState(null);
   const [formData, setFormData] = useState({
-
     category: '',
     description: '',
     value: ''
   });
 
 
+  // Function to  refresh page after new values are stored on local storage
   // function refreshPage() {
   //   window.location.reload(false);
   // }
@@ -62,15 +62,15 @@ function AddTransaction() {
 
 
   const handleSubmit = (event) => {
-
     event.preventDefault();
   
-
-    //Add new transactions to the array
+    //Get existingTransactions from Local storage
     const existingTransactions = JSON.parse(localStorage.getItem('transactions'));
 
+    //If there are existingTransactions create a new one and adds it to the local storage
     if (existingTransactions) {
     
+      //Get if for new transaction to be added
       const newId = existingTransactions.length;
     
       const formattedDate = moment(`${date}`).format('DD/MM/YYYY');
@@ -84,19 +84,15 @@ function AddTransaction() {
         value: formData.value,
       };
 
-  
-
       //Push new element into the Array 
       setTransactions(newTransactions)
       existingTransactions.push(transactions);
       localStorage.setItem('transactions', JSON.stringify(existingTransactions));
       
-      
-      
-
+    
     }
     else {
-      // Create first transaction for local storage with id = 0
+      //If there is no existingTransactions,  creates first transaction for local storage with id = 0
       const formattedDate = moment(`${date}`).format('DD/MM/YYYY');
       const newTransactions =
       {
@@ -111,23 +107,27 @@ function AddTransaction() {
 
     }
 
-
-    // //Pot logics 
-    // //id 7 = Income adds to Balance and to Income pot
-    // //All other ids subtract from  Balance and add to individual pots
+   
+    // //----------Pot logics -How we calculate the values on Pots-----------------
+    // // If id 7 = Income adds to Balance and to Income pot
+    // // For all other ids subtract from Balance (id - 11) and adds value to individual pots
+    
+    //Gets pots from local storage
     const MyPots = JSON.parse(localStorage.getItem('pots'));
  
     if (formData.category === 'Income') {
       //Adds to pot 11 (Balance)
-      //Adds to pot 7   
+      //Adds to pot 7 (Income)
       MyPots[11].value = +MyPots[11].value + +formData.value;
       MyPots[7].value = +MyPots[7].value + +formData.value;
     }
     else { 
-      //Subtract from pot 11
-      //Adds to individual pot
+      //Subtract from pot 11 (Balance)
+      //Adds to individual Pot (See initPots.js for numbers of pots)
       MyPots[11].value = MyPots[11].value - formData.value;
       let idPot = 0  
+
+      //Use of switch to get id of pot base on new transaction on form
       switch (formData.category) {
         case 'Bills':
            idPot = 0;
@@ -164,6 +164,7 @@ function AddTransaction() {
      MyPots[idPot].value = +MyPots[idPot].value + +formData.value;
     }
 
+    //Adds new values to Pots on Local Storage
     localStorage.setItem('pots', JSON.stringify(MyPots));
 
     //Cleans inputs 
@@ -182,7 +183,12 @@ function AddTransaction() {
 
   return (
     <>
-      <Typography variant='h4' align='center' sx={{p:5}}>Add Transaction</Typography>
+      <Typography 
+        variant='h4' 
+        align='center' 
+        sx={{p:5}}>
+        Add Transaction
+      </Typography>
      
       <Card style={{ maxWidth: 350, margin: "0 auto",}} >
         <CardContent>
@@ -193,12 +199,10 @@ function AddTransaction() {
                 <LocalizationProvider dateAdapter={AdapterDayjs} >
                   <DatePicker
                     label="Date"
-                    value={date}
-                   
+                    value={date}  
                     onChange={(newValue) => {
                       setDate(newValue);
                     }}
-
                     renderInput={(params) => <TextField fullWidth required {...params} />}
                   />
                 </LocalizationProvider>
@@ -269,8 +273,6 @@ function AddTransaction() {
           </form>
         </CardContent>
       </Card>
-
-
     </>
   );
 }
