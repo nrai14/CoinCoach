@@ -1,17 +1,24 @@
 import Team from "../components/Team";
 
+import Typography from '@mui/material/Typography';
+
 
 function About() {
   return (
-    <>
-      <h1 class="about-title" >About</h1>
-     
+    <> 
+      <Typography 
+      variant='h3' 
+      align='center' 
+      sx={{ p: 5 }}>
+      About
+      </Typography>
+    
       <div class="container">
         <p>
           Welcome to CoinCoach, a React app created by Nish, Sabrina, Michal and
           Laura as part of their EDX coding bootcamp's final project. 
         </p>
-        <br></br>
+       
         
         <Team />
 

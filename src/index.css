@@ -51,7 +51,7 @@ code {
 }
 
 .coinbox {
-  position: relative;
+  
   margin-top: 10px;
   width: 20%;
   display: flex;
@@ -118,7 +118,7 @@ code {
   width: 50%;
 }
 
-img {
+.team {
   height: 150px;
   border-radius: 50px;
   margin: 10px;
@@ -133,7 +133,7 @@ a {
 
 
 
-/* Button test */
+/* Button styles */
 
 a.css3dbutton {
     background: #6BC1FF; /* background color of button */
@@ -145,7 +145,7 @@ a.css3dbutton {
     bottom: -12px; /* Depth of 3D effect. :after pseudo element inherits this value so it's animated in Chrome. See: kizu.ru/en/pseudos */
 		margin-bottom: 12px;
     -moz-box-shadow: 0 -15px 5px rgb(107, 107, 209) inset;
-    -webkit-box-shadow: 0 -15px 5px darkblue inset;
+    -webkit-box-shadow: 0 -15px 5px var(--NavyBlue) inset;
     box-shadow: 0 -15px 5px #59a9e1 inset;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
@@ -187,9 +187,9 @@ a.css3dbutton:hover {
 a.css3dbutton:active {
     top: 12px; /* shift button down 12px when depressed. Change 12px to match button's "bottom" property above */
     bottom: 0;
-    -moz-box-shadow: 0 -20px 5px darkred inset, 1px 1px 2px #eee;
-    -webkit-box-shadow: 0 -20px 5px darkred inset, 1px 1px 2px #eee;
-    box-shadow: 0 -20px 5px darkred inset, 1px 1px 2px #eee;
+    -moz-box-shadow: 0 -20px 5px var(--NavyBlue) inset, 1px 1px 2px #eee;
+    -webkit-box-shadow: 0 -20px 5px var(--NavyBlue) inset, 1px 1px 2px #eee;
+    box-shadow: 0 -20px 5px var(--NavyBlue) inset, 1px 1px 2px #eee;
 }
 
 
@@ -202,7 +202,7 @@ a.css3dbutton:active {
 }
 
 
-/* Coin stuff */
+/* Coin styles */
 
 .jump {
   animation: jump 1.5s infinite ease;

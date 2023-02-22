@@ -3,9 +3,10 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
 import Typography from '@mui/material/Typography';
+
+//Colours for the chart
 const colors = ['#001C55', '#222479', '#1446a7',
   '#4c78c9', '#b7cdf7', '#346568', '#488485', '#67bfbf', '#96bac4', '#c1e9f4'];
-
 
 
 function RenderTotalExpenses() {
@@ -14,11 +15,12 @@ function RenderTotalExpenses() {
 
   useEffect(() => {
 
+    //Gets Pots from local storage to render all values (no Balance) using BarChart from Recharts 
     const Pots = JSON.parse(localStorage.getItem('pots'));
 
     if (Pots) {
 
-
+      //Array of data coming from each pot
       const data = [
         {
           name: 'Bills',
@@ -75,7 +77,7 @@ function RenderTotalExpenses() {
         return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
       };
 
-
+      //Sets chart to show on screen
       setText(
         <BarChart style={{ margin: "0 auto" }}
           width={1024}
@@ -86,7 +88,12 @@ function RenderTotalExpenses() {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis />
-          <Bar dataKey="uv" fill="#000" shape={<TriangleBar/>} label={{ position: 'top' }}>
+          <Bar 
+          dataKey="uv" 
+          fill="#000" 
+          shape={<TriangleBar/>} 
+          label={{ position: 'top' }}>
+
             {data.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={colors[index % 20]} />
               
@@ -97,6 +104,7 @@ function RenderTotalExpenses() {
     }
     else {
 
+       //If there are no  Transaction stored, shows a different banner
       setText(<Typography variant='h4' align='center'>There are no transactions stored.</Typography>);
 
     }
@@ -106,7 +114,14 @@ function RenderTotalExpenses() {
 
   return (
     <>
-      <Typography variant='h4' align='center' sx={{ p: 5 }}>Total Expenses - All times</Typography>
+      <Typography 
+      variant='h4' 
+      align='center' 
+      sx={{ p: 5 }}>
+      Total Expenses - All times
+      </Typography>
+
+      {/*Shows the correct banner depending on what is on the Pots at the moment */}
       {textOnScreen}
 
     </>

@@ -1,3 +1,4 @@
+import { useState } from "react";
 
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
@@ -6,17 +7,16 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import Typography from '@mui/material/Typography';
-
 import Box from '@mui/material/Box';
-
 import Avatar from '@mui/material/Avatar';
-
-import { useState } from "react";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { CardActionArea } from '@mui/material';
+
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
 
 function ContactForm() {
 
+  // Set style for for button on form
   const theme = createTheme({
     palette: {
       brand: {
@@ -29,15 +29,18 @@ function ContactForm() {
 
 
   const [success, setSuccess] = useState(false);
+
+  //Sets form inputs and key for api
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
-   // access_key: 'f418e9dd-e235-40ff-9982-2df8fd1e3766'
-   access_key: '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'
-    
+    access_key: 'f418e9dd-e235-40ff-9982-2df8fd1e3766'
+
+
   });
 
+  //On change values are shown on form
   const handleChange = (event) => {
     setFormData({
       ...formData,
@@ -46,8 +49,10 @@ function ContactForm() {
   };
 
 
+  //On Submit call to web3forms API and send email to Sabrinas's email account
   const handleSubmit = (event) => {
     event.preventDefault();
+
     const data = JSON.stringify(formData);
 
     fetch('https://api.web3forms.com/submit', {
@@ -68,7 +73,7 @@ function ContactForm() {
           message: ''
         });
         setTimeout(() => { setSuccess(false) }, 2000);
-        console.log(data);
+
       })
       .catch(error => console.log(error));
 
@@ -79,20 +84,51 @@ function ContactForm() {
   return (
     <>
 
-      <Box pb={10} pr={5} pl={5} sx={{ bgcolor: ' #c7d8e1', border: 2, borderColor: '#F7F7F7', borderRadius: 3, maxWidth: '70%', margin: "0 auto" }}>
+      <Box
+        mt={10}
+        pb={10}
+        pr={5}
+        pl={5}
+        sx={{
+          bgcolor: '#c7d8e1',
+          border: 2,
+          borderColor: '#F7F7F7',
+          borderRadius: 2,
+          maxWidth: '80%',
+          margin: "0 auto"
+        }}>
 
-        <Typography variant='h3' align='center' sx={{ p: 5 }}>Contact Us</Typography>
+        <Typography
+          variant='h3'
+          align='center'
+          sx={{ p: 5 }}>
+          Contact Us
+        </Typography>
 
-        <Typography variant='body 1' align='center' sx={{ p: 5 }}>Please send us your message on contact us directly.</Typography>
+        <Typography
+          variant='h6'
+          align='center'
+          sx={{ p: 5 }}>
+          Please send us your message on contact us directly on github. Click on our cards to get the link.
+        </Typography>
 
 
-        <Grid container spacing={3} justifyContent="center" pt={10} >
+        <Grid
+          container
+          spacing={3}
+          justifyContent="center"
+          pt={1}>
 
           <Grid item xs={12} sm={6} >
-            <Card style={{ maxWidth: 500, margin: "0 auto", padding: "30px 5px" }} >
+            <Card style={{ maxWidth: 500, 
+              margin: "0 auto", 
+              padding: "30px 5px" }} >
               <CardContent>
                 <form onSubmit={handleSubmit}>
-                  <Grid container spacing={4} justifyContent="center" padding={1}>
+                  <Grid container 
+                  spacing={4} 
+                  justifyContent="center" 
+                  padding={1}>
                     <Grid item xs={12}>
                       <TextField id=''
                         label='Name'
@@ -143,27 +179,22 @@ function ContactForm() {
                     </Grid>
 
                     <Grid item xs={12}>
-                      {success && (<Typography variant='h4' align='center'> Thank you very much for your message!</Typography>)}
+                      {success && (<Typography variant='h5' align='center'> Thank you very much for your message. We will in contact soon.</Typography>)}
                     </Grid>
-
                   </Grid>
-
-
-
                 </form>
               </CardContent>
             </Card>
           </Grid>
 
           <Grid item xs={12} sm={6} >
-
-
-            <Card style={{ maxWidth: 500, margin: "0px", padding: "5px 5px" }} >
+            <Card style={{ maxWidth: 500, 
+              margin: "0px", 
+              padding: "5px 5px" }} >
               <CardActionArea
                 target="_blank"
                 href="https://github.com/nrai14"
-                component="a"
-              >
+                component="a">
                 <CardHeader
                   avatar={
                     <Avatar alt="Nish Rai"
@@ -172,7 +203,7 @@ function ContactForm() {
                     />
                   }
                   title='Nish Rai - Front-End Web Developer (working with HTML/CSS/JavaScript) 🥽 VR enthusiast.'
-                  titleTypographyProps
+                  
                 />
               </CardActionArea>
             </Card>
@@ -191,7 +222,7 @@ function ContactForm() {
                     />
                   }
                   title='Michal Matuszewski - Front-End Developer. '
-                  titleTypographyProps
+                  
                 />
               </CardActionArea>
             </Card>
@@ -209,13 +240,14 @@ function ContactForm() {
                       sx={{ width: 80, height: 80 }}
                     />
                   }
-                  title='Laura - English grad turned Front-End Developer.'
-                  titleTypographyProps
+                  title='Laura P. - English grad turned Front-End Developer.'     
                 />
               </CardActionArea>
             </Card>
 
-            <Card style={{ maxWidth: 500, marginTop: "10px", padding: "5px 5px" }} >
+            <Card style={{ maxWidth: 500,
+               marginTop: "10px",
+              padding: "5px 5px" }} >
               <CardActionArea
                 target="_blank"
                 href="https://github.com/sabrina-martorelli"
@@ -229,24 +261,13 @@ function ContactForm() {
                     />
                   }
                   title='Sabrina Lorena Martorelli - Software Engineer / Front-End Developer.'
-                  titleTypographyProps
+                  
                 />
               </CardActionArea>
             </Card>
-
-
-
-
           </Grid>
-
         </Grid>
-
-
-
-
-
       </Box>
-
     </>
   )
 };

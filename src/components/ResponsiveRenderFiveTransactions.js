@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 
-import { RadialBarChart, RadialBar, Legend } from "recharts";
+import { RadialBarChart, RadialBar } from "recharts";
 
 import Typography from '@mui/material/Typography';
 
@@ -15,12 +15,7 @@ function RenderFiveTransactions() {
     //Gets transactions from Local Storage to Render using RadialBarChart from Recharts 
     const transactions = JSON.parse(localStorage.getItem('transactions'));
 
-    //Style for labels
-    const style = { 
-      top: 30,
-      left: 400,
-      lineHeight: "44px"
-    };
+
 
     if (transactions && transactions.length > 4) {
 
@@ -74,14 +69,7 @@ function RenderFiveTransactions() {
             clockWise
             dataKey="uv"
           />
-          <Legend
-            iconSize={20}
-            width={600}
-            height={240}
-            layout="vertical"
-            verticalAlign="middle"
-            wrapperStyle={style}
-          />
+         
         </RadialBarChart>
       )
 
@@ -89,7 +77,7 @@ function RenderFiveTransactions() {
     else {
 
       //If there is less than 5 Transaction stored, shows a different banner
-      setText(<Typography variant='body1' align='center'>There are less than 5 transactions stored to display.</Typography>);
+      setText(<Typography variant='body1' align='center'>There are less than 5 transactions stored.</Typography>);
 
     }
   }, []);

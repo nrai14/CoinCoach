@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 
@@ -36,8 +37,8 @@ function OpenAi({ cryptoData }) {
       headers: {
         "Content-Type": "application/json",
         Authorization:
-        'Bearer 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'
-          
+          'Bearer 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'
+
       },
     })
       .then((res) => {
@@ -53,7 +54,7 @@ function OpenAi({ cryptoData }) {
         answer = answer.filter((item) => !isNaN(item));
         // remove all values from answer array that are not between 0 and 10
         answer = answer.filter((item) => item >= 0 && item <= 10);
-        console.log(answer);
+
 
         setopenAiData([...openAiData, answer]);
 
@@ -78,28 +79,23 @@ function OpenAi({ cryptoData }) {
           <span>loading...</span>
         ) : (
           <p>
-            
 
+            <Card
+              style={{
+                maxWidth: "100%",
+                margin: "10px",
+                padding: "50px"
+              }} >
 
-            <Card style={{ maxWidth: "100%", margin: "10px", padding: "50px" }} >          
-                 
-            <Typography 
-            variant='h4' 
-            align='left'
-    
-            >  
-            OpenAi based on {cryptoData.length} article evaluate bitcoin future on :
-            </Typography>        <Typography 
-            variant='h1' 
-            align='center'
-    
-            >  {"7 "}
-            </Typography>
-                 
-                 </Card>
-          
+              <Typography
+                variant='h4'
+                align='left'
+              >
+                OpenAi based on {cryptoData.length} article evaluate bitcoin future on :
+                {" "}
+              </Typography>
 
-          
+            </Card>
 
             {openAiData < 5 ? (
               <span style={{ color: "red" }}>{openAiData}</span>
@@ -111,7 +107,6 @@ function OpenAi({ cryptoData }) {
               openAiData
             )}
 
-            
           </p>
         )}
       </div>
