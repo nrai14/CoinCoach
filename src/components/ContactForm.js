@@ -33,8 +33,8 @@ function ContactForm() {
     name: '',
     email: '',
     message: '',
-   // access_key: 'f418e9dd-e235-40ff-9982-2df8fd1e3766'
-   access_key: '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'
+   access_key: 'f418e9dd-e235-40ff-9982-2df8fd1e3766'
+
     
   });
 
