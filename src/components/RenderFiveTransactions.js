@@ -89,7 +89,7 @@ function RenderFiveTransactions() {
     else {
 
       //If there is less than 5 Transaction stored, shows a different banner
-      setText(<Typography variant='body1' align='center'>There are less than 5 transactions stored.</Typography>);
+      setText(<Typography variant='body1' align='center'>There are less than 5 transactions stored to display.</Typography>);
 
     }
   }, []);

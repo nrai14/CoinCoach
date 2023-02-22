@@ -12,7 +12,6 @@ import ResponsiveRenderIncome from '../components/ResponsiveRenderIncome'
 
 
 import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 
 
@@ -23,22 +22,9 @@ function Tracker() {
 
       <InitPots />
 
-      {/* <Box 
-      pb={10} 
-      pr={5} 
-      pl={5} 
-      display={{ xs: "none", sm: "block" }}
-      sx={{ bgcolor: '#c7d8e1',
-      border: 2,
-      borderColor:'#F7F7F7', 
-      borderRadius: 3, 
-      maxWidth: '80%', 
-      margin: "0 auto"
+ 
       
-      }} */}
-      
-     
-      >
+   
 
       <Typography 
       variant='h3' 
@@ -70,11 +56,12 @@ function Tracker() {
             
           </Grid>
 
+         {/* A different version of the component will show depending of the screen size in use */}
+
           <Grid item  sm={6} 
            display={{ xs: "none", sm: "block" }}>
             <RenderIncome />
           </Grid>
-
 
           <Grid item xs={12} 
            display={{ xs: "block", sm: "none" }}
@@ -83,9 +70,7 @@ function Tracker() {
           </Grid>
 
 
-
-
-
+       {/* A different version of the component will show depending of the screen size in use */}
           <Grid item  sm={6}
            display={{ xs: "none", sm: "block" }}
           >
@@ -98,7 +83,6 @@ function Tracker() {
             <ResponsiveRenderFiveTransactions/>
           </Grid>
          
-
 
           {/* Render Total Expenses will hide on xs */}
           <Grid item xs={12} 
@@ -121,7 +105,7 @@ function Tracker() {
 
         </Grid>
 
-      {/* </Box> */}
+ 
 
     </>
   );

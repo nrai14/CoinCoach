@@ -44,9 +44,9 @@ function AddTransaction() {
 
 
   // Function to  refresh page after new values are stored on local storage
-  // function refreshPage() {
-  //   window.location.reload(false);
-  // }
+  function refreshPage() {
+    window.location.reload(false);
+  }
 
 
   const handleChange = (event) => {
@@ -175,7 +175,7 @@ function AddTransaction() {
       value: ''
     });
 
-    // refreshPage();
+    refreshPage();
     
 
   }

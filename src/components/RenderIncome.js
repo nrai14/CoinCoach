@@ -19,7 +19,7 @@ function RenderIncome() {
   useEffect(() => {
 
     //Initialize the banner of screen in case there are no incomes stored.
-    setText(<Typography variant='body1' align='left'>There are no Incomes stored.</Typography>);
+    setText(<Typography variant='body1' align='center'>There are no Incomes stored to display.</Typography>);
 
     const newData = [];
 
