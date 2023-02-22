@@ -53,7 +53,7 @@ function OpenAi({ cryptoData }) {
         answer = answer.filter((item) => !isNaN(item));
         // remove all values from answer array that are not between 0 and 10
         answer = answer.filter((item) => item >= 0 && item <= 10);
-        console.log(answer);
+       
 
         setopenAiData([...openAiData, answer]);
 

@@ -68,7 +68,7 @@ function ContactForm() {
           message: ''
         });
         setTimeout(() => { setSuccess(false) }, 2000);
-        console.log(data);
+      
       })
       .catch(error => console.log(error));
 

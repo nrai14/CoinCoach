@@ -1,10 +1,14 @@
 import Team from "../components/Team";
+import Typography from '@mui/material/Typography';
 
 
 function About() {
   return (
     <>
-      <h1 class="about-title" >About</h1>
+     
+
+      <Typography variant='h3' align='center' sx={{ p: 5 }}>About</Typography>
+
      
       <div class="container">
         <p>

@@ -14,8 +14,7 @@ function CryptoTracker() {
         .then(res => res.json())
         .then(data => setCryptoData(data.articles))
 
-        console.log('outside')
-        console.log(cryptoData)
+     
         
     
     }, [])
