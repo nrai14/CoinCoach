@@ -38,6 +38,8 @@ function RenderTopFive() {
 
 
     if (Filtered.length > 5) {
+
+       //Sets table board to show on screen
       setText(
         <Card 
         sx={{ maxWidth: 250, 

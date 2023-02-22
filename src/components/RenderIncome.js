@@ -23,7 +23,7 @@ function RenderIncome() {
 
     const newData = [];
 
-     //Gets transactions from Local Storage to Render using RadialBarChart from Recharts 
+    //Gets transactions from Local Storage to Render using RadialBarChart from Recharts 
     const transactions = JSON.parse(localStorage.getItem('transactions'));
 
     if (transactions) {
@@ -46,7 +46,7 @@ function RenderIncome() {
           });
 
         }
-
+        //Sets chart to show on screen
         setText(
           <RadialBarChart
             width={500}

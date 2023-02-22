@@ -54,6 +54,7 @@ function RenderFiveTransactions() {
 
       ];
 
+      //Sets chart to show on screen
       setText(
 
         <RadialBarChart
@@ -87,7 +88,7 @@ function RenderFiveTransactions() {
     }
     else {
 
-      //If there is less than 5 Transaction stored, shows a banner
+      //If there is less than 5 Transaction stored, shows a different banner
       setText(<Typography variant='body1' align='center'>There are less than 5 transactions stored.</Typography>);
 
     }
