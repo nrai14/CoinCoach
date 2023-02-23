@@ -17,6 +17,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+img {
+  max-width: 100%;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -61,6 +66,8 @@ code {
 }
 
 /* Ticker effect */
+
+
 
 .marquee {
   margin: 0 auto;
