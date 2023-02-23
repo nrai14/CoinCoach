@@ -11,7 +11,7 @@ function CryptoInfo({ cryptoData }) {
          
           <h4>{article.title}</h4>
           <h5>{article.author}</h5>  
-          {/* <img src={article.urlToImage} alt='news image'/> */}
+          <img src={article.urlToImage} alt='news image'/>
           <p>{article.description}</p>     
           <h5>{new Date(article.publishedAt).toLocaleDateString("en-GB")}</h5>
           <a href={article.url}>Select here to read news</a>
