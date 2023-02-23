@@ -15,17 +15,17 @@ function Home() {
       Welcome to CoinCoach
       </Typography>
 
-      <div class="maincontainer">
-        <div class="financial">
+      <div className="maincontainer">
+        <div className="financial">
           <Link to="/tracker">
-            <a class="css3dbutton">Coins Tracker</a>
+            <a className="css3dbutton">Coins Tracker</a>
           </Link>
         </div>
-        <div class="coinbox">
+        <div className="coinbox">
             <Coin />
 
 
-          <p class="marquee">
+          <p className="marquee">
             <span>
               CoinCoach is your ultimate financial companion to keep tabs on
               your spending and the latest crypto news
@@ -33,9 +33,9 @@ function Home() {
           </p>
         </div>
 
-        <div class="crypto">
+        <div className="crypto">
           <Link to="/crypto">
-            <a class="css3dbutton">Crypto News</a>
+            <a className="css3dbutton">Crypto News</a>
           </Link>
         </div>
       </div>
