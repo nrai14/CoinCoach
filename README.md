@@ -6,7 +6,7 @@
 
 CoinCoach is the ultimate financial companion to help you keep track of your spending and keep up to date with all the latest crypto news. This application was created with React to build an intuitive user interface and Material UI to streamline the design process whilst Open AI and News API are used to assist users in keeping up to date with Crypto news. CoinCoach is a must have app for effortlessly tracking your finances!
 
-Visit CoinCoach here: [CoinCoach](https://coincoach.netlify.app/)
+Visit CoinCoach here: [CoinCoach](https://coincoachapp.netlify.app/)
 
 ## Screenshots
 
