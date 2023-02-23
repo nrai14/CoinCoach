@@ -10,17 +10,17 @@ Visit CoinCoach here: [CoinCoach](https://coincoach.netlify.app/)
 
 ## Screenshots
 
-![CoinCoach Homepage](public/CoinCoachScreenshot1.png)
+![CoinCoach Homepage](CoinCoachScreenshot1.png)
 
-![CoinCoach Tracker](public/CoinCoachScreenshot2.png)
+![CoinCoach Tracker](CoinCoachScreenshot2.png)
 
-![CoinCoach Tracker](public/CoinCoachScreenshot3.png)
+![CoinCoach Tracker](CoinCoachScreenshot3.png)
 
-![CoinCoach Tracker](public/CoinCoachScreenshot4.png)
+![CoinCoach Tracker](CoinCoachScreenshot4.png)
 
-![CoinCoach Tracker](public/CoinCoachScreenshot5.png)
+![CoinCoach Tracker](CoinCoachScreenshot5.png)
 
-![CoinCoach Crypto News](public/CoinCoachScreenshot6.png)
+![CoinCoach Crypto News](CoinCoachScreenshot6.png)
 
 ## Table of Contents
 
